@@ -2,12 +2,13 @@ import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset-advanced';
 import { darken, lighten } from 'polished';
 
-const mainBrandColor = '#00D1B2';
+const mainBrandColor = '#6A4BC4';
 const lightShades = '#F5F5F5';
-const darkAccent = '#3173DC';
+const darkAccent = '#6A4BC4';
 const darkShades = '#0A0A0A';
 
 export const theme = {
+  hoverColor: '#86E9D5',
   // It can be liberally applied to your layout as its main identity.
   mainBrandColor,
   // Accent colors can be used to bring attention to design elements
@@ -41,6 +42,7 @@ export const theme = {
   primaryFontFamily: "'Open Sans', sans-serif",
   secondaryFontFamily: "'Open Sans', sans-serif",
   boxShadow: 'rgba(0,0,0,0.08) 0px 7px 18px',
+  fontFamilyThin: " 'Poppins', sans-serif",
 };
 
 const GlobalStyle = createGlobalStyle`

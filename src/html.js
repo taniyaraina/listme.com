@@ -18,8 +18,9 @@ export default class HTML extends React.Component {
           {/* Add custom css or scripts here */}
           <link
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"
+            href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
           />
+
           <script
             defer
             src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
@@ -28,6 +29,11 @@ export default class HTML extends React.Component {
             href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap"
             rel="stylesheet"
           />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+            rel="stylesheet"
+          />
+
           <script src="/js/scripts.js" />
           {/* Add custom css or scripts here */}
 

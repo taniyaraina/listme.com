@@ -4,9 +4,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
+import PurpleButton from './elements/PurpleButton';
+
 const Section = styled.section`
-  padding: 1rem 1.5rem;
+  padding: 1rem 0rem;
   font-family: ${props => props.theme.primaryFontFamily};
+  img {
+    max-width: 17rem;
+  }
   .navbar {
     background-color: transparent;
   }
@@ -24,10 +29,13 @@ const Section = styled.section`
     }
   }
   .navbar-item {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 1.2rem;
+    font-family: ${props => props.theme.fontFamilyThin};
+    transition: 1s;
     :hover {
       color: ${props => props.theme.darkAccent};
+      background-color: transparent;
     }
   }
   .navbar-burger {
@@ -35,6 +43,8 @@ const Section = styled.section`
     color: #fff;
     opacity: 0.6;
     border-radius: 4px;
+  }
+
   }
 `;
 
@@ -59,8 +69,8 @@ export default class Header extends React.Component {
     const { isActive } = this.state;
 
     return (
-      <Section className="section">
-        <div className="container">
+      <Section>
+        <div>
           <nav
             className="navbar"
             role="navigation"
@@ -68,7 +78,7 @@ export default class Header extends React.Component {
           >
             <div className="navbar-brand">
               <Link className="navbar-item" to="/">
-                <img src="/images/logo-1024.png" alt="site logo" />
+                <img src="/images/softlab.png" alt="site logo" />
               </Link>
               <a
                 href="#"
@@ -94,14 +104,30 @@ export default class Header extends React.Component {
                   Home
                 </Link>
                 <Link to="/about" className="navbar-item">
-                  About
+                  Pages
                 </Link>
                 <Link to="/news" className="navbar-item">
-                  News
+                  Blog
+                </Link>
+                <Link to="/contact" className="navbar-item">
+                  Portfolio
+                </Link>
+                <Link to="/contact" className="navbar-item">
+                  Shop
                 </Link>
                 <Link to="/contact" className="navbar-item">
                   Contact
                 </Link>
+              </div>
+              <div className="navbar-end">
+                <div className="navbar-item">
+                  <span className="has-text-weight-light subtitle is-3">
+                    <i className="fas fa-search" />
+                  </span>
+                </div>
+                <div className="navbar-item">
+                  <PurpleButton title="Try Free" />
+                </div>
               </div>
             </div>
           </nav>
