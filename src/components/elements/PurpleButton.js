@@ -9,11 +9,11 @@ const Button = styled.button`
   color: ${theme.darkAccent} !important;
   border-color: ${theme.darkAccent} !important;
   box-shadow: none !important ;
-  transition: 1s;
+  transition: 0.5s;
   :hover {
     background-color: ${theme.darkAccent} !important;
     color: ${theme.backgroundColor} !important;
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 7px 18px !important ;
+    box-shadow: 0px 9px 30px 0px rgba(102, 75, 196, 0.4) !important ;
   }
 `;
 const PurpleButton = ({ title }) => {

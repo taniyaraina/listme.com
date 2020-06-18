@@ -1,5 +1,3 @@
-/* eslint global-require: 0 */
-
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
@@ -23,14 +21,18 @@ const Section = styled.section`
   }
   .navbar-menu {
     @media screen and (max-width: 600px) {
+     
       position: absolute;
       width: 100%;
       transition: 0.6s;
+    } @media screen and (min-width:1180px){
+     padding-left:4rem;
     }
   }
   .navbar-item {
     font-weight: 400;
     font-size: 1.2rem;
+    padding-top:0rem;
     font-family: ${props => props.theme.fontFamilyThin};
     transition: 1s;
     :hover {
@@ -39,12 +41,12 @@ const Section = styled.section`
     }
   }
   .navbar-burger {
+    margin-left:0px;
     background-color: #1c1323;
     color: #fff;
     opacity: 0.6;
     border-radius: 4px;
-  }
-
+    }
   }
 `;
 
