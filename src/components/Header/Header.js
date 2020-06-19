@@ -2,13 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-import PurpleButton from './elements/PurpleButton';
+import PurpleButton from '../elements/PurpleButton';
 
 const Section = styled.section`
   padding: 1rem 0rem;
   font-family: ${props => props.theme.primaryFontFamily};
   img {
-    max-width: 17rem;
+    max-width: 15rem;
   }
   .navbar {
     background-color: transparent;
@@ -19,20 +19,25 @@ const Section = styled.section`
       max-height: 3.75rem;
     }
   }
+  .image-to-show {
+    display: none;
+    position: relative;
+    left: -50%;
+  }
+  .absolute-position {
+    position: absolute;
+    left: 50%;
+    top: 0;
+  }
   .navbar-menu {
-    @media screen and (max-width: 600px) {
-     
-      position: absolute;
-      width: 100%;
-      transition: 0.6s;
-    } @media screen and (min-width:1180px){
-     padding-left:4rem;
+    @media screen and (min-width: 1180px) {
+      padding-left: 4rem;
     }
   }
   .navbar-item {
     font-weight: 400;
     font-size: 1.2rem;
-    padding-top:0rem;
+    padding-top: 0rem;
     font-family: ${props => props.theme.fontFamilyThin};
     transition: 1s;
     :hover {
@@ -41,12 +46,39 @@ const Section = styled.section`
     }
   }
   .navbar-burger {
-    margin-left:0px;
     background-color: #1c1323;
     color: #fff;
     opacity: 0.6;
     border-radius: 4px;
+  }
+  @media screen and (max-width: 1023px) {
+    .hidden {
+      display: none;
     }
+    .navbar-burger {
+      margin-left: 10px;
+    }
+    .navbar-menu {
+      position: absolute;
+      width: 100%;
+      height: ${window.innerHeight}px;
+      transition: 0.6s;
+    }
+    .image-to-hide {
+      display: none;
+    }
+    .image-to-show {
+      display: inline;
+    }
+    .searchBar {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+  .image-to-show-image {
+    width: auto;
+    min-height: 2rem;
   }
 `;
 
@@ -79,7 +111,7 @@ export default class Header extends React.Component {
             aria-label="main navigation"
           >
             <div className="navbar-brand">
-              <Link className="navbar-item" to="/">
+              <Link className="navbar-item image-to-hide" to="/">
                 <img src="/images/softlab.png" alt="site logo" />
               </Link>
               <a
@@ -121,15 +153,24 @@ export default class Header extends React.Component {
                   Contact
                 </Link>
               </div>
-              <div className="navbar-end">
-                <div className="navbar-item">
-                  <span className="has-text-weight-light subtitle is-3">
-                    <i className="fas fa-search" />
-                  </span>
-                </div>
-                <div className="navbar-item">
-                  <PurpleButton title="Try Free" />
-                </div>
+            </div>
+            <div className="absolute-position">
+              <Link className="navbar-item image-to-show" to="/">
+                <img
+                  src="/images/softlab.png"
+                  className="image-to-show-image"
+                  alt="site logo"
+                />
+              </Link>
+            </div>
+            <div className="navbar-end">
+              <div className="navbar-item searchBar">
+                <span className="has-text-weight-light subtitle is-3">
+                  <i className="fas fa-search" />
+                </span>
+              </div>
+              <div className="navbar-item hidden">
+                <PurpleButton title="Try Free" />
               </div>
             </div>
           </nav>

@@ -4,7 +4,7 @@ import styled, { ThemeProvider } from 'styled-components';
 
 import GlobalStyle, { theme } from '../utils/theme';
 import config from '../utils/config';
-import Header from './Header';
+import Header from './Header/Header';
 
 const Container = styled.div`
   min-height: 70vh;

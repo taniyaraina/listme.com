@@ -8,6 +8,7 @@ import ImageCollection from './ImageCollection';
 const Section = styled.section`
   overflow-x: hidden;
   overflow-y: hidden;
+
   .mobile-hidden {
     transform: translateY(20%);
     @media screen and (max-width: 768px) {
@@ -23,7 +24,7 @@ const Section = styled.section`
 const HomeHero = () => {
   return (
     <Section className="section">
-      <div className="columns is-gapless is-mobile ">
+      <div className="columns is-gapless is-mobile">
         <div className="column is-1 mobile-hidden">
           <SocialIcons />
         </div>
