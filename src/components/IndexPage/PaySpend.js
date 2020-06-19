@@ -58,9 +58,6 @@ const Container = styled.div`
   .purple {
     min-width: 5rem;
     min-height: 5rem;
-    align-items: center;
-    justify-content: center;
-    padding-top: 0.3rem;
     background-color: ${theme.mainBrandColor};
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 7px 18px !important ;
@@ -73,14 +70,6 @@ const Container = styled.div`
 `;
 
 const PaySpend = () => {
-  // const props = {
-  //   to: async next => {
-  //     await next({ width: '100%' });
-  //     await next({ width: '80%' });
-  //   },
-  //   from: { width: '100%' },
-  // };
-
   return (
     <Container className="columns is-multiline  is-gapless ">
       <motion.div
