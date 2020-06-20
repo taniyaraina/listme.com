@@ -43,6 +43,7 @@ export const theme = {
   secondaryFontFamily: "'Open Sans', sans-serif",
   boxShadow: 'rgba(0,0,0,0.08) 0px 7px 18px',
   fontFamilyThin: " 'Poppins', sans-serif",
+  headerColor: '#222239',
 };
 
 const GlobalStyle = createGlobalStyle`

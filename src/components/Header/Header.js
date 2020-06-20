@@ -27,7 +27,7 @@ const Section = styled.section`
   .absolute-position {
     position: absolute;
     left: 50%;
-    top: 0;
+    top: 10px;
   }
   .navbar-menu {
     @media screen and (min-width: 1180px) {
@@ -52,6 +52,10 @@ const Section = styled.section`
     border-radius: 4px;
   }
   @media screen and (max-width: 1023px) {
+    i {
+      color: ${props => props.theme.backgroundColor};
+    }
+    background-color: ${props => props.theme.headerColor};
     .hidden {
       display: none;
     }
@@ -72,7 +76,7 @@ const Section = styled.section`
     }
     .searchBar {
       position: absolute;
-      top: 0;
+      top: 5px;
       right: 0;
     }
   }
@@ -157,7 +161,7 @@ export default class Header extends React.Component {
             <div className="absolute-position">
               <Link className="navbar-item image-to-show" to="/">
                 <img
-                  src="/images/softlab.png"
+                  src="/images/logo_light.png"
                   className="image-to-show-image"
                   alt="site logo"
                 />

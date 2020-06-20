@@ -6,29 +6,21 @@ import { theme } from '../../utils/theme';
 
 const WalletImageBounce = {
   start: {
-    position: 'absolute',
-    minWidth: '5rem',
-    minHeight: '5rem',
+    scale: 1.5,
+    marginTop: '0.5rem',
   },
   end: {
-    minWidth: '6rem',
-    minHeight: '6rem',
+    scale: 2,
   },
 };
 const TextAnimate = {
   start: {
     opacity: 0,
-    transform: 'rotate(-3deg)',
-    letterSpacing: '1rem',
-    fontStyle: 'italic',
-    marginLeft: '10rem',
+    transform: 'translateX(100%)',
   },
   end: {
     opacity: 1,
-    fontStyle: 'normal',
-    transform: 'rotate(0deg)',
-    letterSpacing: '0rem',
-    marginLeft: '0rem',
+    transform: 'translateX(0%)',
   },
 };
 const ImageEntry = {
@@ -56,8 +48,10 @@ const Container = styled.div`
     margin-bottom: 1rem !important;
   }
   .purple {
-    min-width: 5rem;
-    min-height: 5rem;
+    min-width: 3.5rem;
+    min-height: 2.5rem;
+    max-height: 3.5rem;
+    max-width: 4.5rem;
     background-color: ${theme.mainBrandColor};
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 7px 18px !important ;
@@ -67,6 +61,12 @@ const Container = styled.div`
     width: 10rem;
   }
   padding-top: 2rem;
+  .columns {
+    padding-top: 3rem;
+    @media screen and (max-width: 1200px) {
+      padding-top: 0rem;
+    }
+  }
 `;
 
 const PaySpend = () => {
@@ -84,7 +84,6 @@ const PaySpend = () => {
           animate="end"
           variants={WalletImageBounce}
           transition={{ yoyo: Infinity, delay: 4, duration: 1 }}
-          className="image is-square"
         >
           <img alt="wallet" src="images/wallet.png" />
         </motion.figure>
@@ -101,9 +100,15 @@ const PaySpend = () => {
           Your Terms
         </motion.h1>
       </div>
-      <div className="column is-4">
+      <motion.div
+        initial="start"
+        animate="end"
+        variants={TextAnimate}
+        transition={{ delay: 2, duration: 1 }}
+        className="column is-4"
+      >
         <PurpleButton title="How it Works" />
-      </div>
+      </motion.div>
     </Container>
   );
 };

@@ -8,9 +8,10 @@ import ImageCollection from './ImageCollection';
 const Section = styled.section`
   overflow-x: hidden;
   overflow-y: hidden;
+  padding-top: 4rem;
 
   .mobile-hidden {
-    transform: translateY(20%);
+    transform: translateY(10%);
     @media screen and (max-width: 768px) {
       display: none !important;
     }
@@ -31,7 +32,7 @@ const HomeHero = () => {
         <div className="column is-5">
           <PaySpend />
         </div>
-        <div className="column is-6">
+        <div className="column is-7">
           <ImageCollection />
         </div>
       </div>
