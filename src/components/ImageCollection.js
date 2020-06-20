@@ -62,6 +62,16 @@ const PhoneImage3 = {
     transform: 'translate(-15%,-400%)',
   },
 };
+const PhoneImage4 = {
+  start: {
+    opacity: 0,
+    transform: 'translate(0,-600%)',
+  },
+  end: {
+    opacity: 1,
+    transform: 'translate(-15%,-500%)',
+  },
+};
 
 const Container = styled.div`
   .w {
@@ -134,6 +144,14 @@ const ImageCollection = () => {
         variants={PhoneImage3}
         transition={{ delay: 3.5, duration: 1 }}
         src="images/phone4.png"
+        className="topMargin"
+      />
+      <motion.img
+        initial="start"
+        animate="end"
+        variants={PhoneImage4}
+        transition={{ delay: 3.5, duration: 1 }}
+        src="images/phone5.png"
         className="topMargin"
       />
     </Container>

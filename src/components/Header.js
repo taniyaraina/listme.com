@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-import PurpleButton from '../elements/PurpleButton';
+import PurpleButton from './elements/PurpleButton';
 
 const Section = styled.section`
   padding: 1rem 0rem;

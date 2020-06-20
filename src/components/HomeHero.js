@@ -11,7 +11,7 @@ const Section = styled.section`
   padding-top: 4rem;
 
   .mobile-hidden {
-    transform: translateY(10%);
+    transform: translateY(2%);
     @media screen and (max-width: 768px) {
       display: none !important;
     }

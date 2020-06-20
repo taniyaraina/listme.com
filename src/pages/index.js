@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
-import HomeHero from '../components/IndexPage/HomeHero';
+import HomeHero from '../components/HomeHero';
 
 export default class IndexPage extends React.Component {
   render() {

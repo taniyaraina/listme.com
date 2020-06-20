@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import PurpleButton from '../elements/PurpleButton';
-import { theme } from '../../utils/theme';
+import PurpleButton from './elements/PurpleButton';
+import { theme } from '../utils/theme';
 
 const WalletImageBounce = {
   start: {
