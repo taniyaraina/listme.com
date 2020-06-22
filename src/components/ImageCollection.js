@@ -4,32 +4,34 @@ import { motion } from 'framer-motion';
 
 const WImage = {
   start: {
-    marginLeft: '50rem',
+    position: 'relative',
+    right: -300,
+    opacity: 0,
     display: 'flex',
-    objectFit: 'cover',
   },
   end: {
-    marginLeft: '5rem',
+    right: -80,
+    opacity: 1,
   },
 };
 const TextImage = {
   start: {
-    opacity: 1,
-    transform: 'translate(20%,-400%)',
+    opacity: 0,
+    transform: 'translate(-80%,-200%)',
   },
   end: {
+    transform: 'translate(-80%,-10%)',
     opacity: 1,
-    transform: 'translate(20%,-300%)',
   },
 };
 const PhoneImage = {
   start: {
     opacity: 0,
-    transform: 'translate(0,0%)',
+    transform: 'translate(-380%,100%)',
   },
   end: {
     opacity: 1,
-    transform: 'translate(-15%,-100%)',
+    transform: 'translate(-380%,10%)',
   },
 };
 const PhoneImage1 = {
@@ -75,14 +77,18 @@ const PhoneImage4 = {
 
 const Container = styled.div`
   .w {
-    min-height: 35rem;
-    min-width: 35rem;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     @media screen and (max-width: 600px) {
-      min-height: 15rem;
-      min-width: 20rem;
+      min-height: 10rem;
+      min-width: 25rem;
     }
   }
   .wallapp {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     @media screen and (max-width: 738px) {
       display: none;
     }
@@ -91,26 +97,27 @@ const Container = styled.div`
     /* margin-top: 16rem; */
     max-height: 30%;
   }
+  display: flex;
+  /* flex-direction: row; */
 `;
 
 const ImageCollection = () => {
   return (
     <Container className="container">
-      <figure className="">
-        <motion.img
-          initial="start"
-          animate="end"
-          variants={WImage}
-          transition={{ duration: 1 }}
-          src="images/w.png"
-          alt="w"
-        />
-      </figure>
+      <motion.img
+        initial="start"
+        animate="end"
+        variants={WImage}
+        transition={{ duration: 1 }}
+        src="images/w.png"
+        alt="w"
+        className="w"
+      />
       <motion.img
         initial="start"
         animate="end"
         variants={TextImage}
-        transition={{ delay: 1, duration: 0.5 }}
+        transition={{ delay: 1, duration: 1 }}
         src="images/wallapp.png"
         className="wallapp"
       />
@@ -122,6 +129,7 @@ const ImageCollection = () => {
         src="images/phone.png"
         className="topMargin"
       />
+      {/*
       <motion.img
         initial="start"
         animate="end"
@@ -153,7 +161,7 @@ const ImageCollection = () => {
         transition={{ delay: 3.5, duration: 1 }}
         src="images/phone5.png"
         className="topMargin"
-      />
+      /> */}
     </Container>
   );
 };

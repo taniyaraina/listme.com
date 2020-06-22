@@ -41,7 +41,7 @@ const Container = styled.div`
       max-width: 1rem;
     }
     .is-1 {
-      font-size: 1.2rem;
+      font-size: 100%;
     }
   }
   .margin {
@@ -107,7 +107,7 @@ const PaySpend = () => {
         transition={{ delay: 2, duration: 1 }}
         className="column is-4"
       >
-        <PurpleButton title="How it Works" />
+        <PurpleButton className="is-medium" title="How it Works" />
       </motion.div>
     </Container>
   );

@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import UseAnimations from 'react-useanimations';
 
 import PurpleButton from './elements/PurpleButton';
+import SearchBox from './SearchBox';
 
 const Section = styled.section`
   padding: 1rem 0rem;
@@ -83,6 +85,11 @@ const Section = styled.section`
   .image-to-show-image {
     width: auto;
     min-height: 2rem;
+  }
+  .searchBox {
+    position: absolute;
+    top: 7rem;
+    right: 40%;
   }
 `;
 
@@ -169,13 +176,14 @@ export default class Header extends React.Component {
             </div>
             <div className="navbar-end">
               <div className="navbar-item searchBar">
-                <span className="has-text-weight-light subtitle is-3">
-                  <i className="fas fa-search" />
-                </span>
+                <UseAnimations animationKey="searchToX" size={30} />
               </div>
               <div className="navbar-item hidden">
                 <PurpleButton title="Try Free" />
               </div>
+              {/* <div className="searchBox">
+                <SearchBox />
+              </div> */}
             </div>
           </nav>
         </div>

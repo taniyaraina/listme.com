@@ -40,6 +40,7 @@
     "react-reveal": "^1.2.2",
     "react-spring": "^8.0.27",
     "react-text-transition": "^1.1.1",
+    "react-useanimations": "^1.2.13",
     "styled-components": "^4.3.2",
     "styled-reset-advanced": "^1.0.1"
   },

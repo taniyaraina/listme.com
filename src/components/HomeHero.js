@@ -6,10 +6,9 @@ import PaySpend from './PaySpend';
 import ImageCollection from './ImageCollection';
 
 const Section = styled.section`
+  padding-top: 4rem;
   overflow-x: hidden;
   overflow-y: hidden;
-  padding-top: 4rem;
-
   .mobile-hidden {
     transform: translateY(2%);
     @media screen and (max-width: 768px) {
