@@ -6,6 +6,8 @@ import HomeHero from '../components/HomeHero';
 import Bitcoin from '../components/Bitcoins';
 import Payments from '../components/Payments';
 import Benefits from '../components/Benefits';
+import Number from '../components/Number';
+import HowItWorks from '../components/HowItWorks';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -16,6 +18,8 @@ export default class IndexPage extends React.Component {
         <Bitcoin />
         <Payments />
         <Benefits />
+        <Number />
+        <HowItWorks />
       </Layout>
     );
   }
