@@ -19,7 +19,7 @@ const Container = styled.div`
 
 const PersonalAppBenefits = () => {
   return (
-    <Container className="columns is-multiline ">
+    <Container className="columns is-multiline is-mobile ">
       <div className="column is-12">
         <div className="columns ">
           <div className="column is-2 ">

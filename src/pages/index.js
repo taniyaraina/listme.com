@@ -8,18 +8,24 @@ import Payments from '../components/Payments';
 import Benefits from '../components/Benefits';
 import Number from '../components/Number';
 import HowItWorks from '../components/HowItWorks';
+import ClientTestimonials from '../components/ClientTestimonials';
+import InfoCards from '../components/InfoCards';
 
 export default class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
         <Seo title="Home" description="Welcome to GatsbyJs v1" />
-        <HomeHero />
-        <Bitcoin />
-        <Payments />
-        <Benefits />
-        <Number />
-        <HowItWorks />
+        <div style={{ overflowX: 'hidden' }}>
+          <HomeHero />
+          <Bitcoin />
+          <Payments />
+          <Benefits />
+          <Number />
+          <HowItWorks />
+          <ClientTestimonials />
+          <InfoCards />
+        </div>
       </Layout>
     );
   }

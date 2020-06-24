@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { theme } from '../utils/theme';
 
 import BenefitsList from './BenefitsList';
+import MapChart from './MapChart';
 
 const Container = styled.div`
   align-content: right;
@@ -43,6 +44,9 @@ const Benefits = () => {
             onFalse={() => setSelected(false)}
           />
         </section>
+      </div>
+      <div className="column is-">
+        <MapChart />
       </div>
     </Container>
   );

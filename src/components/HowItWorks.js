@@ -14,6 +14,18 @@ const Container = styled.div`
   .purple {
     color: ${theme.darkAccent} !important;
   }
+  .is-6 {
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+    margin-top: -0.5rem;
+  }
+  .is-5 {
+    font-size: 1rem;
+  }
+  .card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
 `;
 
 const Data1 = [
@@ -72,12 +84,12 @@ const HowItWorks = () => {
           </div>
           <div className="column is-3">
             {Data1.map(item => (
-              <div className="columns is-multiline is-mobile">
+              <div className="columns is-gapless is-multiline is-mobile card">
                 <div className="column is-2">
-                  <h1 className="title is-4 purple">{item.number}</h1>
+                  <h1 className="title is-5 purple">{item.number}</h1>
                 </div>
                 <div className="column is-10">
-                  <h1 className="title is-6  has-text-left has-text-weight-bold">
+                  <h1 className="title is-5  has-text-left has-text-weight-bold">
                     {item.title}
                   </h1>
                   <h1 className="title is-6 has-text-left has-text-weight-light">
@@ -92,9 +104,9 @@ const HowItWorks = () => {
           </div>
           <div className="column is-3">
             {Data2.map(item => (
-              <div className="columns is-multiline is-mobile">
+              <div className="columns  is-gapless is-multiline is-mobile card">
                 <div className="column is-10">
-                  <h1 className="title is-6  has-text-right has-text-weight-bold">
+                  <h1 className="title is-5  has-text-right has-text-weight-bold">
                     {item.title}
                   </h1>
                   <h1 className="title is-6 has-text-right has-text-weight-light">
@@ -102,7 +114,7 @@ const HowItWorks = () => {
                   </h1>
                 </div>
                 <div className="column is-2">
-                  <h1 className="title is-4 purple">{item.number}</h1>
+                  <h1 className="title is-5 purple">{item.number}</h1>
                 </div>
               </div>
             ))}
