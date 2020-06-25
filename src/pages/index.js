@@ -10,6 +10,8 @@ import Number from '../components/Number';
 import HowItWorks from '../components/HowItWorks';
 import ClientTestimonials from '../components/ClientTestimonials';
 import InfoCards from '../components/InfoCards';
+import CreativeInterface from '../components/CreativeInterface';
+import OurPartner from '../components/OurPartner';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -25,6 +27,8 @@ export default class IndexPage extends React.Component {
           <HowItWorks />
           <ClientTestimonials />
           <InfoCards />
+          <CreativeInterface />
+          <OurPartner />
         </div>
       </Layout>
     );

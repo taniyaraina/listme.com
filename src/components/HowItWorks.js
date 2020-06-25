@@ -25,6 +25,12 @@ const Container = styled.div`
   .card {
     padding: 1rem;
     margin-bottom: 1rem;
+    transition: 1s;
+    box-shadow: none;
+    border-radius: 30px;
+    :hover {
+      box-shadow: inset 0px 14px 20px 0px rgba(0, 0, 0, 0.08);
+    }
   }
 `;
 
