@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 import { theme } from '../utils/theme';
 
@@ -73,6 +75,60 @@ const Data2 = [
   },
 ];
 
+const LeftAnimatedDiv = {
+  start: {
+    transform: 'translateX(-20%)',
+    opacity: 0,
+  },
+  end: {
+    transform: 'translateX(0%)',
+    opacity: 1,
+  },
+};
+
+const RightAnimatedDiv = {
+  start: {
+    transform: 'translateX(20%)',
+    opacity: 0,
+  },
+  end: {
+    transform: 'translateX(0%)',
+    opacity: 1,
+  },
+};
+
+const ListItem = ({ number, title, subtitle, variants }) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  React.useEffect(() => {
+    if (inView) {
+      controls.start('end');
+    }
+  }, [controls, inView]);
+  return (
+    <motion.div
+      ref={ref}
+      animate={controls}
+      initial="start"
+      variants={variants}
+      className="columns is-gapless is-multiline is-mobile card"
+    >
+      <div className="column is-2">
+        <h1 className="title is-5 purple">{number}</h1>
+      </div>
+      <div className="column is-10">
+        <h1 className="title is-5  has-text-left has-text-weight-bold">
+          {title}
+        </h1>
+        <h1 className="title is-6 has-text-left has-text-weight-light">
+          {subtitle}
+        </h1>
+      </div>
+    </motion.div>
+  );
+};
+
 const HowItWorks = () => {
   return (
     <Container>
@@ -90,19 +146,12 @@ const HowItWorks = () => {
           </div>
           <div className="column is-3">
             {Data1.map(item => (
-              <div className="columns is-gapless is-multiline is-mobile card">
-                <div className="column is-2">
-                  <h1 className="title is-5 purple">{item.number}</h1>
-                </div>
-                <div className="column is-10">
-                  <h1 className="title is-5  has-text-left has-text-weight-bold">
-                    {item.title}
-                  </h1>
-                  <h1 className="title is-6 has-text-left has-text-weight-light">
-                    {item.subtitle}
-                  </h1>
-                </div>
-              </div>
+              <ListItem
+                number={item.number}
+                title={item.title}
+                subtitle={item.subtitle}
+                variants={LeftAnimatedDiv}
+              />
             ))}
           </div>
           <div className="column is-4">
@@ -110,19 +159,12 @@ const HowItWorks = () => {
           </div>
           <div className="column is-3">
             {Data2.map(item => (
-              <div className="columns  is-gapless is-multiline is-mobile card">
-                <div className="column is-10">
-                  <h1 className="title is-5  has-text-right has-text-weight-bold">
-                    {item.title}
-                  </h1>
-                  <h1 className="title is-6 has-text-right has-text-weight-light">
-                    {item.subtitle}
-                  </h1>
-                </div>
-                <div className="column is-2">
-                  <h1 className="title is-5 purple">{item.number}</h1>
-                </div>
-              </div>
+              <ListItem
+                number={item.number}
+                title={item.title}
+                subtitle={item.subtitle}
+                variants={RightAnimatedDiv}
+              />
             ))}
           </div>
         </div>

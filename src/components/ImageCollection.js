@@ -37,21 +37,21 @@ const PhoneImage = {
 const PhoneImage1 = {
   start: {
     opacity: 0,
-    transform: 'translate(0,-400%)',
+    transform: 'translate(-380%,100%)',
   },
   end: {
     opacity: 1,
-    transform: 'translate(-15%,-200%)',
+    transform: 'translate(-480%,10%)',
   },
 };
 const PhoneImage2 = {
   start: {
     opacity: 0,
-    transform: 'translate(0,-500%)',
+    transform: 'translate(-380%,-500%)',
   },
   end: {
     opacity: 1,
-    transform: 'translate(-15%,-300%)',
+    transform: 'translate(-380%,-100%)',
   },
 };
 const PhoneImage3 = {
@@ -90,7 +90,7 @@ const Container = styled.div`
     height: 100%;
     object-fit: contain;
     @media screen and (max-width: 738px) {
-      display: none;
+      opacity: 0;
     }
   }
   .topMargin {
@@ -129,7 +129,7 @@ const ImageCollection = () => {
         src="images/phone.png"
         className="topMargin"
       />
-      {/*
+
       <motion.img
         initial="start"
         animate="end"
@@ -138,7 +138,7 @@ const ImageCollection = () => {
         src="images/phone2.png"
         className="topMargin"
       />
-      <motion.img
+      {/* <motion.img
         initial="start"
         animate="end"
         variants={PhoneImage2}

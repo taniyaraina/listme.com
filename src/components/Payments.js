@@ -30,30 +30,59 @@ const Container = styled.div`
   .paddingTop {
     padding-top: 1rem;
   }
+  .cancelTopPadding {
+    padding-top: 0rem;
+  }
+  }
+  .imageHide {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  .secondCard{
+    @media screen and (max-width: 768px) {
+      padding-top:0rem;
+    }
+  }
+  .icon{
+    padding-top:1rem;
+    padding-bottom:2rem;
+    color:${theme.hoverColor} !important;
+  }
 `;
 
 const Payments = () => {
   return (
     <Container className="columns is-multiline has-text-centered">
-      <div className="column is-3 side">
+      <div className="column is-3 side imageHide">
         <img src="images/letter-a.png" alt="a" />
       </div>
       <div className="column is-3  ">
-        <div className="card">
-          <section className="section">
-            <h1 className="subtitle is-4 has-text-weight-bold">Any Payments</h1>
-            <h1 className="subtitle is-5 has-text-grey-lighter">
-              Accept Crypto payments from your online customers on your
-              smartphone.
-            </h1>
-            <h1 className="purple">{`< Read More >`}</h1>
-          </section>
-        </div>
+        <section className="section cancelTopPadding">
+          <div className="card">
+            <section className="section ">
+              <span className="icon  is-size-2">
+                <i className="fab fa-bitcoin" />
+              </span>
+              <h1 className="subtitle is-4 has-text-weight-bold">
+                Any Payments
+              </h1>
+              <h1 className="subtitle is-5 has-text-grey-lighter">
+                Accept Crypto payments from your online customers on your
+                smartphone.
+              </h1>
+              <h1 className="purple">{`< Read More >`}</h1>
+            </section>
+          </div>
+        </section>
       </div>
       <div className="column is-3  ">
-        <section className="section">
+        <section className="section secondCard">
           <div className="card">
             <section className="section">
+              <span className="icon is-size-2">
+                <i className="fab fa-bitcoin" />
+              </span>
               <h1 className="subtitle is-4 has-text-weight-bold">
                 Any Payments
               </h1>

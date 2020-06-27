@@ -27,7 +27,6 @@ const Container = styled.div`
     }
   }
   .margin {
-    margin-bottom: 1rem;
   }
 `;
 

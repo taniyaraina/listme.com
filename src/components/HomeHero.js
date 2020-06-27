@@ -31,7 +31,7 @@ const HomeHero = () => {
         <div className="column is-5">
           <PaySpend />
         </div>
-        <div className="column is-7">
+        <div className="column is-8">
           <ImageCollection />
         </div>
       </div>

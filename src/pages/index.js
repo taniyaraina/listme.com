@@ -12,6 +12,7 @@ import ClientTestimonials from '../components/ClientTestimonials';
 import InfoCards from '../components/InfoCards';
 import CreativeInterface from '../components/CreativeInterface';
 import OurPartner from '../components/OurPartner';
+import PricingPlans from '../components/PricingPlans';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -29,6 +30,7 @@ export default class IndexPage extends React.Component {
           <InfoCards />
           <CreativeInterface />
           <OurPartner />
+          <PricingPlans />
         </div>
       </Layout>
     );
