@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import UseAnimations from 'react-useanimations';
 
 import PurpleButton from './elements/PurpleButton';
-import SearchBox from './SearchBox';
+// import SearchBox from './SearchBox';
 
 const Section = styled.section`
   padding: 1rem 0rem;
@@ -67,7 +67,7 @@ const Section = styled.section`
     .navbar-menu {
       position: absolute;
       width: 100%;
-      height: ${window.innerHeight}px;
+      /* height: ${window.innerHeight}px !important; */
       transition: 0.6s;
     }
     .image-to-hide {
