@@ -45,6 +45,7 @@ export const theme = {
   fontFamilyThin: " 'Poppins', sans-serif",
   headerColor: '#222239',
   lightColor: '#F7F9FD',
+  darkPurple: '#121225',
 };
 
 const GlobalStyle = createGlobalStyle`

@@ -13,6 +13,7 @@ import InfoCards from '../components/InfoCards';
 import CreativeInterface from '../components/CreativeInterface';
 import OurPartner from '../components/OurPartner';
 import PricingPlans from '../components/PricingPlans';
+import DownloadApp from '../components/DownloadApp';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -31,6 +32,7 @@ export default class IndexPage extends React.Component {
           <CreativeInterface />
           <OurPartner />
           <PricingPlans />
+          <DownloadApp />
         </div>
       </Layout>
     );
