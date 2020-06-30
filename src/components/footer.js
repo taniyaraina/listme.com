@@ -11,7 +11,7 @@ const FooterStyled = styled.footer`
   background-attachment: scroll;
   min-height: 30rem;
   width: 100%;
-  padding-top: 8rem;
+  padding-top: 10.5rem;
   h1 {
     color: ${theme.backgroundColor} !important;
   }
@@ -46,6 +46,11 @@ const FooterStyled = styled.footer`
     height: 2.5rem;
     background-color: ${theme.hoverColor} !important;
     font-weight: bold;
+  }
+  .is-borderTop {
+    border: 0px solid #fff;
+    border-top-width: 1px;
+    margin-top: 2rem;
   }
 `;
 
@@ -100,12 +105,29 @@ const Footer = () => {
               Privacy Policy
             </h1>
           </div>
-          <div className="column is-2">
+          <div className="column is-3">
             <h1 className="title is-4 has-text-weight-bold "> Newsletter</h1>
             <input className="input is-medium" placeholder="Your Email" />
             <button type="button" className="button is-primary is-medium">
               Submit
             </button>
+          </div>
+        </div>
+        <div className="columns is-centered">
+          <div className="column is-11">
+            <div className="columns is-borderTop">
+              <div className="column is-5">
+                <h1 className="subtitle is-6 grey">
+                  Terms of Use | Privacy Environmental Policy
+                </h1>
+              </div>
+              <div className="column is-2" />
+              <div className="column is-6">
+                <h1 className="subtitle is-6 grey">
+                  Copyright © 2019 Softlab by WebGeniusLab. All Rights Reserved.
+                </h1>
+              </div>
+            </div>
           </div>
         </div>
       </section>
