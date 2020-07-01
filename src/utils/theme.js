@@ -31,10 +31,11 @@ export const theme = {
   backgroundInputColor: lightShades,
   backgroundInputColorDark: darkShades,
   fontSize: 16,
-  fontSizeSmall: 14,
-  fontSizeExtraSmall: 12,
+  fontSizeSmall: 16,
+  fontSizeExtraSmall: 14,
   fontSizeMedium: 18,
-  fontSizeLarge: 22,
+  fontSizeLarge: 48,
+  fontSizeExtraLarge: 55,
   textColor: darkShades, // '#0A0B11',
   textColorInverse: lightShades,
   textColorLite: '#8B8989',
@@ -74,7 +75,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${theme.secondaryFontFamily};
     color: ${theme.textColor};
     letter-spacing: 0.03rem !important;
-    font-size: 17px;
+    font-size: 16px;
   }
   .title {
     font-family: ${theme.primaryFontFamily};
