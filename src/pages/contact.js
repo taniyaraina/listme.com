@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ContactComponent from '../components/Contact';
+import ContactComponent from '../components/ContactComponent';
 
 import config from '../utils/config';
 import Seo from '../components/Seo';
