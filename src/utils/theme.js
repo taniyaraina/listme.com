@@ -39,8 +39,8 @@ export const theme = {
   textColorInverse: lightShades,
   textColorLite: '#8B8989',
   menuTintColor: darkAccent,
-  primaryFontFamily: "'Open Sans', sans-serif",
-  secondaryFontFamily: "'Open Sans', sans-serif",
+  primaryFontFamily: "'Poppins-Regular',sans-serif",
+  secondaryFontFamily: "'Nunito-Regular', sans-serif",
   boxShadow: 'rgba(0,0,0,0.08) 0px 7px 18px',
   fontFamilyThin: " 'Poppins', sans-serif",
   headerColor: '#222239',
@@ -50,6 +50,25 @@ export const theme = {
 
 const GlobalStyle = createGlobalStyle`
   ${reset};
+@font-face {
+  font-family: 'Poppins-Regular';
+  src: url('../fonts/Poppins-Regular.ttf');
+  src: local('Poppins-Regular'), local('Poppins-Regular'),
+       url('../fonts/Poppins-Regular.ttf') format('truetype'),
+       url('../fonts/Poppins-Bold.ttf') format('truetype'),
+       url('../fonts/Poppins-Light.ttf') format('truetype'),
+       url('../fonts/Poppins-SemiBold.ttf') format('truetype'),
+}
+@font-face {
+  font-family: 'Nunito-Regular';
+  src: url('../fonts/Nunito-Regular.ttf');
+  src: local('Nunito-Regular'), local('Nunito-Regular'),
+       url('../fonts/Nunito-Regular.ttf') format('truetype'),
+       url('../fonts/Nunito-Black.ttf') format('truetype'),
+       url('../fonts/Nunito-Light.ttf') format('truetype'),
+       url('../fonts/Nunito-Bold.ttf') format('truetype'),
+       url('../fonts/Nunito-SemiBold.ttf') format('truetype'),
+}
 
   body {
     font-family: ${theme.secondaryFontFamily};
