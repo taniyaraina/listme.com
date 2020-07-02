@@ -19,7 +19,15 @@ const Container = styled.div`
     padding-right: 2rem;
     padding-left: 0.8rem;
     padding-top: 0.8rem;
-    padding-bottom: 0.8rem;
+    padding-bottom: 0.6rem;
+    transition: 0.6s;
+    border-radius: 10px;
+    :hover {
+      background-color: ${theme.darkAccent};
+      span {
+        color: ${theme.backgroundColor};
+      }
+    }
   }
   .up {
     margin-top: -1rem;
@@ -38,16 +46,6 @@ const Container = styled.div`
     font-weight: bold;
     border-radius: 50px;
   }
-  /* .GradientBackground {
-    border-radius: 50px;
-    transform: translateY('1rem');
-    display: inline;
-    background-image: radial-gradient(
-      circle farthest-corner at 100% 150%,
-      #d75dbc 10%,
-      #6a4bc4 50%
-    );
-  } */
 `;
 
 const Data = [
@@ -70,7 +68,20 @@ const Data = [
 
 const Contact = () => {
   return (
-    <Container className="columns is-centered">
+    <Container className="columns is-centered is-multiline">
+      <div className="column is-12">
+        <div className="columns  is-centered">
+          <div className="column is-4">
+            <h1 className="title has-text-weight-bold">Contact</h1>
+          </div>
+          <div className="column is-6">
+            <img
+              alt="img"
+              src="https://images.unsplash.com/photo-1519500099198-fd81846b8f03?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+            />
+          </div>
+        </div>
+      </div>
       <div className="column is-5">
         <GoogleContactMap
           isMarkerShown
