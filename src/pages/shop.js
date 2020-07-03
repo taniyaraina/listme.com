@@ -14,7 +14,7 @@ const Shop = () => {
       <Seo title="Shop" />
       <section className="section">
         <Container className="columns is-gapless is-centered">
-          <div className="column is-10">
+          <div className="column is-11">
             <div className="columns ">
               <div className="column is-3">
                 <SearchAndFilter />
