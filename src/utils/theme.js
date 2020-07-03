@@ -47,6 +47,7 @@ export const theme = {
   headerColor: '#222239',
   lightColor: '#F7F9FD',
   darkPurple: '#121225',
+  red: '#EE1D52',
 };
 
 const GlobalStyle = createGlobalStyle`
