@@ -4,7 +4,6 @@ import { Link } from 'gatsby';
 import UseAnimations from 'react-useanimations';
 
 import PurpleButton from './elements/PurpleButton';
-// import SearchBox from './SearchBox';
 
 const Section = styled.section`
   padding: 1rem 0rem;
@@ -37,8 +36,7 @@ const Section = styled.section`
     }
   }
   .navbar-item {
-    font-weight: 400;
-    font-size: 1.2rem;
+    font-weight: 500;
     padding-top: 0rem;
     font-family: ${props => props.theme.fontFamilyThin};
     transition: 1s;
