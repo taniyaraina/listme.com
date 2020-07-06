@@ -5,7 +5,7 @@ import { darken, lighten } from 'polished';
 const mainBrandColor = '#6A4BC4';
 const lightShades = '#F5F5F5';
 const darkAccent = '#6A4BC4';
-const darkShades = '#0A0A0A';
+const darkShades = '#161616';
 
 export const theme = {
   hoverColor: '#86E9D5',
@@ -31,13 +31,14 @@ export const theme = {
   backgroundInputColor: lightShades,
   backgroundInputColorDark: darkShades,
   fontSize: 16,
-  fontSizeSmall: 14,
-  fontSizeExtraSmall: 12,
+  fontSizeSmall: 16,
+  fontSizeExtraSmall: 14,
   fontSizeMedium: 18,
-  fontSizeLarge: 22,
-  textColor: darkShades, // '#0A0B11',
+  fontSizeLarge: 48,
+  fontSizeExtraLarge: 55,
+  textColor: darkShades, // '#161616',
   textColorInverse: lightShades,
-  textColorLite: '#8B8989',
+  textColorLite: '#4f4e4e',
   menuTintColor: darkAccent,
   primaryFontFamily: "'Poppins-Regular',sans-serif",
   secondaryFontFamily: "'Nunito-Regular', sans-serif",
@@ -75,7 +76,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${theme.secondaryFontFamily};
     color: ${theme.textColor};
     letter-spacing: 0.03rem !important;
-    font-size: 17px;
+    font-size: 16px;
   }
   .title {
     font-family: ${theme.primaryFontFamily};
@@ -119,6 +120,9 @@ const GlobalStyle = createGlobalStyle`
   }
   .has-text-warning {
     color: ${theme.lightAccent} !important;
+  }
+  .has-text-black {
+    color: ${theme.darkShades} !important;
   }
 `;
 
