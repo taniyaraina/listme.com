@@ -2,11 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import UseAnimations from 'react-useanimations';
-
 import PurpleButton from './elements/PurpleButton';
 
-const Section = styled.section`
-  padding: 1rem 0rem;
+const Section = styled.div`
+  padding: 1.5rem 1.5rem !important;
   font-family: ${props => props.theme.primaryFontFamily};
   img {
     max-width: 15rem;
@@ -36,7 +35,7 @@ const Section = styled.section`
     }
   }
   .navbar-item {
-    font-weight: 500 !important;
+    font-weight: 600 !important;
     padding-top: 0rem;
     font-family: ${props => props.theme.fontFamilyThin};
     transition: 1s;
@@ -110,79 +109,77 @@ export default class Header extends React.Component {
     const { isActive } = this.state;
 
     return (
-      <Section>
-        <div>
-          <nav
-            className="navbar is-fixed"
-            role="navigation"
-            aria-label="main navigation"
-          >
-            <div className="navbar-brand">
-              <Link className="navbar-item image-to-hide" to="/">
-                <img src="/images/softlab.png" alt="site logo" />
+      <Section className="section">
+        <nav
+          className="navbar is-fixed"
+          role="navigation"
+          aria-label="main navigation"
+        >
+          <div className="navbar-brand">
+            <Link className="navbar-item image-to-hide" to="/">
+              <img src="/images/softlab.png" alt="site logo" />
+            </Link>
+            <a
+              href="#"
+              role="button"
+              className={
+                isActive
+                  ? 'navbar-burger burger mobile is-active'
+                  : 'navbar-burger burger mobile'
+              }
+              aria-label="menu"
+              aria-expanded="false"
+              data-target="navbarBasicExample"
+              onClick={() => this.handleMobileMenu()}
+            >
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+            </a>
+          </div>
+          <div className={isActive ? 'navbar-menu is-active' : 'navbar-menu'}>
+            <div className="navbar-start">
+              <Link to="/" className="navbar-item">
+                Home
               </Link>
-              <a
-                href="#"
-                role="button"
-                className={
-                  isActive
-                    ? 'navbar-burger burger mobile is-active'
-                    : 'navbar-burger burger mobile'
-                }
-                aria-label="menu"
-                aria-expanded="false"
-                data-target="navbarBasicExample"
-                onClick={() => this.handleMobileMenu()}
-              >
-                <span aria-hidden="true" />
-                <span aria-hidden="true" />
-                <span aria-hidden="true" />
-              </a>
-            </div>
-            <div className={isActive ? 'navbar-menu is-active' : 'navbar-menu'}>
-              <div className="navbar-start">
-                <Link to="/" className="navbar-item">
-                  Home
-                </Link>
-                <Link to="/about" className="navbar-item">
-                  Pages
-                </Link>
-                <Link to="/news" className="navbar-item">
-                  Blog
-                </Link>
-                <Link to="/contact" className="navbar-item">
-                  Portfolio
-                </Link>
-                <Link to="/shop" className="navbar-item">
-                  Shop
-                </Link>
-                <Link to="/contact" className="navbar-item">
-                  Contacts
-                </Link>
-              </div>
-            </div>
-            <div className="absolute-position">
-              <Link className="navbar-item image-to-show" to="/">
-                <img
-                  src="/images/logo_light.png"
-                  className="image-to-show-image"
-                  alt="site logo"
-                />
+              <Link to="/about" className="navbar-item">
+                Pages
+              </Link>
+              <Link to="/news" className="navbar-item">
+                Blog
+              </Link>
+              <Link to="/contact" className="navbar-item">
+                Portfolio
+              </Link>
+              <Link to="/shop" className="navbar-item">
+                Shop
+              </Link>
+              <Link to="/contact" className="navbar-item">
+                Contacts
               </Link>
             </div>
-            <div className="navbar-end">
-              <div className="navbar-item searchBar">
-                <UseAnimations animationKey="searchToX" size={30} />
-              </div>
-              <div className="navbar-item hidden">
-                <PurpleButton title="Try Free" />
-              </div>
-              {/* <div className="searchBox">
+          </div>
+          <div className="absolute-position">
+            <Link className="navbar-item image-to-show" to="/">
+              <img
+                src="/images/logo_light.png"
+                className="image-to-show-image"
+                alt="site logo"
+              />
+            </Link>
+          </div>
+          <div className="navbar-end">
+            <div className="navbar-item searchBar">
+              <UseAnimations animationKey="searchToX" size={30} />
+            </div>
+            <div className="navbar-item hidden">
+              <PurpleButton title="Try Free" />
+            </div>
+            {/* <div className="searchBox">
                 <SearchBox />
               </div> */}
-            </div>
-          </nav>
-        </div>
+          </div>
+        </nav>
       </Section>
     );
   }
