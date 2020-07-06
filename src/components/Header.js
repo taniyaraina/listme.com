@@ -17,7 +17,7 @@ const Section = styled.section`
   .navbar-brand {
     margin-right: 20px;
     .navbar-item img {
-      max-height: 3.75rem;
+      max-height:	2.375rem;
     }
   }
   .image-to-show {
@@ -36,14 +36,12 @@ const Section = styled.section`
     }
   }
   .navbar-item {
-    font-weight: 500;
+    font-weight: 500 !important;
     padding-top: 0rem;
     font-family: ${props => props.theme.fontFamilyThin};
     transition: 1s;
-    :hover {
-      color: ${props => props.theme.darkAccent};
-      background-color: transparent;
-    }
+    color: ${props => props.theme.textColor} !important;
+
   }
   .navbar-burger {
     background-color: #1c1323;
@@ -115,7 +113,7 @@ export default class Header extends React.Component {
       <Section>
         <div>
           <nav
-            className="navbar"
+            className="navbar is-fixed"
             role="navigation"
             aria-label="main navigation"
           >
@@ -159,7 +157,7 @@ export default class Header extends React.Component {
                   Shop
                 </Link>
                 <Link to="/contact" className="navbar-item">
-                  Contact
+                  Contacts
                 </Link>
               </div>
             </div>
