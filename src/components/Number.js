@@ -1,7 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
 
+import { useInView } from 'react-intersection-observer';
 import CountUp from 'react-countup';
+import styled from 'styled-components';
 import Image from '../../static/images/NumberBackground.jpg';
 import { theme } from '../utils/theme';
 
@@ -25,14 +26,18 @@ const Container = styled.div`
 `;
 
 const Numbers = () => {
+  const [ref, inView] = useInView({
+    threshold: 0,
+  });
   return (
-    <Container>
-      <section className="section">
+    <Container inView={inView}>
+      <section className="section" ref={ref}>
         <div className="columns is-centered is-vcentered">
           <div className="column is-10  background">
             <div className="columns is-centered is-vcentered has-text-centered">
               <div className="column is-3">
                 <h1 className="title is-3">
+                  {inView.toString()}
                   <CountUp
                     start={0}
                     end={190}

@@ -5,7 +5,7 @@ import { darken, lighten } from 'polished';
 const mainBrandColor = '#6A4BC4';
 const lightShades = '#F5F5F5';
 const darkAccent = '#6A4BC4';
-const darkShades = '#0A0A0A';
+const darkShades = '#161616';
 
 export const theme = {
   hoverColor: '#86E9D5',
@@ -38,7 +38,7 @@ export const theme = {
   fontSizeExtraLarge: 55,
   textColor: darkShades, // '#0A0B11',
   textColorInverse: lightShades,
-  textColorLite: '#8B8989',
+  textColorLite: '#4f4e4e',
   menuTintColor: darkAccent,
   primaryFontFamily: "'Poppins-Regular',sans-serif",
   secondaryFontFamily: "'Nunito-Regular', sans-serif",
@@ -120,6 +120,9 @@ const GlobalStyle = createGlobalStyle`
   }
   .has-text-warning {
     color: ${theme.lightAccent} !important;
+  }
+  .has-text-black {
+    color: ${theme.darkShades} !important;
   }
 `;
 
