@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
 import { theme } from '../utils/theme';
+import ShopProductPricingAndImage from './ShopProductPricingAndImage';
+import ShopProductDisplayButton from './ShopProductDisplayButton';
 
 const Container = styled.div`
   section {
@@ -9,31 +11,11 @@ const Container = styled.div`
     padding-top: 2rem;
     border-radius: 10px;
     height: 25rem;
-  }
-  .smallFont {
-    font-size: 0.8rem;
-  }
-  .bottomPadding {
-    margin-bottom: 1rem;
-  }
-  .cancelledPrice {
-    text-decoration: line-through;
-    color: ${theme.textColorLite} !important;
-  }
-  .actualPrice {
-    color: ${theme.darkAccent} !important;
-  }
-  .saleText {
-    background-color: ${theme.red};
-    color: ${theme.backgroundColor} !important;
-    padding: 0.1rem 0.5rem;
-    border-radius: 5px;
-    transform: translateY(20px);
-    margin-top: -2.5rem;
-  }
-  .book {
-    z-index: -2;
-    margin-top: -2rem;
+    transition: 0.5s;
+    :hover {
+      box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
+        0 0 0 1px rgba(10, 10, 10, 0.02);
+    }
   }
 `;
 
@@ -43,63 +25,35 @@ const ShowProductDisplay = ({
   actualPrice,
   image,
   title,
+  index,
 }) => {
+  const HoverElements = () => {
+    const elem = document.getElementById(`button ${index}`);
+    elem.className = 'hovered';
+  };
+  const RemovedHoverElements = () => {
+    const elem = document.getElementById(`button ${index}`);
+    elem.className = 'removedHover';
+  };
+  useEffect(() => {
+    document.getElementById(`container ${index}`).onmouseenter = HoverElements;
+    document.getElementById(
+      `container ${index}`,
+    ).onmouseleave = RemovedHoverElements;
+  });
+
   return (
-    <Container>
-      <section className="section">
-        <div className="columns is-multiline is-mobile is-gapless is-centered has-text-centered">
-          <div className="column is-12 has-text-left sale">
-            {cancelledPrice ? (
-              <div
-                style={{
-                  backgroundColor: theme.borderColor,
-                  display: 'inline-block',
-                  borderRadius: 10,
-                }}
-              >
-                <h1 className="title is-6 saleText">Sale</h1>
-              </div>
-            ) : (
-              ''
-            )}
-
-            <img
-              alt="book"
-              src={image}
-              className={cancelledPrice ? 'book' : ''}
-            />
-          </div>
-          <div className="column is-10 ">
-            <h1 className="title is-6 has-text-weight-bold bottomPadding">
-              {title}
-            </h1>
-          </div>
-          {cancelledPrice ? (
-            <div className="column is-4">
-              <h1 className="title is-5 has-text-weight-light cancelledPrice">
-                ${cancelledPrice}
-              </h1>
-            </div>
-          ) : (
-            ''
-          )}
-          {lowerPrice ? (
-            <div className="column is-5">
-              <h1 className="title is-5 has-text-weight-light actualPrice has-text-left">
-                ${lowerPrice} -
-              </h1>
-            </div>
-          ) : (
-            ''
-          )}
-
-          <div className="column is-4">
-            <h1 className="title is-5 has-text-weight-light actualPrice">
-              ${actualPrice}
-            </h1>
-          </div>
-        </div>
+    <Container id={`container ${index}`} className="has-text-centered">
+      <section id={`section ${index}`} className="section">
+        <ShopProductPricingAndImage
+          title={title}
+          image={image}
+          cancelledPrice={cancelledPrice}
+          actualPrice={actualPrice}
+          lowerPrice={lowerPrice}
+        />
       </section>
+      <ShopProductDisplayButton index={index} />
     </Container>
   );
 };

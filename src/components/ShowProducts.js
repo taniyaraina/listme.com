@@ -92,7 +92,7 @@ const ShowProduct = () => {
         </div>
       </div>
       <div className="columns is-multiline ">
-        {Data.map(item => (
+        {Data.map((item, index) => (
           <div className="column is-4">
             <ShopProductDisplay
               actualPrice={item.actualPrice}
@@ -100,6 +100,7 @@ const ShowProduct = () => {
               title={item.title}
               cancelledPrice={item.cancelledPrice}
               lowerPrice={item.lowerPrice}
+              index={index}
             />
           </div>
         ))}
