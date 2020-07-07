@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import SocialIcons from './SocialIcons';
-import PaySpend from './PaySpend';
-import ImageCollection from './ImageCollection';
+import SocialIconsHomeHero from './SocialIconsHomeHero';
+import PaySpendHomeHero from './PaySpendHomeHero';
+import ImageCollectionHomeHero from './ImageCollectionHomeHero';
 
 const Section = styled.section`
   padding-top: 4rem;
@@ -26,13 +26,13 @@ const HomeHero = () => {
     <Section className="section">
       <div className="columns is-gapless is-mobile">
         <div className="column is-1 mobile-hidden">
-          <SocialIcons />
+          <SocialIconsHomeHero />
         </div>
         <div className="column is-5">
-          <PaySpend />
+          <PaySpendHomeHero />
         </div>
         <div className="column is-8">
-          <ImageCollection />
+          <ImageCollectionHomeHero />
         </div>
       </div>
     </Section>

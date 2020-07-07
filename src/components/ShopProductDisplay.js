@@ -51,6 +51,7 @@ const ShowProductDisplay = ({
           cancelledPrice={cancelledPrice}
           actualPrice={actualPrice}
           lowerPrice={lowerPrice}
+          index={index}
         />
       </section>
       <ShopProductDisplayButton index={index} />

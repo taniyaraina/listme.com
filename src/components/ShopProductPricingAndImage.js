@@ -29,6 +29,37 @@ const Container = styled.div`
     z-index: -2;
     margin-top: -2rem;
   }
+  img {
+    scale: 2;
+  }
+  .saleBackground {
+    background-color: ${theme.borderColor};
+    display: inline-block;
+    border-radius: 10;
+  }
+  @keyframes animation {
+    25% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    75% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  :hover {
+    .imageBook {
+      animation-name: animation;
+      animation-duration: 0.5s;
+    }
+  }
 `;
 
 const ShopProductPricingAndImage = ({
@@ -37,25 +68,26 @@ const ShopProductPricingAndImage = ({
   lowerPrice,
   title,
   actualPrice,
+  index,
 }) => {
   return (
     <Container className="columns is-multiline is-mobile is-gapless is-centered has-text-centered">
       <div className="column is-12 has-text-left sale">
         {cancelledPrice ? (
-          <div
-            style={{
-              backgroundColor: theme.borderColor,
-              display: 'inline-block',
-              borderRadius: 10,
-            }}
-          >
+          <div className="saleBackground">
             <h1 className="title is-6 saleText">Sale</h1>
           </div>
         ) : (
           ''
         )}
 
-        <img alt="book" src={image} className={cancelledPrice ? 'book' : ''} />
+        <img
+          alt="book"
+          src={image}
+          id={`image ${index}`}
+          transition={{ duration: 1 }}
+          className={cancelledPrice ? 'book imageBook' : 'imageBook'}
+        />
       </div>
       <div className="column is-10 ">
         <h1 className="title is-6 has-text-weight-bold bottomPadding">
