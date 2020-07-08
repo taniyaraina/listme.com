@@ -89,15 +89,15 @@ const Contact = () => {
           loadingElement={
             <div style={{ height: `100%`, borderRadius: '50px' }} />
           }
-          containerElement={
-            // eslint-disable-next-line react/jsx-wrap-multilines
-            <div
-              style={{
-                height: window.innerWidth > 768 ? '800px' : '400px',
-                borderRadius: '50px',
-              }}
-            />
-          }
+          // containerElement={
+          //   // eslint-disable-next-line react/jsx-wrap-multilines
+          //   <div
+          //     style={{
+          //       height: window.innerWidth > 768 ? '800px' : '400px',
+          //       borderRadius: '50px',
+          //     }}
+          //   />
+          // }
           mapElement={<div style={{ height: `100%`, borderRadius: '20px' }} />}
         />
       </div>

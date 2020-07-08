@@ -7,17 +7,12 @@ import PurpleButton from './elements/PurpleButton';
 const Section = styled.div`
   padding: 1.5rem 1.5rem !important;
   font-family: ${props => props.theme.primaryFontFamily};
-  img {
-    max-width: 15rem;
-  }
   .navbar {
     background-color: transparent;
   }
-  .navbar-brand {
-    margin-right: 20px;
-    .navbar-item img {
-      max-height:	2.375rem;
-    }
+
+  .navbar-item img {
+    max-height: 2.375rem;
   }
   .image-to-show {
     display: none;
@@ -31,7 +26,7 @@ const Section = styled.div`
   }
   .navbar-menu {
     @media screen and (min-width: 1180px) {
-      padding-left: 4rem;
+      padding-left: 12rem;
     }
   }
   .navbar-item {
@@ -40,7 +35,6 @@ const Section = styled.div`
     font-family: ${props => props.theme.fontFamilyThin};
     transition: 1s;
     color: ${props => props.theme.textColor} !important;
-
   }
   .navbar-burger {
     background-color: #1c1323;
@@ -62,7 +56,6 @@ const Section = styled.div`
     .navbar-menu {
       position: absolute;
       width: 100%;
-      /* height: ${window.innerHeight}px !important; */
       transition: 0.6s;
     }
     .image-to-hide {
@@ -70,11 +63,6 @@ const Section = styled.div`
     }
     .image-to-show {
       display: inline;
-    }
-    .searchBar {
-      position: absolute;
-      top: 5px;
-      right: 0;
     }
   }
   .image-to-show-image {
@@ -139,9 +127,16 @@ export default class Header extends React.Component {
           </div>
           <div className={isActive ? 'navbar-menu is-active' : 'navbar-menu'}>
             <div className="navbar-start">
-              <Link to="/" className="navbar-item">
-                Home
-              </Link>
+              <div className="navbar-item has-dropdown is-hoverable">
+                <Link to="/" className="navbar-link">
+                  Home
+                </Link>
+                <div className="navbar-dropdown">
+                  <a className="navbar-item">About</a>
+                  <a className="navbar-item">Jobs</a>
+                  <a className="navbar-item">Contact</a>
+                </div>
+              </div>
               <Link to="/about" className="navbar-item">
                 Pages
               </Link>
@@ -169,15 +164,29 @@ export default class Header extends React.Component {
             </Link>
           </div>
           <div className="navbar-end">
-            <div className="navbar-item searchBar">
-              <UseAnimations animationKey="searchToX" size={30} />
-            </div>
+            <UseAnimations
+              className="navbar-item searchBar"
+              animationKey="searchToX"
+              size={50}
+            />
+
+            {/* <Search className="header_search-field">
+              <div className="field has-addons">
+                <div className="control">
+                  <input
+                    className="input"
+                    type="text"
+                    placeholder="Find a repository"
+                  />
+                </div>
+                <div className="control">
+                  <a className="button is-info">Search</a>
+                </div>
+              </div>
+            </Search> */}
             <div className="navbar-item hidden">
               <PurpleButton title="Try Free" />
             </div>
-            {/* <div className="searchBox">
-                <SearchBox />
-              </div> */}
           </div>
         </nav>
       </Section>
