@@ -26,15 +26,20 @@ const Section = styled.div`
   }
   .navbar-menu {
     @media screen and (min-width: 1180px) {
-      padding-left: 12rem;
+      padding-left: 8rem;
     }
   }
   .navbar-item {
+    a {
+      color: ${props => props.theme.textColor} !important;
+    }
     font-weight: 600 !important;
     padding-top: 0rem;
     font-family: ${props => props.theme.fontFamilyThin};
-    transition: 1s;
     color: ${props => props.theme.textColor} !important;
+    :hover {
+      background: transparent !important;
+    }
   }
   .navbar-burger {
     background-color: #1c1323;
@@ -73,6 +78,17 @@ const Section = styled.div`
     position: absolute;
     top: 7rem;
     right: 40%;
+  }
+  .navbar-link:not(.is-arrowless)::after,
+  .select:not(.is-multiple):not(.is-loading)::after {
+    border: 3px solid transparent;
+    color: #161616;
+    content: '+';
+    transform: rotate(-90deg);
+    width: 0.9em;
+  }
+  .navbar-link:not(.is-arrowless) {
+    padding-right: 2em;
   }
 `;
 
@@ -132,26 +148,57 @@ export default class Header extends React.Component {
                   Home
                 </Link>
                 <div className="navbar-dropdown">
+                  <a className="navbar-item">Home 1</a>
+                  <a className="navbar-item">Home 2</a>
+                  <a className="navbar-item">Home 3</a>
+                </div>
+              </div>
+              <div className="navbar-item has-dropdown is-hoverable">
+                <Link to="/about" className="navbar-link">
+                  Pages
+                </Link>
+                <div className="navbar-dropdown">
                   <a className="navbar-item">About</a>
                   <a className="navbar-item">Jobs</a>
                   <a className="navbar-item">Contact</a>
                 </div>
               </div>
-              <Link to="/about" className="navbar-item">
-                Pages
-              </Link>
-              <Link to="/news" className="navbar-item">
-                Blog
-              </Link>
-              <Link to="/contact" className="navbar-item">
-                Portfolio
-              </Link>
-              <Link to="/shop" className="navbar-item">
-                Shop
-              </Link>
-              <Link to="/contact" className="navbar-item">
-                Contacts
-              </Link>
+              <div className="navbar-item has-dropdown is-hoverable">
+                <Link to="/blog" className="navbar-link">
+                  Blog
+                </Link>
+                <div className="navbar-dropdown">
+                  <a className="navbar-item">About</a>
+                  <a className="navbar-item">Jobs</a>
+                  <a className="navbar-item">Contact</a>
+                </div>
+              </div>
+              <div className="navbar-item has-dropdown is-hoverable">
+                <Link to="/portfolio" className="navbar-link">
+                  Portfolio
+                </Link>
+                <div className="navbar-dropdown">
+                  <a className="navbar-item">About</a>
+                  <a className="navbar-item">Jobs</a>
+                  <a className="navbar-item">Contact</a>
+                </div>
+              </div>
+
+              <div className="navbar-item has-dropdown is-hoverable">
+                <Link to="/shop" className="navbar-link">
+                  Shop
+                </Link>
+                <div className="navbar-dropdown">
+                  <a className="navbar-item">About</a>
+                  <a className="navbar-item">Jobs</a>
+                  <a className="navbar-item">Contact</a>
+                </div>
+              </div>
+              <div className="navbar-item has-dropdown is-hoverable">
+                <Link to="/contact" className="navbar-link">
+                  Contacts
+                </Link>
+              </div>
             </div>
           </div>
           <div className="absolute-position">
