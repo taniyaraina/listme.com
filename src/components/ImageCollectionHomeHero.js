@@ -100,15 +100,10 @@ const Container = styled.div`
   display: flex;
   /* flex-direction: row; */
 `;
-function ImageCollection() {
-  const [props, set] = useSpring(() => ({
-    xy: [0, 0],
-    config: { mass: 10, tension: 550, friction: 140 },
-  }));
+const ImageCollection = () => {
   return (
     <Container className="container">
       <motion.img
-        style={{ transform: props.xy.interpolate(trans1) }}
         initial="start"
         animate="end"
         variants={WImage}
@@ -168,5 +163,5 @@ function ImageCollection() {
       />
     </Container>
   );
-}
+};
 export default ImageCollection;
