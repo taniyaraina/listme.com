@@ -5,6 +5,19 @@ import ContactUs from '../components/ContactUs';
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 
+const Wrapper = styled.div`
+    background-image: url(/images/contact/l.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center bottom;
+    height: 378px;
+    margin-bottom: 40px;
+    padding-top: 60px;
+    padding-bottom: 145px;
+}
+`;
+
 const Section = styled.div`
   .container {
     margin-top: 4rem;
@@ -26,6 +39,13 @@ const Section = styled.div`
 const Contact = () => (
   <Layout>
     <Seo title="Contact Us" />
+    <Wrapper className="section hero">
+      <div className="hero-body">
+        <div className="container">
+          <h1 className="title is-2 has-text-weight-bold">Contacts</h1>
+        </div>
+      </div>
+    </Wrapper>
     <Section className="section">
       <ContactUs />
     </Section>

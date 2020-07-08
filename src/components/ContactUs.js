@@ -67,56 +67,52 @@ const Data = [
 
 const ContactUs = () => {
   return (
-    <Container className="columns is-centered is-multiline">
-      <div className="column is-12">
-        <div className="columns  is-centered">
-          <div className="column is-4">
-            <h1 className="title has-text-weight-bold">Contact</h1>
-          </div>
+    <Container className="section">
+      <div className="container">
+        <div className="columns">
           <div className="column is-6">
-            <img
-              alt="img"
-              src="https://images.unsplash.com/photo-1519500099198-fd81846b8f03?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+            <GoogleMap />
+          </div>
+          <div className="column is-1" />
+          <div className="column is-5">
+            <h1 className="title is-6 greenColor">{`< our_contacts >`}</h1>
+            <h1 className="title is-2 has-text-weight-bold">Get in Touch</h1>
+            <h1 className="title smallText grey has-text-weight-light">
+              Got a project in mind? We’d love to hear about it. Take five
+              minutes to fill out our project form so that we can get to know
+              you and understand your project.
+            </h1>
+            {Data.map(item => (
+              <div className="columns is-mobile">
+                <div className="column is-2">
+                  <div className="card ">
+                    <span className="icon is-size-3 ">
+                      <i className={item.icon} />
+                    </span>
+                  </div>
+                </div>
+                <div className="column">
+                  <h1 className="title is-5 has-text-weight-bold">
+                    {item.title}
+                  </h1>
+                  <h1 className="title is-6 has-text-weight-normal up">
+                    {item.subtitle}
+                  </h1>
+                </div>
+              </div>
+            ))}
+            <h1 className="title is-4 has-text-weight-bold">Drop Us a Line</h1>
+            <input className="input is-medium" placeholder="Your Name *" />
+            <input className="input is-medium" placeholder="Your Email *" />
+            <textarea
+              className="textarea is-medium"
+              placeholder="Your Message *"
             />
+            <button className="button is-medium" type="button">
+              Send a Message
+            </button>
           </div>
         </div>
-      </div>
-      <div className="column is-5">
-        <GoogleMap />
-      </div>
-      <div className="column is-1" />
-      <div className="column is-4">
-        <h1 className="title is-6 greenColor">{`< our_contacts >`}</h1>
-        <h1 className="title is-2 has-text-weight-bold">Get in Touch</h1>
-        <h1 className="title smallText grey has-text-weight-light">
-          Got a project in mind? We’d love to hear about it. Take five minutes
-          to fill out our project form so that we can get to know you and
-          understand your project.
-        </h1>
-        {Data.map(item => (
-          <div className="columns is-mobile">
-            <div className="column is-2">
-              <div className="card ">
-                <span className="icon is-size-3 ">
-                  <i className={item.icon} />
-                </span>
-              </div>
-            </div>
-            <div className="column">
-              <h1 className="title is-5 has-text-weight-bold">{item.title}</h1>
-              <h1 className="title is-6 has-text-weight-normal up">
-                {item.subtitle}
-              </h1>
-            </div>
-          </div>
-        ))}
-        <h1 className="title is-4 has-text-weight-bold">Drop Us a Line</h1>
-        <input className="input is-medium" placeholder="Your Name *" />
-        <input className="input is-medium" placeholder="Your Email *" />
-        <textarea className="textarea is-medium" placeholder="Your Message *" />
-        <button className="button is-medium" type="button">
-          Send a Message
-        </button>
       </div>
     </Container>
   );
