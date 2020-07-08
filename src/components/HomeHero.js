@@ -24,15 +24,17 @@ const Section = styled.section`
 const HomeHero = () => {
   return (
     <Section className="section">
-      <div className="columns is-gapless is-mobile">
-        <div className="column is-1 mobile-hidden">
+      <div className="container">
+        <div className="columns is-mobile">
+          {/* <div className="column is-1 mobile-hidden">
           <SocialIconsHomeHero />
-        </div>
-        <div className="column is-5">
-          <PaySpendHomeHero />
-        </div>
-        <div className="column is-8">
-          <ImageCollectionHomeHero />
+        </div> */}
+          <div className="column is-5-desktop is--mobile">
+            <PaySpendHomeHero />
+          </div>
+          <div className="column is-9-desktop is-6-mobile">
+            <ImageCollectionHomeHero />
+          </div>
         </div>
       </div>
     </Section>

@@ -216,7 +216,6 @@ export default class Header extends React.Component {
               animationKey="searchToX"
               size={50}
             />
-
             {/* <Search className="header_search-field">
               <div className="field has-addons">
                 <div className="control">

@@ -71,7 +71,7 @@ const Container = styled.div`
 
 const PaySpend = () => {
   return (
-    <Container className="columns is-multiline  is-gapless ">
+    <Container className="columns is-multiline is-gapless ">
       <motion.div
         initial="start"
         animate="end"
