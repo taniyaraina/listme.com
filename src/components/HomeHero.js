@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import SocialIconsHomeHero from './SocialIconsHomeHero';
+// import SocialIconsHomeHero from './SocialIconsHomeHero';
 import PaySpendHomeHero from './PaySpendHomeHero';
 import ImageCollectionHomeHero from './ImageCollectionHomeHero';
 

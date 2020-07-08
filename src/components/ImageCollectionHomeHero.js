@@ -100,25 +100,29 @@ const Container = styled.div`
   display: flex;
   /* flex-direction: row; */
 `;
-
-const ImageCollection = () => {
+function ImageCollection() {
+  const [props, set] = useSpring(() => ({
+    xy: [0, 0],
+    config: { mass: 10, tension: 550, friction: 140 },
+  }));
   return (
     <Container className="container">
       <motion.img
+        style={{ transform: props.xy.interpolate(trans1) }}
         initial="start"
         animate="end"
         variants={WImage}
         transition={{ duration: 1 }}
-        src="images/w.png"
+        src="/images/w.png"
         alt="w"
-        className="w"
+        className="w card1"
       />
       <motion.img
         initial="start"
         animate="end"
         variants={TextImage}
         transition={{ delay: 1, duration: 1 }}
-        src="images/wallapp.png"
+        src="/images/wallapp.png"
         className="wallapp"
       />
       <motion.img
@@ -126,7 +130,7 @@ const ImageCollection = () => {
         animate="end"
         variants={PhoneImage}
         transition={{ delay: 3, duration: 1 }}
-        src="images/phone.png"
+        src="/images/phone.png"
         className="topMargin"
       />
 
@@ -138,7 +142,7 @@ const ImageCollection = () => {
         src="images/phone2.png"
         className="topMargin"
       />
-      {/* <motion.img
+      <motion.img
         initial="start"
         animate="end"
         variants={PhoneImage2}
@@ -161,8 +165,8 @@ const ImageCollection = () => {
         transition={{ delay: 3.5, duration: 1 }}
         src="images/phone5.png"
         className="topMargin"
-      /> */}
+      />
     </Container>
   );
-};
+}
 export default ImageCollection;
