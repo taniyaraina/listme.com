@@ -232,7 +232,7 @@ export default class Header extends React.Component {
               </div>
             </Search> */}
             <div className="navbar-item hidden">
-              <PurpleButton title="Try Free" />
+              <PurpleButton title="Try Now" />
             </div>
           </div>
         </nav>
