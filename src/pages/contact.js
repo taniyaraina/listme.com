@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ContactComponent from '../components/ContactComponent';
-
-import config from '../utils/config';
+import ContactUs from '../components/ContactUs';
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 
@@ -29,7 +27,7 @@ const Contact = () => (
   <Layout>
     <Seo title="Contact Us" />
     <Section className="section">
-      <ContactComponent />
+      <ContactUs />
     </Section>
   </Layout>
 );

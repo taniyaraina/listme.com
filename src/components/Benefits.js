@@ -31,7 +31,7 @@ const Benefits = () => {
   const [selected, setSelected] = useState(true);
   return (
     <Container className="columns is-multiline is-gapless">
-      <div className="column is-3" />
+      <div className="column is-2" />
       <div className="column is-4">
         <section className="section">
           <h1 className="title is-6 lightGreen">{`< app_benefits >`}</h1>
@@ -45,7 +45,7 @@ const Benefits = () => {
           />
         </section>
       </div>
-      <div className="column is-">
+      <div className="column">
         <MapChart />
       </div>
     </Container>

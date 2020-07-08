@@ -16,8 +16,8 @@ button{
   .personal {
     box-shadow: ${props =>
       props.selected ? '0 0.5em 1em -0.125em rgba(10,10,10,.1)' : 'none'};
-    color: ${props =>
-      props.selected ? theme.darkAccent : theme.textColorLite};
+      color: ${props =>
+        props.selected ? theme.darkAccent : theme.textColorLite};
   }
   .business {
     box-shadow: ${props =>

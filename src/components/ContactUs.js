@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { theme } from '../utils/theme';
-
-import GoogleContactMap from './GoogleContactMap';
+import GoogleMap from './GoogleMap';
 
 const Container = styled.div`
   .greenColor {
@@ -66,7 +65,7 @@ const Data = [
   },
 ];
 
-const Contact = () => {
+const ContactUs = () => {
   return (
     <Container className="columns is-centered is-multiline">
       <div className="column is-12">
@@ -83,23 +82,7 @@ const Contact = () => {
         </div>
       </div>
       <div className="column is-5">
-        <GoogleContactMap
-          isMarkerShown
-          googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
-          loadingElement={
-            <div style={{ height: `100%`, borderRadius: '50px' }} />
-          }
-          // containerElement={
-          //   // eslint-disable-next-line react/jsx-wrap-multilines
-          //   <div
-          //     style={{
-          //       height: window.innerWidth > 768 ? '800px' : '400px',
-          //       borderRadius: '50px',
-          //     }}
-          //   />
-          // }
-          mapElement={<div style={{ height: `100%`, borderRadius: '20px' }} />}
-        />
+        <GoogleMap />
       </div>
       <div className="column is-1" />
       <div className="column is-4">
@@ -131,11 +114,6 @@ const Contact = () => {
         <input className="input is-medium" placeholder="Your Name *" />
         <input className="input is-medium" placeholder="Your Email *" />
         <textarea className="textarea is-medium" placeholder="Your Message *" />
-        {/* <span className="GradientBackground">
-          <button className="button is-medium" type="button">
-            Send a Message
-          </button>
-        </span> */}
         <button className="button is-medium" type="button">
           Send a Message
         </button>
@@ -143,4 +121,4 @@ const Contact = () => {
     </Container>
   );
 };
-export default Contact;
+export default ContactUs;
