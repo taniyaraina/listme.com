@@ -154,7 +154,7 @@ export default class Header extends React.Component {
                 </div>
               </div>
               <div className="navbar-item has-dropdown is-hoverable">
-                <Link to="/about" className="navbar-link">
+                <Link to="/" className="navbar-link">
                   Pages
                 </Link>
                 <div className="navbar-dropdown">
@@ -164,7 +164,7 @@ export default class Header extends React.Component {
                 </div>
               </div>
               <div className="navbar-item has-dropdown is-hoverable">
-                <Link to="/blog" className="navbar-link">
+                <Link to="/" className="navbar-link">
                   Blog
                 </Link>
                 <div className="navbar-dropdown">
@@ -174,7 +174,7 @@ export default class Header extends React.Component {
                 </div>
               </div>
               <div className="navbar-item has-dropdown is-hoverable">
-                <Link to="/portfolio" className="navbar-link">
+                <Link to="/" className="navbar-link">
                   Portfolio
                 </Link>
                 <div className="navbar-dropdown">
