@@ -33,7 +33,7 @@ const Section = styled.div`
     a {
       color: ${props => props.theme.textColor} !important;
     }
-    font-weight: 600 !important;
+    font-weight: 500 !important;
     padding-top: 0rem;
     font-family: ${props => props.theme.fontFamilyThin};
     color: ${props => props.theme.textColor} !important;
