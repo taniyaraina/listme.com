@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import { theme } from '../utils/theme';
-
 import BenefitsList from './BenefitsList';
-import MapChart from './MapChart';
 
 const Container = styled.div`
   align-content: right;
@@ -27,6 +25,8 @@ const Container = styled.div`
   }
 `;
 
+const Map = styled.div``;
+
 const Benefits = () => {
   const [selected, setSelected] = useState(true);
   return (
@@ -46,7 +46,9 @@ const Benefits = () => {
         </section>
       </div>
       <div className="column">
-        <MapChart />
+        <Map className="">
+          <img src="/images/contact/map.png" alt="" />
+        </Map>
       </div>
     </Container>
   );

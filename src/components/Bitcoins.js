@@ -10,17 +10,29 @@ const Bitcoin = [
   { image: 'client-crypto-6' },
 ];
 
-const Section = styled.div``;
+const Section = styled.div`
+  .zoom {
+    transition: all 400ms;
+  }
+
+  .zoom:hover {
+    transform: scale(1.1);
+  }
+`;
 
 const Bitcoins = () => {
   return (
     <Section className="section">
       <div className="columns is-centered">
         <div className="column is-10">
-          <div className="columns is-gapless is-centered has-text-centered">
+          <div className="columns is-gapless is-centered">
             {Bitcoin.map(item => (
               <div className="column is-2">
-                <img src={`images/${item.image}.png`} alt="bitcoin" />
+                <img
+                  src={`images/${item.image}.png`}
+                  className="zoom"
+                  alt="bitcoin"
+                />
               </div>
             ))}
           </div>
