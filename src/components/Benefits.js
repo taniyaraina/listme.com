@@ -43,7 +43,11 @@ const Benefits = () => {
           />
         </section>
       </div>
-      <div className="column">{/* <MapChart /> */}</div>
+      <div className="column">
+        <figure className="">
+          <img src=" http://softlab.wgl-demo.net/wp-content/uploads/2019/02/rev-1-5.png" />
+        </figure>
+      </div>
     </Container>
   );
 };

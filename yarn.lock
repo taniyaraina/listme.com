@@ -9907,6 +9907,13 @@ react-hot-loader@^4.12.12:
     shallowequal "^1.1.0"
     source-map "^0.7.3"
 
+react-hover@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/react-hover/-/react-hover-1.4.0.tgz#2f1e1423b17626529bfb196b0f81876e2e4bafb5"
+  integrity sha512-Vj0DYp7a0Jk2RjTFgRUEq+0D6AV6un5bAtFY8VQucognklU4nzsNg7gAC2H95+1jRS3v3LLnnLaBfMmSNrpFhw==
+  dependencies:
+    prop-types "^15.5.10"
+
 react-intersection-observer@^8.26.2:
   version "8.26.2"
   resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-8.26.2.tgz#0562ff0c06b2b10e809190c2fa9b6ded656e6e16"
