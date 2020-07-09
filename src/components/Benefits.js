@@ -25,6 +25,8 @@ const Container = styled.div`
   }
 `;
 
+const Map = styled.div``;
+
 const Benefits = () => {
   const [selected, setSelected] = useState(true);
   return (
@@ -44,9 +46,9 @@ const Benefits = () => {
         </section>
       </div>
       <div className="column">
-        <figure className="">
+        <Map className="">
           <img src="/images/contact/map.png" alt="" />
-        </figure>
+        </Map>
       </div>
     </Container>
   );

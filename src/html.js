@@ -38,6 +38,10 @@ export default class HTML extends React.Component {
             rel="stylesheet"
           />
           <link
+            rel="stylesheet"
+            href="https://unpkg.com/tippy.js@6/animations/scale.css"
+          />
+          <link
             href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
             rel="stylesheet"
           />
