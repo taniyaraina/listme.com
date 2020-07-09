@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import { theme } from '../utils/theme';
-
 import BenefitsList from './BenefitsList';
-import MapChart from './MapChart';
 
 const Container = styled.div`
   align-content: right;
@@ -45,9 +43,7 @@ const Benefits = () => {
           />
         </section>
       </div>
-      <div className="column">
-        <MapChart />
-      </div>
+      <div className="column">{/* <MapChart /> */}</div>
     </Container>
   );
 };
