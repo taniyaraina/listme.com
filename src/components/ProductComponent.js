@@ -4,6 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { theme } from '../utils/theme';
+import MapHero from './MapHero';
 
 const Container = styled.div`
   .bordered {
@@ -41,20 +42,10 @@ const Container = styled.div`
     display: inline-block;
     border-radius: 100px;
   }
-`;
-
-const Wrapper = styled.div`
-  background-image: url(/images/contact/l.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center bottom;
-  height: 378px;
-  margin-bottom: 40px;
-  padding-top: 60px;
-  padding-bottom: 145px;
-  .grey {
-    color: ${theme.textColorLite} !important;
+  .card {
+    padding-top: 2rem;
+    box-shadow: none;
+    flex-direction: row;
   }
 `;
 
@@ -70,16 +61,11 @@ const ProductComponent = () => {
   }
   return (
     <Container>
-      <Wrapper className="section hero">
-        <div className="hero-body">
-          <div className="container">
-            <h1 className="title is-2 has-text-weight-bold">Shop</h1>
-            <h1 className="title is-5 has-text-weight-light">
-              <span className="grey">Business</span> > Top 10 App Tips
-            </h1>
-          </div>
-        </div>
-      </Wrapper>
+      <MapHero
+        Title="Shop"
+        lightSubtitle="Business "
+        subtitle="> Top 10 App Tips"
+      />
       <div className="columns is-centered">
         <div className="column is-10">
           <div className="columns is-centered">
@@ -125,8 +111,8 @@ const ProductComponent = () => {
                   app
                 </h1>
               </div>
-              <section className="section">
-                <h1 className="title is-5 has-background-light pb-4">
+              <div className="card columns mt-4">
+                <h1 className="title is-5 has-background-light py-3 mr-6">
                   <span
                     className="icon mx-4 is-size-6"
                     onClick={() => DecreaseProduct()}
@@ -141,7 +127,7 @@ const ProductComponent = () => {
                     <i className="fas fa-plus" />
                   </span>
                 </h1>
-              </section>
+              </div>
             </div>
           </div>
         </div>

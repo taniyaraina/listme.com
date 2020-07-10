@@ -10,7 +10,7 @@ const Container = styled.div`
     border: 1px solid ${theme.borderColor};
     padding-top: 2rem;
     border-radius: 10px;
-    height: 25rem;
+    height: ${props => (props.small ? '21rem' : '25rem')};
     transition: 0.5s;
     :hover {
       box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
@@ -26,6 +26,7 @@ const ShowProductDisplay = ({
   image,
   title,
   index,
+  small,
 }) => {
   const HoverElements = () => {
     const elem = document.getElementById(`button ${index}`);
@@ -43,7 +44,11 @@ const ShowProductDisplay = ({
   });
 
   return (
-    <Container id={`container ${index}`} className="has-text-centered">
+    <Container
+      small={small}
+      id={`container ${index}`}
+      className="has-text-centered"
+    >
       <section id={`section ${index}`} className="section">
         <ShopProductPricingAndImage
           title={title}
