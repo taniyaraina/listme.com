@@ -35,7 +35,7 @@ const OurPartner = () => {
     <Container>
       <div className="columns is-gapless is-centered">
         <div className="column is-12 has-text-centered">
-          <h1 className="subtitle is-5 has-text-weight-bold">OUR PARTNERS</h1>
+          <h1 className="subtitle is-6 has-text-weight-bold">OUR PARTNERS</h1>
           <div className="columns has-text-centered is-centered">
             {Data.map(item => (
               <div className="column is-2">
