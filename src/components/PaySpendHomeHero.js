@@ -61,13 +61,6 @@ const Container = styled.div`
     height: 3rem;
     width: 10rem;
   }
-  padding-top: 2rem;
-  .columns {
-    padding-top: 3rem;
-    @media screen and (max-width: 1200px) {
-      padding-top: 0rem;
-    }
-  }
 `;
 
 const PaySpend = () => {
