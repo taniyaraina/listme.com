@@ -6,6 +6,39 @@ import ShopProductDisplay from './ShopProductDisplay';
 import { theme } from '../utils/theme';
 
 const Container = styled.div`
+  .grey {
+    color: ${theme.lightGrey} !important;
+  }
+  .lineHeight {
+    line-height: 1.5rem;
+  }
+  input {
+    border-radius: 100px;
+    box-shadow: none;
+    height: 3rem;
+    ::placeholder {
+      color: ${theme.textColor};
+    }
+  }
+  textarea {
+    border-radius: 20px;
+    box-shadow: none;
+    ::placeholder {
+      color: ${theme.textColor};
+    }
+    height: 8rem;
+  }
+  .submit {
+    border-radius: 100px;
+    width: 12rem;
+    box-shadow: none;
+    font-weight: bold;
+    background-image: radial-gradient(
+      circle farthest-corner at 100% 150%,
+      #d75dbc 10%,
+      #6a4bc4 50%
+    );
+  }
   .selectButton {
     width: 100%;
     border-radius: 100px;
@@ -61,6 +94,9 @@ const Container = styled.div`
   }
   .line {
     line-height: 1.8rem;
+  }
+  img {
+    border-radius: 100px;
   }
 `;
 
@@ -119,6 +155,50 @@ const ProductInfoAndRelated = () => {
             </div>
             <div className="column is-10">
               <h1 className="subtitle is-6">Gray</h1>
+            </div>
+          </div>
+        );
+      case 'reviews':
+        return (
+          <div className="columns is-multiline is-vcentered">
+            <div className="column is-1">
+              <img
+                alt="face"
+                src="http://2.gravatar.com/avatar/8781126dc411ecf481e1cbaad60baadd?s=120&d=mm&r=g"
+              />
+            </div>
+            <div className="column is-11">
+              <h1 className="title is-4">Arnold Newman</h1>
+              <h1 className="subtitle is-6 grey">February 28, 2019</h1>
+              <h1 className="title is-6 has-text-weight-light lineHeight">
+                We realised we really wanted to catch a glimpse of what went on
+                behind the scenes of the companies we looked up to. And we
+                thought other people would want to know too.
+              </h1>
+            </div>
+            <div className="column is-12">
+              <h1 className="title is-3"> Add a Review </h1>
+              <h1 className="title is-6 has-text-weight-light">
+                Your email address will not be published. Required fields are
+                marked *
+              </h1>
+            </div>
+            <div className="column is-6">
+              <input className="input" placeholder="Name" />
+            </div>
+            <div className="column is-6">
+              <input className="input" placeholder="Email" />
+            </div>
+            <div className="column is-12">
+              <textarea className="textarea" placeholder="Your Review" />
+            </div>
+            <div className="column is-12">
+              <button
+                className="button is-medium submit is-primary"
+                type="button"
+              >
+                Submit
+              </button>{' '}
             </div>
           </div>
         );
