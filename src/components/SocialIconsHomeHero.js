@@ -3,15 +3,15 @@ import styled from 'styled-components';
 
 import { theme } from '../utils/theme';
 
-const Container = styled.div`
+const Container = styled.ul`
   justify-content: flex-start;
-  span {
-    color: ${theme.textColorLite} !important;
-  }
-  .column {
+  width: 50px;
+  li {
     transition: 0.5s;
-    margin-left: -2.4rem;
+    justify-content: center;
+    display: flex;
     :hover {
+      padding: 10px;
       background-color: ${theme.hoverColor};
       border-bottom-right-radius: 100px;
       border-top-right-radius: 100px;
@@ -27,13 +27,15 @@ const Icon = [
 
 const SocialIcons = () => {
   return (
-    <Container className="columns is-multiline has-text-centered">
+    <Container>
       {Icon.map(item => (
-        <div className="column is-12">
-          <span>
-            <i className={item.icon} />
-          </span>
-        </div>
+        <a>
+          <li className="mb-5">
+            <span className="has-text-grey-light">
+              <i className={item.icon} />
+            </span>
+          </li>
+        </a>
       ))}
     </Container>
   );

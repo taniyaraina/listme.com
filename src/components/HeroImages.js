@@ -100,7 +100,7 @@ const Container = styled.div`
   display: flex;
   /* flex-direction: row; */
 `;
-const ImageCollection = () => {
+const HeroImages = () => {
   return (
     <Container className="container">
       <motion.img
@@ -164,4 +164,4 @@ const ImageCollection = () => {
     </Container>
   );
 };
-export default ImageCollection;
+export default HeroImages;

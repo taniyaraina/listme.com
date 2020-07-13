@@ -61,6 +61,9 @@ const GlobalStyle = createGlobalStyle`
   .title {
     font-family: ${theme.primaryFontFamily};
   }
+  .title.is-1 {
+    font-size: 3.6rem !important;
+  }
   .button {
     font-family: ${theme.primaryFontFamily};
   }

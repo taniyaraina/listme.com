@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 import { theme } from '../../utils/theme';
 
@@ -16,7 +17,11 @@ const Button = styled.button`
     box-shadow: 0px 9px 30px 0px rgba(102, 75, 196, 0.4) !important ;
   }
 `;
-const PurpleButton = ({ title, className }) => {
-  return <Button className={`button ${className}`}>{title}</Button>;
+const PurpleButton = ({ title, className, link }) => {
+  return (
+    <Link to={link}>
+      <Button className={`button ${className}`}>{title}</Button>
+    </Link>
+  );
 };
 export default PurpleButton;

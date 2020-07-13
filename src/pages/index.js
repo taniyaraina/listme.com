@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
@@ -15,12 +16,16 @@ import OurPartner from '../components/OurPartner';
 import PricingPlans from '../components/PricingPlans';
 import DownloadApp from '../components/DownloadApp';
 
+const Container = styled.div`
+  overflow-x: hidden;
+`;
+
 export default class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
         <Seo title="Home" description="Welcome to GatsbyJs v1" />
-        <div style={{ overflowX: 'hidden' }}>
+        <Container>
           <HomeHero />
           <Bitcoin />
           <Payments />
@@ -33,7 +38,7 @@ export default class IndexPage extends React.Component {
           <OurPartner />
           <PricingPlans />
           <DownloadApp />
-        </div>
+        </Container>
       </Layout>
     );
   }

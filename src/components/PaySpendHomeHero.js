@@ -1,16 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+
 import PurpleButton from './elements/PurpleButton';
 import { theme } from '../utils/theme';
 
 const WalletImageBounce = {
   start: {
-    scale: 1.5,
+    scale: 1.2,
     marginTop: '0.5rem',
   },
   end: {
-    scale: 2,
+    scale: 1.4,
   },
 };
 const TextAnimate = {
@@ -35,7 +36,7 @@ const ImageEntry = {
 };
 
 const Container = styled.div`
-  @media screen and (max-width: 738px) {
+  @media screen and (max-width: 768px) {
     padding-top: 0rem;
     .purple {
       max-width: 1rem;
@@ -47,13 +48,13 @@ const Container = styled.div`
   .margin {
     margin-bottom: 1rem !important;
   }
-  .purple {
-    min-width: 3.5rem;
-    min-height: 2.5rem;
-    max-height: 3.5rem;
-    max-width: 4.5rem;
+  .wallet-background {
+    min-width: 5.5rem;
+    min-height: 4.5rem;
+    max-height: 5.5rem;
+    max-width: 6.5rem;
     background-color: ${theme.mainBrandColor};
-    border-radius: 20px;
+    border-radius: 30px;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 7px 18px !important ;
   }
   button {
@@ -71,13 +72,13 @@ const Container = styled.div`
 
 const PaySpend = () => {
   return (
-    <Container className="columns is-multiline is-gapless ">
+    <Container>
       <motion.div
         initial="start"
         animate="end"
         variants={ImageEntry}
         transition={{ delay: 3, duration: 1 }}
-        className="column is-1 margin purple"
+        className="wallet-background"
       >
         <motion.figure
           initial="start"
@@ -88,7 +89,7 @@ const PaySpend = () => {
           <img alt="wallet" src="images/wallet.png" />
         </motion.figure>
       </motion.div>
-      <div className="column is-12 margin">
+      <div className="my-5">
         <motion.h1
           initial="start"
           animate="end"
@@ -105,7 +106,6 @@ const PaySpend = () => {
         animate="end"
         variants={TextAnimate}
         transition={{ delay: 2, duration: 1 }}
-        className="column is-4"
       >
         <PurpleButton className="is-medium" title="How it Works" />
       </motion.div>
