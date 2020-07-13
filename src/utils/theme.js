@@ -48,6 +48,7 @@ export const theme = {
   lightColor: '#F7F9FD',
   darkPurple: '#121225',
   red: '#EE1D52',
+  lightGrey: '#c4cdd7',
 };
 
 const GlobalStyle = createGlobalStyle`

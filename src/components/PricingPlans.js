@@ -22,15 +22,21 @@ const Container = styled.div`
     display: inline-block;
     border-radius: 100px;
     padding: 0.2rem;
-    button {
+    .button {
       border-radius: 100px;
       border-width: 0px;
+      background-color: transparent;
+      box-shadow: none !important;
     }
     .individual {
+      box-shadow: ${props =>
+        props.tab ? '0px 15px 39px rgba(0, 0, 0, 0.2) !important' : ''};
       color: ${props =>
         props.tab ? theme.darkAccent : theme.textColorLite} !important;
     }
     .business {
+      box-shadow: ${props =>
+        props.tab ? '' : '0px 15px 39px rgba(0, 0, 0, 0.2) !important'};
       color: ${props =>
         props.tab ? theme.textColorLite : theme.darkAccent} !important;
     }

@@ -7,27 +7,22 @@ import PersonalAppBenefits from './PersonalAppBenefits';
 import BusinessAppBenefits from './BusinessAppBenefits';
 
 const Container = styled.div`
-button{
-    border-color:transparent !important;
-
-:focus{
-    border-color:transparent !important;
-}}
+  button {
+    border-color: transparent;
+    box-shadow: none;
+    background-color: transparent;
+  }
   .personal {
     box-shadow: ${props =>
-      props.selected ? '0 0.5em 1em -0.125em rgba(10,10,10,.1)' : 'none'};
-      color: ${props =>
-        props.selected ? theme.darkAccent : theme.textColorLite};
+      props.selected ? '0px 15px 39px rgba(0, 0, 0, 0.2) !important' : 'none'};
+    color: ${props =>
+      props.selected ? theme.darkAccent : theme.textColorLite};
   }
   .business {
     box-shadow: ${props =>
-      props.selected
-        ? 'none'
-        : '0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02)'};
+      props.selected ? '' : '0px 15px 39px rgba(0, 0, 0, 0.2) !important'};
     color: ${props =>
       props.selected ? theme.textColorLite : theme.darkAccent};
-  }
-
   }
 `;
 

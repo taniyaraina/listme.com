@@ -47,6 +47,32 @@ const Container = styled.div`
     box-shadow: none;
     flex-direction: row;
   }
+
+  .buttonDiv {
+    border: 1px solid ${theme.darkAccent};
+    border-radius: 100px;
+    transition: 1s;
+    height: 3rem;
+    .shoppingCart {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 100px;
+      transform: translateX(-2px);
+      box-shadow: 0px 9px 30px 0px rgba(102, 75, 196, 0.4);
+      background-color: ${theme.darkAccent};
+      color: ${theme.backgroundColor};
+    }
+    :hover {
+      background-color: ${theme.darkAccent};
+      .title {
+        color: ${theme.backgroundColor} !important;
+      }
+      .shoppingCart {
+        background-color: ${theme.backgroundColor};
+        color: ${theme.darkAccent};
+      }
+    }
+  }
 `;
 
 const ProductComponent = () => {
@@ -66,7 +92,7 @@ const ProductComponent = () => {
         lightSubtitle="Business "
         subtitle="> Top 10 App Tips"
       />
-      <div className="columns is-centered">
+      <div className="columns is-centered is-mobile">
         <div className="column is-10">
           <div className="columns is-centered">
             <div className="column is-6">
@@ -111,22 +137,28 @@ const ProductComponent = () => {
                   app
                 </h1>
               </div>
-              <div className="card columns mt-4">
-                <h1 className="title is-5 has-background-light py-3 mr-6">
+              <div className=" columns mt-4 is-vcentered is-mobile">
+                <h1 className="title is-5 has-background-light mt-5 py-3 mr-6">
                   <span
-                    className="icon mx-4 is-size-6"
+                    className="icon mx-3 is-size-6"
                     onClick={() => DecreaseProduct()}
                   >
                     <i className="fas fa-minus" />
                   </span>
                   {ProductNo}
                   <span
-                    className="icon  mx-4 is-size-6"
+                    className="icon  mx-3 is-size-6"
                     onClick={() => IncreaseProduct()}
                   >
                     <i className="fas fa-plus" />
                   </span>
                 </h1>
+                <div className="columns is-vcentered buttonDiv is-mobile">
+                  <span className="icon shoppingCart is-size-5">
+                    <i className="fas fa-shopping-cart" />
+                  </span>
+                  <h1 className="title is-6 pl-3 pr-5">ADD TO CART</h1>
+                </div>
               </div>
             </div>
           </div>
