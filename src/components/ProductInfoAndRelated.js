@@ -43,7 +43,6 @@ const Container = styled.div`
     width: 100%;
     border-radius: 100px;
     font-weight: bold;
-    /* box-shadow: 0px 15px 39px rgba(0, 0, 0, 0.2) !important; */
     box-shadow: none !important;
     color: ${theme.lightGrey} !important;
     border-width: 0px;

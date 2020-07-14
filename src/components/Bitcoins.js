@@ -24,8 +24,8 @@ const Bitcoins = () => {
   return (
     <Section className="section">
       <div className="columns is-centered">
-        <div className="column is-10">
-          <div className="columns is-gapless is-centered">
+        <div className="column is-9">
+          <div className="columns is-centered">
             {Bitcoin.map(item => (
               <div className="column is-2">
                 <img
