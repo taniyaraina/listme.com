@@ -1,12 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 import { theme } from '../utils/theme';
 
 const CardWrapper = styled.div`
   border-radius: 30px;
   box-shadow: 0px 15px 38px rgba(0, 0, 0, 0.1);
-  .purple {
+  h2 {
     color: ${theme.darkAccent} !important;
+    :hover {
+      color: ${theme.hoverColor} !important;
+      transition: all 0.3s ease-in-out;
+    }
   }
 
   .icon {
@@ -23,15 +28,16 @@ const PaymentCard = () => {
         <figure className="mage is-32x32">
           <img src="/images/contact/toolip-one.png" alt="icon" />
         </figure>
-        <h1 className="subtitle is-4 has-text-weight-bold">Any Payments</h1>
-        <h1 className="subtitle is-5 has-text-grey-lighter">
-          Accept Crypto payments from your online customers on your smartphone.
-        </h1>
-        <a className="subtitle is-5 has-text-grey-lighter">
-          Accept Crypto payments from your online customers on your smartphone.
-        </a>
-
-        <a className="purple">{`< Read More >`}</a>
+        <h1 className="title is-5 has-text-weight-semibold">Any Payments</h1>
+        <div className="content">
+          <h1 className="subtitle is-6 has-text-grey-lighter">
+            Accept Crypto payments from your online customers on your
+            smartphone.
+          </h1>
+        </div>
+        <Link to="/">
+          <h2 className="subtitle is-6 has-text-weight-bold">{`< Read More >`}</h2>
+        </Link>
       </div>
     </CardWrapper>
   );

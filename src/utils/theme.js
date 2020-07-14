@@ -107,6 +107,9 @@ const GlobalStyle = createGlobalStyle`
   .has-text-black {
     color: ${theme.darkShades} !important;
   }
+  .has-text-grey-lighter{
+    color: ${theme.textColorLite} !important;
+  }
 `;
 
 export default GlobalStyle;

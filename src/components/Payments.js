@@ -13,28 +13,8 @@ const Container = styled.div`
     font-size: 0.9rem;
     line-height: 1.2rem;
   }
-  .boldText {
-    font-weight: bold;
-  }
   img {
     border-radius: 100px;
-  }
-  .paddingTop {
-    padding-top: 1rem;
-  }
-  .cancelTopPadding {
-    padding-top: 0rem;
-  }
-
-  .imageHide {
-    @media screen and (max-width: 768px) {
-      display: none;
-    }
-  }
-  .secondCard {
-    @media screen and (max-width: 768px) {
-      padding-top: 0rem;
-    }
   }
 `;
 
