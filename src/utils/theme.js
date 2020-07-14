@@ -62,6 +62,9 @@ const GlobalStyle = createGlobalStyle`
   .title {
     font-family: ${theme.primaryFontFamily};
   }
+  .title.is-1 {
+    font-size: 3.6rem !important;
+  }
   .button {
     font-family: ${theme.primaryFontFamily};
   }
@@ -104,6 +107,9 @@ const GlobalStyle = createGlobalStyle`
   }
   .has-text-black {
     color: ${theme.darkShades} !important;
+  }
+  .has-text-grey-lighter{
+    color: ${theme.textColorLite} !important;
   }
 `;
 
