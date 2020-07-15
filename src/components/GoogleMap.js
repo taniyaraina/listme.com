@@ -1,5 +1,6 @@
 import React from 'react';
 import { compose, withProps } from 'recompose';
+import styled from 'styled-components';
 
 import {
   withScriptjs,
@@ -169,12 +170,19 @@ const styles = [
   },
 ];
 
+const Container = styled.div`
+  height: 850px;
+  @media screen and (max-width: 768px) {
+    height: 400px;
+  }
+`;
+
 const GoogleMaps = compose(
   withProps({
     googleMapURL:
       'https://maps.googleapis.com/maps/api/js?key=AIzaSyD4VzGKf4b6PZUwJCfD5twLBqFizOT_zXg',
     loadingElement: <div style={{ height: `100%` }} />,
-    containerElement: <div style={{ height: `800px` }} />,
+    containerElement: <Container />,
     mapElement: <div style={{ height: `100%`, borderRadius: 30 }} />,
   }),
   withScriptjs,

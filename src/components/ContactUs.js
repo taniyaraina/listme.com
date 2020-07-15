@@ -15,8 +15,8 @@ const Container = styled.div`
     line-height: 1.3rem;
   }
   .card {
-    padding-right: 2rem;
-    padding-left: 0.8rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
     padding-top: 0.8rem;
     padding-bottom: 0.6rem;
     transition: 0.6s;
@@ -34,16 +34,29 @@ const Container = styled.div`
   input {
     border-radius: 100px;
     margin-bottom: 1rem;
+    box-shadow: none;
   }
   textarea {
+    box-shadow: none;
     border-radius: 40px;
   }
   button {
+    background-image: radial-gradient(
+      circle farthest-corner at 100% 150%,
+      #d75dbc 10%,
+      #6a4bc4 50%
+    );
+    transition: 0.6s;
     color: ${theme.backgroundColor};
-    background-color: #6a4bc4;
     padding: 0rem 2rem;
     font-weight: bold;
     border-radius: 50px;
+    background-color: ${theme.darkAccent};
+    :hover {
+      background-image: none;
+      color: ${theme.backgroundColor};
+      background-color: ${theme.darkAccent};
+    }
   }
 `;
 
@@ -67,7 +80,7 @@ const Data = [
 
 const ContactUs = () => {
   return (
-    <Container className="section">
+    <Container>
       <div className="container">
         <div className="columns">
           <div className="column is-6">
