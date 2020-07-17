@@ -4,19 +4,27 @@ import { Link } from 'gatsby';
 import { theme } from '../utils/theme';
 
 const CardWrapper = styled.div`
+  min-height: 28rem;
   border-radius: 30px;
   box-shadow: 0px 15px 38px rgba(0, 0, 0, 0.1);
   h2 {
     color: ${theme.darkAccent} !important;
     :hover {
-      color: ${theme.hoverColor} !important;
       transition: all 0.3s ease-in-out;
     }
+  }
+  p {
+    line-height: 33.75px;
+    font-size: 18px !important;
+  }
+  .card-content {
+    padding: 2.8125rem !important;
   }
 
   .icon {
     padding-top: 1rem;
     padding-bottom: 2rem;
+
     color: ${theme.hoverColor} !important;
   }
   .services_icon_wrapper :hover {
@@ -109,10 +117,10 @@ const PaymentCard = () => {
         </div>
         <h1 className="title is-5 has-text-weight-semibold">Any Payments</h1>
         <div className="content">
-          <h1 className="subtitle is-6 has-text-grey-lighter">
+          <p className="subtitle has-text-weight-light has-text-grey-lighter">
             Accept Crypto payments from your online customers on your
             smartphone.
-          </h1>
+          </p>
         </div>
         <Link to="/">
           <h2 className="subtitle is-6 has-text-weight-bold">{`< Read More >`}</h2>
