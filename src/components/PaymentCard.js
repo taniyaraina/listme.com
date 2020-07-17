@@ -107,7 +107,6 @@ const PaymentCard = () => {
           </div>
           <i className="fas fa-home" />
         </div>
-
         <h1 className="title is-5 has-text-weight-semibold">Any Payments</h1>
         <div className="content">
           <h1 className="subtitle is-6 has-text-grey-lighter">

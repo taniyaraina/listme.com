@@ -5,19 +5,22 @@ import PaymentCard from './PaymentCard';
 
 import { theme } from '../utils/theme';
 
-const Container = styled.div`
+const Container = styled.div``;
+
+const MovingDownColumn = styled.div`
+  margin-top: 70px;
+`;
+const ContentWrapper = styled.div`
+  margin-top: 70px;
   .lightGreen {
     color: ${theme.hoverColor} !important;
   }
-  .small {
+  .has-text-weight-normal {
     font-size: 0.9rem;
     line-height: 1.2rem;
   }
   img {
     border-radius: 100px;
-  }
-  .main {
-    margin-top: 70px;
   }
 `;
 
@@ -29,15 +32,15 @@ const Payments = () => {
           <div className="column is-3">
             <PaymentCard />
           </div>
-          <div className="column is-3 main">
+          <MovingDownColumn className="column is-3">
             <PaymentCard />
-          </div>
-          <div className="column is-6 has-text-left ">
+          </MovingDownColumn>
+          <ContentWrapper className="column is-6 has-text-left ">
             <h1 className="title is-6 lightGreen">{`< about_app >`}</h1>
             <h1 className="title is-3 has-text-weight-bold">
               Get Started with Crypto Payments
             </h1>
-            <h1 className="title small has-text-weight-normal">
+            <h1 className="title has-text-weight-normal">
               We have created a few plugins for the most popular shopping carts
               to make integrations fast and easy, even for a non-technical user.
               <span className="boldText">
@@ -55,7 +58,7 @@ const Payments = () => {
                 </h1>
               </div>
             </div>
-          </div>
+          </ContentWrapper>
         </div>
       </div>
     </Container>
