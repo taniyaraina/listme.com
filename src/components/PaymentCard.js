@@ -44,6 +44,8 @@ const CardWrapper = styled.div`
   }
 
   .services_icon_wrapper {
+    color: #6a4bc4;
+    border-color: #6a4bc4;
     position: relative;
     z-index: 1;
     width: 110px;
@@ -69,6 +71,7 @@ const CardWrapper = styled.div`
       opacity: 0.2;
     }
   }
+
   .services_circle_wrapper {
     width: 84%;
     height: 84%;

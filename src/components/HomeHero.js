@@ -23,7 +23,6 @@ const Section = styled.section`
 
 const SocialIcons = styled.div`
   position: absolute;
-  /* left: 30px; */
   top: 50%;
 `;
 

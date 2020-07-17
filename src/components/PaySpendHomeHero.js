@@ -63,6 +63,16 @@ const Container = styled.div`
   }
 `;
 
+const IconWrapper = styled.a`
+  margin: 10px 6px 0px 6px;
+
+  color: ${theme.mainBrandColor};
+  :hover {
+    color: ${theme.hoverColor}!important;
+    transition: color 0.25s;
+  }
+`;
+
 const PaySpend = () => {
   return (
     <Container>
@@ -101,6 +111,14 @@ const PaySpend = () => {
         transition={{ delay: 2, duration: 1 }}
       >
         <PurpleButton className="is-medium" title="How it Works" />
+        <>
+          <IconWrapper href="/" className="icon">
+            <i className="fab fa-apple" />
+          </IconWrapper>
+          <IconWrapper href="/" className="icon">
+            <i className="fab fa-android" />
+          </IconWrapper>
+        </>
       </motion.div>
     </Container>
   );

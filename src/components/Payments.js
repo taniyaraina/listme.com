@@ -16,6 +16,9 @@ const Container = styled.div`
   img {
     border-radius: 100px;
   }
+  .main {
+    margin-top: 70px;
+  }
 `;
 
 const Payments = () => {
@@ -26,7 +29,7 @@ const Payments = () => {
           <div className="column is-3">
             <PaymentCard />
           </div>
-          <div className="column is-3">
+          <div className="column is-3 main">
             <PaymentCard />
           </div>
           <div className="column is-6 has-text-left ">
