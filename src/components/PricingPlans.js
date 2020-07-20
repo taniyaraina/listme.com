@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-
 import { theme } from '../utils/theme';
 
 import IndividualPricingPlan from './IndividualPricingPlan';
