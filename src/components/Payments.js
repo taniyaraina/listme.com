@@ -61,7 +61,7 @@ const Payments = () => {
             <Article className="media">
               <figure className="media-left">
                 <h1 className="image is-64x64">
-                  <img src="images/girl.jpg" alt="girl" />
+                  <img src="/images/girl.jpg" alt="girl" />
                 </h1>
               </figure>
               <div className="media-content">

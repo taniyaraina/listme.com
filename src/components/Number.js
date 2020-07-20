@@ -37,26 +37,12 @@ const Numbers = () => {
             <div className="columns is-centered is-vcentered has-text-centered">
               <div className="column is-3">
                 <h1 className="title is-3">
-                  {inView.toString()}
                   <CountUp
                     start={0}
                     end={190}
                     duration={2.75}
                     decimals={1}
-                    decimal=","
-                  />
-                </h1>
-                <h1 className="subtitle is-5">{`< happy_clients >`}</h1>
-              </div>
-              <div className="column is-3">
-                {' '}
-                <h1 className="title is-3">
-                  <CountUp
-                    start={0}
-                    end={190}
-                    duration={4.75}
-                    decimals={1}
-                    decimal=","
+                    decimal=""
                   />
                 </h1>
                 <h1 className="subtitle is-5">{`< happy_clients >`}</h1>
@@ -68,7 +54,19 @@ const Numbers = () => {
                     end={190}
                     duration={4.75}
                     decimals={1}
-                    decimal=","
+                    decimal=""
+                  />
+                </h1>
+                <h1 className="subtitle is-5">{`< happy_clients >`}</h1>
+              </div>
+              <div className="column is-3">
+                <h1 className="title is-3">
+                  <CountUp
+                    start={0}
+                    end={190}
+                    duration={4.75}
+                    decimals={1}
+                    decimal=""
                   />
                 </h1>
                 <h1 className="subtitle is-5">{`< happy_clients >`}</h1>
@@ -80,7 +78,7 @@ const Numbers = () => {
                     end={500}
                     duration={4.75}
                     decimals={1}
-                    decimal=","
+                    decimal=""
                   />
                 </h1>
                 <h1 className="subtitle is-5">{`< happy_clients >`}</h1>
