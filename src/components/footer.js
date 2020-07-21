@@ -64,6 +64,13 @@ const FooterStyled = styled.footer`
   .icon {
     color: ${theme.darkAccent}!important;
   }
+  a {
+    transition: 0.6s;
+    :hover {
+      color: ${theme.darkAccent} !important;
+      text-decoration: underline;
+    }
+  }
 `;
 
 const Footer = () => {
