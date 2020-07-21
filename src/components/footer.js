@@ -1,8 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 import { theme } from '../utils/theme';
 import Image from '../../static/images/footer_home_1.png';
+
+const Icons = [
+  { icon: 'fab fa-twitter-square' },
+  { icon: 'fab fa-facebook' },
+  { icon: 'fab fa-linkedin' },
+  { icon: 'fab fa-instagram' },
+  { icon: 'fab fa-pinterest' },
+];
 
 const FooterStyled = styled.footer`
   background-image: url(${Image});
@@ -12,6 +21,10 @@ const FooterStyled = styled.footer`
   min-height: 30rem;
   width: 100%;
   padding-top: 10.5rem;
+  .is-6 {
+    font-size: 0.85rem;
+    line-height: 1.5rem;
+  }
   h1 {
     color: ${theme.backgroundColor} !important;
   }
@@ -19,17 +32,12 @@ const FooterStyled = styled.footer`
     color: ${theme.hoverColor} !important;
   }
   .grey {
-    color: ${theme.textColorLite} !important;
+    color: ${theme.lightGrey} !important;
   }
   .bold {
     font-weight: bold;
   }
-  .lineHeight {
-    line-height: 1.4rem;
-  }
-  .small {
-    line-height: 1.4rem;
-  }
+
   input {
     border-radius: 100px;
     background-color: ${theme.darkPurple};
@@ -52,6 +60,9 @@ const FooterStyled = styled.footer`
     border-top-width: 1px;
     margin-top: 2rem;
   }
+  .icon {
+    color: ${theme.darkAccent}!important;
+  }
 `;
 
 const Footer = () => {
@@ -67,6 +78,19 @@ const Footer = () => {
               We are a software house from USA focused on custom software
               development, e-commerce platforms, ERP class systems development.
             </h1>
+            <div className="columns">
+              <div className="column is-8">
+                <div className="columns is-mobile is-gapless">
+                  {Icons.map(({ icon }) => (
+                    <div className="column is-2">
+                      <span className="icon is-size-4">
+                        <i className={icon} />
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
           <div className="column is-3">
             <h1 className="title is-4 has-text-weight-bold">Contact Us</h1>
@@ -92,7 +116,7 @@ const Footer = () => {
             </h1>
           </div>
           <div className="column is-2">
-            <h1 className="title is-4  ">
+            <h1 className="title is-5  ">
               <span className="bold"> Useful Links</span>
             </h1>
             <h1 className="title is-6  has-text-weight-light ">About Us</h1>
@@ -100,7 +124,11 @@ const Footer = () => {
             <h1 className="title is-6  has-text-weight-light ">
               Terms & Conditions
             </h1>
-            <h1 className="title is-6  has-text-weight-light ">Contact Us</h1>
+
+            <h1 className="title is-6  has-text-weight-light ">
+              <Link to="/contact">Contact Us</Link>
+            </h1>
+
             <h1 className="title is-6  has-text-weight-light ">
               Privacy Policy
             </h1>
