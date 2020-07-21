@@ -42,18 +42,19 @@ const FooterStyled = styled.footer`
     border-radius: 100px;
     background-color: ${theme.darkPurple};
     border-width: 0px;
+    color: ${theme.backgroundColor};
     ::placeholder {
-      color: ${theme.borderColor};
+      color: ${theme.lightGrey};
     }
     width: 100%;
   }
   button {
     border-radius: 100px;
-    padding: 0rem 2rem;
+    padding: 0rem 3rem;
     margin-top: 1rem;
-    height: 2.5rem;
+    height: 3rem;
     background-color: ${theme.hoverColor} !important;
-    font-weight: bold;
+    font-weight: 600;
   }
   .is-borderTop {
     border: 0px solid #fff;
