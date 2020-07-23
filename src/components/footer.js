@@ -25,11 +25,12 @@ const FooterStyled = styled.footer`
     font-size: 0.85rem;
     line-height: 1.5rem;
   }
+  .footer-logo {
+    height: 2.5rem;
+    margin-bottom: 1rem;
+  }
   h1 {
     color: ${theme.backgroundColor} !important;
-  }
-  .greenColor {
-    color: ${theme.hoverColor} !important;
   }
   .grey {
     color: ${theme.lightGrey} !important;
@@ -46,7 +47,7 @@ const FooterStyled = styled.footer`
     ::placeholder {
       color: ${theme.lightGrey};
     }
-    width: 100%;
+    width: 85%;
   }
   button {
     border-radius: 100px;
@@ -62,7 +63,7 @@ const FooterStyled = styled.footer`
     margin-top: 2rem;
   }
   .icon {
-    color: ${theme.darkAccent}!important;
+    margin-left: -3rem;
   }
   a {
     transition: 0.6s;
@@ -79,12 +80,17 @@ const Footer = () => {
       <section className="section">
         <div className="columns is-centered has-text-left">
           <div className="column is-3">
-            <h1 className="title is-2 has-text-weight-bold">
-              Softlab <span className="greenColor">{`</>`}</span>
-            </h1>
+            <Link className="" to="/">
+              <img
+                src="/images/softlab_footer.png"
+                alt="site logo"
+                className="footer-logo"
+              />
+            </Link>
             <h1 className="title is-6 has-text-weight-light grey small">
               We are a software house from USA focused on custom software
-              development, e-commerce platforms, ERP class systems development.
+              development, e-commerce platforms, ERP className systems
+              development.
             </h1>
             <div className="columns">
               <div className="column is-8">
@@ -143,7 +149,18 @@ const Footer = () => {
           </div>
           <div className="column is-3">
             <h1 className="title is-4 has-text-weight-bold "> Newsletter</h1>
-            <input className="input is-medium" placeholder="Your Email" />
+            <div className="field">
+              <p className="control has-icons-left">
+                <input
+                  className="input"
+                  type="password"
+                  placeholder="Your Email"
+                />
+                <span className="icon is-small">
+                  <i className="fas fa-envelope"></i>
+                </span>
+              </p>
+            </div>
             <button type="button" className="button is-primary is-medium">
               Submit
             </button>
