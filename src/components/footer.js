@@ -6,11 +6,11 @@ import { theme } from '../utils/theme';
 import Image from '../../static/images/footer_home_1.png';
 
 const Icons = [
-  { icon: 'fab fa-twitter-square' },
-  { icon: 'fab fa-facebook' },
-  { icon: 'fab fa-linkedin' },
-  { icon: 'fab fa-instagram' },
-  { icon: 'fab fa-pinterest' },
+  { icon: 'fab fa-twitter', onHover: `${theme.twitterIconColor}` },
+  { icon: 'fab fa-facebook-f', onHover: `${theme.facebookIconColor}` },
+  { icon: 'fab fa-linkedin-in', onHover: `${theme.linkedinIconColor}` },
+  { icon: 'fab fa-instagram', onHover: `${theme.instagramIconColor}` },
+  { icon: 'fab fa-pinterest-p', onHover: `${theme.pinterestIconColor}` },
 ];
 
 const FooterStyled = styled.footer`
@@ -38,16 +38,16 @@ const FooterStyled = styled.footer`
   .bold {
     font-weight: bold;
   }
-
   input {
-    border-radius: 100px;
     background-color: ${theme.darkPurple};
-    border-width: 0px;
-    color: ${theme.backgroundColor};
+    border-radius: 100px;
+    border: none;
     ::placeholder {
       color: ${theme.lightGrey};
     }
-    width: 85%;
+    :hover {
+      background-color: ${theme.backgroundColor};
+    }
   }
   button {
     border-radius: 100px;
@@ -62,15 +62,20 @@ const FooterStyled = styled.footer`
     border-top-width: 1px;
     margin-top: 2rem;
   }
-  .icon {
-    margin-left: -3rem;
-  }
   a {
     transition: 0.6s;
     :hover {
-      color: ${theme.darkAccent} !important;
+      color: ${theme.darkAccent};
       text-decoration: underline;
     }
+  }
+`;
+const IconsGroup = styled.a`
+  margin-right: 10px;
+  background: ${theme.darkAccent};
+  border-radius: 15px;
+  :hover {
+    background-color: ${props => props.hoverColor} !important;
   }
 `;
 
@@ -92,19 +97,14 @@ const Footer = () => {
               development, e-commerce platforms, ERP className systems
               development.
             </h1>
-            <div className="columns">
-              <div className="column is-8">
-                <div className="columns is-mobile is-gapless">
-                  {Icons.map(({ icon }) => (
-                    <div className="column is-2">
-                      <span className="icon is-size-4">
-                        <i className={icon} />
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            {Icons.map(item => (
+              <IconsGroup
+                hoverColor={item.onHover}
+                className="icon is-size-7 has-text-white"
+              >
+                <i className={item.icon} />
+              </IconsGroup>
+            ))}
           </div>
           <div className="column is-3">
             <h1 className="title is-4 has-text-weight-bold">Contact Us</h1>
@@ -149,15 +149,15 @@ const Footer = () => {
           </div>
           <div className="column is-3">
             <h1 className="title is-4 has-text-weight-bold "> Newsletter</h1>
-            <div className="field">
-              <p className="control has-icons-left">
+            <div class="field">
+              <p class="control has-icons-right">
                 <input
-                  className="input"
+                  class="input is-medium"
                   type="password"
                   placeholder="Your Email"
                 />
-                <span className="icon is-small">
-                  <i className="fas fa-envelope"></i>
+                <span class="icon is-small is-right">
+                  <i class="fas fa-envelope"></i>
                 </span>
               </p>
             </div>
