@@ -69,6 +69,9 @@ const FooterStyled = styled.footer`
       text-decoration: underline;
     }
   }
+  .underline {
+    text-decoration: underline;
+  }
 `;
 const IconsGroup = styled.a`
   margin-right: 10px;
@@ -133,10 +136,16 @@ const Footer = () => {
             <h1 className="title is-5  ">
               <span className="bold"> Useful Links</span>
             </h1>
-            <h1 className="title is-6  has-text-weight-light ">About Us</h1>
-            <h1 className="title is-6  has-text-weight-light ">Help Link</h1>
             <h1 className="title is-6  has-text-weight-light ">
-              Terms & Conditions
+              {' '}
+              <Link to="/">About Us</Link>
+            </h1>
+            <h1 className="title is-6  has-text-weight-light ">
+              {' '}
+              <Link to="/">Help Link</Link>
+            </h1>
+            <h1 className="title is-6  has-text-weight-light ">
+              <Link to="/">Terms & Conditions</Link>
             </h1>
 
             <h1 className="title is-6  has-text-weight-light ">
@@ -144,7 +153,7 @@ const Footer = () => {
             </h1>
 
             <h1 className="title is-6  has-text-weight-light ">
-              Privacy Policy
+              <Link to="/">Privacy Policy</Link>
             </h1>
           </div>
           <div className="column is-3">
@@ -153,7 +162,7 @@ const Footer = () => {
               <p class="control has-icons-right">
                 <input
                   class="input is-medium"
-                  type="password"
+                  type="email"
                   placeholder="Your Email"
                 />
                 <span class="icon is-small is-right">
@@ -177,7 +186,9 @@ const Footer = () => {
               <div className="column is-2" />
               <div className="column is-6">
                 <h1 className="subtitle is-6 grey">
-                  Copyright © 2019 Softlab by WebGeniusLab. All Rights Reserved.
+                  Copyright © 2019 Softlab by{' '}
+                  <a className="has-text-white underline">WebGeniusLab.</a> All
+                  Rights Reserved.
                 </h1>
               </div>
             </div>
