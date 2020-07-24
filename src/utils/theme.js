@@ -49,6 +49,11 @@ export const theme = {
   darkPurple: '#121225',
   red: '#EE1D52',
   lightGrey: '#c4cdd7',
+  twitterIconColor: '#1da1f2',
+  facebookIconColor: '#3b5998',
+  linkedinIconColor: '#007bb5',
+  instagramIconColor: '#c32aa3',
+  pinterestIconColor: '#bd081c',
 };
 
 const GlobalStyle = createGlobalStyle`

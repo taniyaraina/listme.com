@@ -6,11 +6,11 @@ import { theme } from '../utils/theme';
 import Image from '../../static/images/footer_home_1.png';
 
 const Icons = [
-  { icon: 'fab fa-twitter-square' },
-  { icon: 'fab fa-facebook' },
-  { icon: 'fab fa-linkedin' },
-  { icon: 'fab fa-instagram' },
-  { icon: 'fab fa-pinterest' },
+  { icon: 'fab fa-twitter', onHover: `${theme.twitterIconColor}` },
+  { icon: 'fab fa-facebook-f', onHover: `${theme.facebookIconColor}` },
+  { icon: 'fab fa-linkedin-in', onHover: `${theme.linkedinIconColor}` },
+  { icon: 'fab fa-instagram', onHover: `${theme.instagramIconColor}` },
+  { icon: 'fab fa-pinterest-p', onHover: `${theme.pinterestIconColor}` },
 ];
 
 const FooterStyled = styled.footer`
@@ -25,11 +25,12 @@ const FooterStyled = styled.footer`
     font-size: 0.85rem;
     line-height: 1.5rem;
   }
+  .footer-logo {
+    height: 2.5rem;
+    margin-bottom: 1rem;
+  }
   h1 {
     color: ${theme.backgroundColor} !important;
-  }
-  .greenColor {
-    color: ${theme.hoverColor} !important;
   }
   .grey {
     color: ${theme.lightGrey} !important;
@@ -37,16 +38,16 @@ const FooterStyled = styled.footer`
   .bold {
     font-weight: bold;
   }
-
   input {
-    border-radius: 100px;
     background-color: ${theme.darkPurple};
-    border-width: 0px;
-    color: ${theme.backgroundColor};
+    border-radius: 100px;
+    border: none;
     ::placeholder {
       color: ${theme.lightGrey};
     }
-    width: 100%;
+    :hover {
+      background-color: ${theme.backgroundColor};
+    }
   }
   button {
     border-radius: 100px;
@@ -61,15 +62,23 @@ const FooterStyled = styled.footer`
     border-top-width: 1px;
     margin-top: 2rem;
   }
-  .icon {
-    color: ${theme.darkAccent}!important;
-  }
   a {
     transition: 0.6s;
     :hover {
-      color: ${theme.darkAccent} !important;
+      color: ${theme.darkAccent};
       text-decoration: underline;
     }
+  }
+  .underline {
+    text-decoration: underline;
+  }
+`;
+const IconsGroup = styled.a`
+  margin-right: 10px;
+  background: ${theme.darkAccent};
+  border-radius: 15px;
+  :hover {
+    background-color: ${props => props.hoverColor} !important;
   }
 `;
 
@@ -79,26 +88,26 @@ const Footer = () => {
       <section className="section">
         <div className="columns is-centered has-text-left">
           <div className="column is-3">
-            <h1 className="title is-2 has-text-weight-bold">
-              Softlab <span className="greenColor">{`</>`}</span>
-            </h1>
+            <Link className="" to="/">
+              <img
+                src="/images/softlab_footer.png"
+                alt="site logo"
+                className="footer-logo"
+              />
+            </Link>
             <h1 className="title is-6 has-text-weight-light grey small">
               We are a software house from USA focused on custom software
-              development, e-commerce platforms, ERP class systems development.
+              development, e-commerce platforms, ERP className systems
+              development.
             </h1>
-            <div className="columns">
-              <div className="column is-8">
-                <div className="columns is-mobile is-gapless">
-                  {Icons.map(({ icon }) => (
-                    <div className="column is-2">
-                      <span className="icon is-size-4">
-                        <i className={icon} />
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            {Icons.map(item => (
+              <IconsGroup
+                hoverColor={item.onHover}
+                className="icon is-size-7 has-text-white"
+              >
+                <i className={item.icon} />
+              </IconsGroup>
+            ))}
           </div>
           <div className="column is-3">
             <h1 className="title is-4 has-text-weight-bold">Contact Us</h1>
@@ -127,21 +136,38 @@ const Footer = () => {
             <h1 className="title is-5  ">
               <span className="bold"> Useful Links</span>
             </h1>
-            <h1 className="title is-6  has-text-weight-light ">About Us</h1>
-            <h1 className="title is-6  has-text-weight-light ">Help Link</h1>
             <h1 className="title is-6  has-text-weight-light ">
-              Terms & Conditions
+              {' '}
+              <Link to="/">About Us</Link>
+            </h1>
+            <h1 className="title is-6  has-text-weight-light ">
+              {' '}
+              <Link to="/">Help Link</Link>
+            </h1>
+            <h1 className="title is-6  has-text-weight-light ">
+              <Link to="/">Terms & Conditions</Link>
             </h1>
             <h1 className="title is-6  has-text-weight-light ">
               <Link to="/contact">Contact Us</Link>
             </h1>
             <h1 className="title is-6  has-text-weight-light ">
-              Privacy Policy
+              <Link to="/">Privacy Policy</Link>
             </h1>
           </div>
           <div className="column is-3">
             <h1 className="title is-4 has-text-weight-bold "> Newsletter</h1>
-            <input className="input is-medium" placeholder="Your Email" />
+            <div class="field">
+              <p class="control has-icons-right">
+                <input
+                  class="input is-medium"
+                  type="email"
+                  placeholder="Your Email"
+                />
+                <span class="icon is-small is-right">
+                  <i class="fas fa-envelope"></i>
+                </span>
+              </p>
+            </div>
             <button type="button" className="button is-primary is-medium">
               Submit
             </button>
@@ -158,7 +184,9 @@ const Footer = () => {
               <div className="column is-2" />
               <div className="column is-6">
                 <h1 className="subtitle is-6 grey">
-                  Copyright © 2019 Softlab by WebGeniusLab. All Rights Reserved.
+                  Copyright © 2019 Softlab by{' '}
+                  <a className="has-text-white underline">WebGeniusLab.</a> All
+                  Rights Reserved.
                 </h1>
               </div>
             </div>

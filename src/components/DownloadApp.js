@@ -10,7 +10,8 @@ const Container = styled.div`
   }
   .subs {
     line-height: 2rem;
-    font-weight: lighter;
+    font-family: ${theme.secondaryFontFamily};
+    font-weight: inherit;
   }
   button {
     border-radius: 100px;
@@ -21,12 +22,21 @@ const Container = styled.div`
   }
   .appStore {
     color: ${theme.backgroundColor};
+    font-family: ${theme.primaryFontFamily};
+    font-weight: initial;
     box-shadow: 0px 9px 30px 0 rgba(106, 75, 196, 0.4) !important;
+    :hover {
+      background-color: ${theme.backgroundColor} !important;
+      color: ${theme.textColor} !important;
+      border-color: ${theme.darkAccent};
+      .appleIcon {
+        color: ${theme.darkAccent};
+      }
+    }
   }
   .appStoreBack {
     margin: 0.5rem 1rem;
     display: inline-block;
-
     background-image: radial-gradient(
       circle farthest-corner at 100% 150%,
       #d75dbc 10%,
@@ -34,7 +44,11 @@ const Container = styled.div`
     );
     border-radius: 100px;
   }
-
+  .playStore {
+    font-family: ${theme.primaryFontFamily};
+    font-weight: initial;
+    border-color: ${theme.darkAccent};
+  }
   .playStoreBack {
     margin: 0.5rem 1rem;
     display: inline-block;
@@ -50,7 +64,17 @@ const Container = styled.div`
         color: ${theme.backgroundColor};
         box-shadow: 0px 9px 30px 0 rgba(106, 75, 196, 0.4) !important;
       }
+      .playIcon {
+        color: ${theme.backgroundColor};
+      }
     }
+  }
+  .playIcon {
+    margin-right: 10px;
+    color: ${theme.darkAccent};
+  }
+  .appleIcon {
+    margin-right: 10px;
   }
 `;
 
@@ -63,7 +87,7 @@ const DownloadApp = () => {
         </h1>
         <div className="columns is-centered">
           <div className="column is-8">
-            <h1 className="title is-5 subs">
+            <h1 className="title is-5 has-text-grey-lighter subs">
               Are you looking for trusted experts, who are ready to get insight
               about your business needs? Here we are with our comprehensive
               services!
@@ -72,12 +96,14 @@ const DownloadApp = () => {
         </div>
         <div className="appStoreBack">
           <button type="button" className="button is-medium appStore">
+            <i className="fab fa-apple is-size-4 appleIcon"></i>
             App Store
           </button>
         </div>
         <div className="playStoreBack">
           <button type="button" className="button is-medium playStore">
-            PlayStore
+            <i className="fab fa-google-play is-size-4 playIcon"></i>
+            Google Play
           </button>
         </div>
       </section>
