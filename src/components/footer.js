@@ -132,11 +132,9 @@ const Footer = () => {
             <h1 className="title is-6  has-text-weight-light ">
               Terms & Conditions
             </h1>
-
             <h1 className="title is-6  has-text-weight-light ">
               <Link to="/contact">Contact Us</Link>
             </h1>
-
             <h1 className="title is-6  has-text-weight-light ">
               Privacy Policy
             </h1>
