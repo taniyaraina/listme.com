@@ -5,7 +5,10 @@ import { theme } from '../utils/theme';
 
 const Container = styled.div`
   sup {
-    color: ${theme.textColorLite} !important;
+    color: ${theme.lightGrey} !important;
+    vertical-align: super;
+    padding-right: 0.5rem;
+    font-weight: 400;
   }
   .card {
     border-radius: 50px;
@@ -53,7 +56,7 @@ const IndividualPricingPlan = () => {
             <div className="card">
               <section className="section">
                 <h1 className="title is-1 has-text-weight-light">
-                  <sup>$</sup>19.99
+                  <sup className="is-size-4">$</sup>19.99
                 </h1>
                 <h1 className="title is-5">Monthly Package</h1>
                 <h1 className="subtitle is-6 greenCard coloredCard">basic</h1>
@@ -81,7 +84,7 @@ const IndividualPricingPlan = () => {
             <div className="card">
               <section className="section">
                 <h1 className="title is-1 has-text-weight-light">
-                  <sup>$</sup>29.99
+                  <sup className="is-size-4">$</sup>29.99
                 </h1>
                 <h1 className="title is-5">Monthly Package</h1>
                 <h1 className="subtitle is-6 greenCard coloredCard">basic</h1>
@@ -109,7 +112,7 @@ const IndividualPricingPlan = () => {
             <div className="card">
               <section className="section">
                 <h1 className="title is-1 has-text-weight-light">
-                  <sup>$</sup>39.99
+                  <sup className="is-size-4">$</sup>39.99
                 </h1>
                 <h1 className="title is-5">Monthly Package</h1>
                 <h1 className="subtitle is-6 greenCard coloredCard">basic</h1>
