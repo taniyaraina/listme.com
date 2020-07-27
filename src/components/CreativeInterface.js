@@ -12,6 +12,10 @@ const Container = styled.div`
     font-size: 1rem;
     line-height: 1.5rem;
   }
+  .icon {
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+  }
   button {
     padding: 0rem 3rem;
     height: 3.5rem;
@@ -19,6 +23,7 @@ const Container = styled.div`
     transition: 0.5s;
     box-shadow: none;
     font-weight: bold;
+    border-color: ${theme.darkAccent};
     :hover {
       background-color: #6a4bc4 !important;
       color: ${theme.backgroundColor};
@@ -49,6 +54,12 @@ const CreativeInterface = () => {
           <button type="button" className="button is-medium">
             Get the App
           </button>
+          <a href="/" className="icon ">
+            <i className="fab fa-apple has-text-primary"></i>
+          </a>
+          <a href="/" className="icon">
+            <i className=" fab fa-android has-text-primary"></i>
+          </a>
         </div>
         <div className="column is-5">
           <ImageCollection2 />
