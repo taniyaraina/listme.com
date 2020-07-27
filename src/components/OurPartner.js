@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const Container = styled.div`
   overflow-x: hidden;
   overflow-y: hidden;
+  margin-bottom: 2rem;
 `;
 
 const Data = [
