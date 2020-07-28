@@ -90,7 +90,7 @@ const Footer = () => {
           <div className="column is-3">
             <Link className="" to="/">
               <img
-                src="/images/softlab_footer.png"
+                src="/images/listmelogo.png"
                 alt="site logo"
                 className="footer-logo"
               />
