@@ -35,7 +35,7 @@ const TheySay = () => {
               technology forward.”
             </p>
             <div className="content">
-              <h1 className="title is-6">Arnold Wilson</h1>
+              <h1 className="title is-5">Arnold Wilson</h1>
               <h2 className="subtitle is-6 ">React Developer</h2>
             </div>
           </div>
