@@ -47,6 +47,15 @@ const Container = styled.div`
   .icon {
     width: 2rem;
   }
+  .marg {
+    margin-right: 10px;
+  }
+  .wrapper {
+    display: flex;
+  }
+`;
+const Comment = styled.div`
+  margin-right: 2rem;
 `;
 
 const BlogGridCard = () => {
@@ -64,15 +73,17 @@ const BlogGridCard = () => {
       <h1 className="title is-4 has-text-weight-bold">
         Facts & Tips About Bitcoin Miner Fees
       </h1>
-      <h1 className="subtitle is-6 has-text-weight-light">
-        <span className="icon comment">
-          <i className="far fa-comment" />
-        </span>
-        2 Comments
+      <h1 className="is-6 has-text-weight-light wrapper">
+        <Comment>
+          <span className="icon comment">
+            <i className="far fa-comment" />
+          </span>
+          2 Comments
+        </Comment>
         <span className="icon heart">
-          <i className="far fa-heart" />
+          <i className="far fa-heart marg" />
+          24
         </span>
-        24
       </h1>
     </Container>
   );
