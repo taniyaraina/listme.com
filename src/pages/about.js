@@ -5,17 +5,33 @@ import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import MapHero from '../components/MapHero';
 import InfoCards from '../components/InfoCards';
-import OurPartner from '../components/OurPartner';
+import ClientTestimonials from '../components/ClientTestimonials';
+import HowItWorks from '../components/HowItWorks';
 import AboutApp from '../components/AboutApp';
+import OurPartner from '../components/OurPartner';
+
+const Container = styled.div`
+  overflow-x: hidden;
+`;
+const Wrapper = styled.div`
+  margin-bottom: 5rem;
+  margin-top: 2rem;
+`;
 
 const About = () => {
   return (
     <Layout>
       <Seo title="about" />
-      <MapHero Title="About App" subtitle="About App" />
-      <AboutApp />
-      <InfoCards />
-      <OurPartner />
+      <Container>
+        <MapHero Title="About App" subtitle="About App" />
+        <AboutApp />
+        <ClientTestimonials />
+        <InfoCards />
+        <HowItWorks />
+        <Wrapper>
+          <OurPartner />
+        </Wrapper>
+      </Container>
     </Layout>
   );
 };

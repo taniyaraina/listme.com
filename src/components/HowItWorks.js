@@ -155,7 +155,7 @@ const HowItWorks = () => {
             ))}
           </div>
           <div className="column is-4">
-            <img src="images/iphone-1.png" alt="iphone" />
+            <img src="/images/iphone-1.png" alt="iphone" />
           </div>
           <div className="column is-3">
             {Data2.map(item => (

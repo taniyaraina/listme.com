@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/mouse-events-have-key-events */
 import React from 'react';
 import styled from 'styled-components';
 
@@ -10,24 +9,24 @@ const Container = styled.div`
 
 const Data = [
   {
-    noColor: 'images/Client_1_noColor.png',
-    Color: 'images/Client_1_Color.png',
+    noColor: '/images/Client_1_noColor.png',
+    Color: '/images/Client_1_Color.png',
   },
   {
-    noColor: 'images/Client_2_noColor.png',
-    Color: 'images/Client_2_Color.png',
+    noColor: '/images/Client_2_noColor.png',
+    Color: '/images/Client_2_Color.png',
   },
   {
-    noColor: 'images/Client_3_noColor.png',
-    Color: 'images/Client_3_Color.png',
+    noColor: '/images/Client_3_noColor.png',
+    Color: '/images/Client_3_Color.png',
   },
   {
-    noColor: 'images/Client_4_noColor.png',
-    Color: 'images/Client_4_Color.png',
+    noColor: '/images/Client_4_noColor.png',
+    Color: '/images/Client_4_Color.png',
   },
   {
-    noColor: 'images/Client_5_noColor.png',
-    Color: 'images/Client_5_Color.png',
+    noColor: '/images/Client_5_noColor.png',
+    Color: '/images/Client_5_Color.png',
   },
 ];
 

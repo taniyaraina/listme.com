@@ -11,8 +11,29 @@ const Container = styled.div`
     line-height: 1.5rem;
   }
   img {
-    height: auto;
-    min-width: 40rem;
+    max-width: fit-content;
+  }
+  @media (max-width: 600px) {
+    .sidebarImage {
+      display: none;
+    }
+  }
+  .icon {
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+  }
+  button {
+    padding: 0rem 3rem;
+    height: 3.5rem;
+    border-radius: 100px;
+    transition: 0.5s;
+    box-shadow: none;
+    font-weight: bold;
+    border-color: ${theme.darkAccent};
+    :hover {
+      background-color: #6a4bc4 !important;
+      color: ${theme.backgroundColor};
+    }
   }
 `;
 
@@ -21,9 +42,9 @@ const AboutApp = () => {
     <Container className="container">
       <section className="section">
         <div className="columns is-gapless is-vcentered">
-          <div className="column is-6">
+          <div className="column is-5">
             <h1 className="title is-5 green">{`<about app>`}</h1>
-            <h1 className="title is-2 has-text-weight-bold ">
+            <h1 className=" title is-2 has-text-weight-bold ">
               Starting with App is Easier Than Anything!
             </h1>
             <h1 className="title is-6 lineHeight has-text-weight-normal">
@@ -33,14 +54,23 @@ const AboutApp = () => {
               industry-leading merchants on six continents. We’ve created a
               seamless, secure bitcoin
             </h1>
+            <button type="button" className="button is-medium">
+              Get the App
+            </button>
+            <a href="/" className="icon ">
+              <i className="fab fa-apple has-text-primary"></i>
+            </a>
+            <a href="/" className="icon">
+              <i className=" fab fa-android has-text-primary"></i>
+            </a>
           </div>
-          <div className="column is-6 has-text-centered">
-            <div className="columns is-gapless has-text-centered">
+          <div className="column is-6 has-text-centered sidebarImage">
+            <div className="columns is-variable is-4 has-text-centered">
               <div className="column is-6">
-                <img src="images/SlidingPhone.png" />
+                <img src="/images/SlidingPhone.png" />
               </div>
               <div className="column is-6">
-                <img src="images/SlidingPhone2.png" />
+                <img src="/images/SlidingPhone.png" />
               </div>
             </div>
           </div>
