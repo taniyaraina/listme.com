@@ -1,14 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import Heading from './elements/Heading';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 import { theme } from '../utils/theme';
 
 const Container = styled.div`
-  .greenColor {
-    color: ${theme.hoverColor} !important;
-  }
   .reverse {
     flex-direction: row-reverse;
     text-align: right;
@@ -20,9 +18,6 @@ const Container = styled.div`
     font-size: 0.8rem;
     line-height: 1.3rem;
     margin-top: -0.5rem;
-  }
-  .is-5 {
-    font-size: 1rem;
   }
   .card {
     padding: 1rem;
@@ -115,10 +110,10 @@ const ListItem = ({ number, title, subtitle, variants }) => {
       className="columns is-gapless is-multiline is-mobile card"
     >
       <div className="column is-2">
-        <h1 className="title is-5 purple">{number}</h1>
+        <h1 className="title is-size-6 purple">{number}</h1>
       </div>
       <div className="column is-10">
-        <h1 className="title is-5  has-text-left has-text-weight-bold">
+        <h1 className="title is-size-6  has-text-left has-text-weight-bold">
           {title}
         </h1>
         <h1 className="title is-6 has-text-left has-text-weight-light">
@@ -135,12 +130,12 @@ const HowItWorks = () => {
       <section className="section">
         <div className="columns is-multiline is-vcentered is-centered has-text-centered">
           <div className="column is-12">
-            <h1 className="title is-4 has-text-weight-normal greenColor">{`< how_it_works >`}</h1>
             <div className="columns is-centered">
               <div className="column is-4">
-                <h1 className="title is-3 has-text-weight-bold">
-                  Get Started in a Few Minutes with WallApp
-                </h1>
+                <Heading
+                  subtitle={`< how_it_works >`}
+                  title="Get Started in a Few Minutes with WallApp"
+                />
               </div>
             </div>
           </div>

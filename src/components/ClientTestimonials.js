@@ -1,17 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
+import Heading from './elements/Heading';
 import { theme } from '../utils/theme';
 
 const Container = styled.div`
   img {
     border-radius: 40px;
   }
-  .greenColor {
-    color: ${theme.hoverColor} !important;
-  }
   p {
     line-height: 1.875;
     margin-bottom: 2rem;
+    margin-top: 2rem;
   }
 `;
 
@@ -24,10 +23,7 @@ const TheySay = () => {
             <img src="/images/personComputer.jpg" alt="personComputer" />
           </div>
           <div className="column is-6">
-            <h1 className="title is-5 greenColor">{`< they_say >`}</h1>{' '}
-            <h1 className="title is-3 has-text-weight-bold">
-              Clients Testimonials
-            </h1>
+            <Heading subtitle={`< they_say >`} title="Clients Testimonials" />
             <p>
               “WallApp has consistently impressed us with its service and engi
               neering. We are excited to see where bitcoin is headed, and we are

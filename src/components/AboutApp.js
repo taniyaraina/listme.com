@@ -1,12 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import Heading from './elements/Heading';
 import { theme } from '../utils/theme';
 
 const Container = styled.div`
-  .green {
-    color: ${theme.hoverColor} !important;
-  }
   .lineHeight {
     line-height: 1.5rem;
   }
@@ -43,10 +40,10 @@ const AboutApp = () => {
       <section className="section">
         <div className="columns is-gapless is-vcentered">
           <div className="column is-5">
-            <h1 className="title is-5 green">{`<about app>`}</h1>
-            <h1 className=" title is-2 has-text-weight-bold ">
-              Starting with App is Easier Than Anything!
-            </h1>
+            <Heading
+              subtitle={`<about app>`}
+              title="Starting with App is Easier Than Anything!"
+            />
             <h1 className="title is-6 lineHeight has-text-weight-normal">
               We started our app because we wanted to make it easy for
               businesses to accept bitcoin payments. We are currently the

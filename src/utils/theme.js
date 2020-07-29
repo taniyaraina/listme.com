@@ -76,7 +76,7 @@ const GlobalStyle = createGlobalStyle`
   p {
     line-height: 1.5rem;
   }
-  p, .title, .box {
+  p, .box {
     color: ${theme.textColor} !important;
   }
   .subtitle {
