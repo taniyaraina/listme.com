@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import Heading from './elements/Heading';
 import { theme } from '../utils/theme';
 
 import IndividualPricingPlan from './IndividualPricingPlan';
@@ -50,14 +51,14 @@ const PricingPlans = () => {
   return (
     <Container tab={tab} className="has-text-centered">
       <section className="section">
-        <h1 className="title greenColor is-5">{`< pricing_plans >`}</h1>
         <div className="columns is-centered">
           <div className="column is-11">
             <div className="columns is-centered">
               <div className="column is-7">
-                <h1 className="title is-2 has-text-weight-bold is-size-4-touch">
-                  The Best Solutions for Agencies and Business Companies
-                </h1>
+                <Heading
+                  subtitle={`< pricing_plans >`}
+                  title="The Best Solutions for Agencies and Business Companies"
+                />
               </div>
             </div>
             <div className="buttonCollection">

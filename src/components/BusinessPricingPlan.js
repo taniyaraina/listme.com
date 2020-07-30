@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import PricingCard from '../components/PricingCard';
 import { theme } from '../utils/theme';
 
 const Container = styled.div`
@@ -53,88 +53,34 @@ const BusinessPlanPricing = () => {
       <div className="column is-12">
         <div className="columns is-centered">
           <div className="column is-4 hoverPull">
-            <div className="card">
-              <section className="section">
-                <h1 className="title is-1 has-text-weight-light">
-                  <sup className="is-size-4">$</sup>190.99
-                </h1>
-                <h1 className="title is-5">Monthly Package</h1>
-                <h1 className="subtitle is-6 greenCard coloredCard">basic</h1>
-                <div className="list">
-                  <h1 className="title is-5">
-                    <span className="bold">25 Analytics</span> Campaign
-                  </h1>
-                  <h1 className="title is-5">
-                    <span className="bold">1300</span> keywords
-                  </h1>
-                  <h1 className="title is-5">
-                    <span className="bold">25 Social</span> Media Reviews
-                  </h1>
-                  <h1 className="title is-5 faded">
-                    <span className="bold">1 Free</span> Optimization
-                  </h1>
-                  <h1 className="title is-5 faded">
-                    <span className="bold">24/7</span> Support
-                  </h1>
-                </div>
-              </section>
-            </div>
+            <PricingCard
+              price="190.99"
+              packages="Monthly Package"
+              Analytics="25 Analytics"
+              Keywords="1,600"
+              Media="22 Social"
+              Optimization="3 Free"
+            />
           </div>
           <div className="column is-4 hoverPull">
-            <div className="card">
-              <section className="section">
-                <h1 className="title is-1 has-text-weight-light">
-                  <sup className="is-size-4">$</sup>290.99
-                </h1>
-                <h1 className="title is-5">Monthly Package</h1>
-                <h1 className="subtitle is-6 greenCard coloredCard">basic</h1>
-                <div className="list">
-                  <h1 className="title is-5">
-                    <span className="bold">25 Analytics</span> Campaign
-                  </h1>
-                  <h1 className="title is-5">
-                    <span className="bold">1300</span> keywords
-                  </h1>
-                  <h1 className="title is-5">
-                    <span className="bold">25 Social</span> Media Reviews
-                  </h1>
-                  <h1 className="title is-5 ">
-                    <span className="bold">1 Free</span> Optimization
-                  </h1>
-                  <h1 className="title is-5 faded">
-                    <span className="bold">24/7</span> Support
-                  </h1>
-                </div>
-              </section>
-            </div>
+            <PricingCard
+              price="290.99"
+              packages="Year Package"
+              Analytics="29 Analytics"
+              Keywords="1,200"
+              Media="23 Social"
+              Optimization="3 Free"
+            />
           </div>
           <div className="column is-4 hoverPull">
-            <div className="card">
-              <section className="section">
-                <h1 className="title is-1 has-text-weight-light">
-                  <sup className="is-size-4">$</sup>390.99
-                </h1>
-                <h1 className="title is-5">Monthly Package</h1>
-                <h1 className="subtitle is-6 greenCard coloredCard">basic</h1>
-                <div className="list">
-                  <h1 className="title is-5">
-                    <span className="bold">25 Analytics</span> Campaign
-                  </h1>
-                  <h1 className="title is-5">
-                    <span className="bold">1300</span> keywords
-                  </h1>
-                  <h1 className="title is-5">
-                    <span className="bold">25 Social</span> Media Reviews
-                  </h1>
-                  <h1 className="title is-5 ">
-                    <span className="bold">1 Free</span> Optimization
-                  </h1>
-                  <h1 className="title is-5 ">
-                    <span className="bold">24/7</span> Support
-                  </h1>
-                </div>
-              </section>
-            </div>
+            <PricingCard
+              price="390.99"
+              packages="Monthly Package"
+              Analytics="25 Analytics"
+              Keywords="1,800"
+              Media="21 Social"
+              Optimization="3 Free"
+            />
           </div>
         </div>
       </div>
