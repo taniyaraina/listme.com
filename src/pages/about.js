@@ -6,7 +6,7 @@ import Seo from '../components/Seo';
 import MapHero from '../components/MapHero';
 import InfoCards from '../components/InfoCards';
 import ClientTestimonials from '../components/ClientTestimonials';
-import HowItWorks from '../components/HowItWorks';
+import Features from '../components/Features';
 import AboutApp from '../components/AboutApp';
 import OurPartner from '../components/OurPartner';
 
@@ -27,7 +27,7 @@ const About = () => {
         <AboutApp />
         <ClientTestimonials />
         <InfoCards />
-        <HowItWorks />
+        <Features />
         <Wrapper>
           <OurPartner />
         </Wrapper>
