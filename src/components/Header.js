@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import UseAnimations from 'react-useanimations';
 import PurpleButton from './elements/PurpleButton';
+import { theme } from '../utils/theme';
 
 const Section = styled.div`
   padding: 1.5rem 1.5rem !important;
@@ -12,7 +13,14 @@ const Section = styled.div`
     padding-bottom: 1.5rem;
     background-color: rgba(255, 255, 255, 1);
   }
-
+  @media only screen and (max-width: 1024px) {
+    .navbar {
+      background-color: ${theme.textColor};
+      padding-top: 0;
+      padding-bottom: 0;
+      display: flex;
+    }
+  }
   .navbar-item img {
     max-height: 2.375rem;
   }
@@ -22,6 +30,7 @@ const Section = styled.div`
     left: -50%;
   }
   .absolute-position {
+    margin-top: 2rem;
     position: absolute;
     left: 50%;
     top: 10px;
@@ -49,7 +58,7 @@ const Section = styled.div`
     opacity: 0.6;
     border-radius: 4px;
   }
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 1024px) {
     i {
       color: ${props => props.theme.backgroundColor};
     }
@@ -59,11 +68,16 @@ const Section = styled.div`
     }
     .navbar-burger {
       margin-left: 10px;
+      margin-top: 2.2rem;
     }
     .navbar-menu {
       position: absolute;
       width: 100%;
       transition: 0.6s;
+    }
+    .navbar-end {
+      margin-left: 15rem;
+      margin-top: 3rem;
     }
     .image-to-hide {
       display: none;
@@ -71,15 +85,13 @@ const Section = styled.div`
     .image-to-show {
       display: inline;
     }
+    .searchBar {
+      color: ${theme.backgroundColor} !important;
+    }
   }
   .image-to-show-image {
     width: auto;
     min-height: 2rem;
-  }
-  .searchBox {
-    position: absolute;
-    top: 7rem;
-    right: 40%;
   }
   .navbar-link:not(.is-arrowless)::after,
   .select:not(.is-multiple):not(.is-loading)::after {
@@ -91,6 +103,9 @@ const Section = styled.div`
   }
   .navbar-link:not(.is-arrowless) {
     padding-right: 2em;
+  }
+  .Navbutton {
+    padding: 1rem 2rem 1rem 2rem;
   }
 `;
 
@@ -133,43 +148,17 @@ const Header = () => {
               <Link to="/" className="navbar-link">
                 Home
               </Link>
-              <div className="navbar-dropdown">
-                <a className="navbar-item">Home 1</a>
-                <a className="navbar-item">Home 2</a>
-                <a className="navbar-item">Home 3</a>
-              </div>
             </div>
             <div className="navbar-item has-dropdown is-hoverable">
-              <Link to="/" className="navbar-link">
-                Pages
+              <Link to="/about" className="navbar-link">
+                About
               </Link>
-              <div className="navbar-dropdown">
-                <a className="navbar-item">About</a>
-                <a className="navbar-item">Jobs</a>
-                <a className="navbar-item">Contact</a>
-              </div>
             </div>
             <div className="navbar-item has-dropdown is-hoverable">
               <Link to="/blog-grid" className="navbar-link">
                 Blog
               </Link>
-              <div className="navbar-dropdown">
-                <a className="navbar-item">About</a>
-                <a className="navbar-item">Jobs</a>
-                <a className="navbar-item">Contact</a>
-              </div>
             </div>
-            <div className="navbar-item has-dropdown is-hoverable">
-              <Link to="/" className="navbar-link">
-                Portfolio
-              </Link>
-              <div className="navbar-dropdown">
-                <a className="navbar-item">About</a>
-                <a className="navbar-item">Jobs</a>
-                <a className="navbar-item">Contact</a>
-              </div>
-            </div>
-
             <div className="navbar-item has-dropdown is-hoverable">
               <Link to="/shop" className="navbar-link">
                 Shop
@@ -223,7 +212,7 @@ const Header = () => {
               </div>
             </Search> */}
           <div className="navbar-item hidden">
-            <PurpleButton title="Try Now" />
+            <PurpleButton title="Try Free" className="Navbutton" />
           </div>
         </div>
       </nav>
