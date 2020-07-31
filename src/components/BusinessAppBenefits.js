@@ -7,6 +7,15 @@ const Container = styled.div`
   .icon {
     color: ${theme.darkAccent};
   }
+  .Inner {
+    display: flex;
+  }
+  .is-2 {
+    align-self: center;
+  }
+  .subtitle {
+    line-height: 1.7;
+  }
   span {
     height: 3rem;
     width: 3rem;
@@ -21,8 +30,8 @@ const BusinessAppBenefits = () => {
   return (
     <Container className="columns is-multiline  is-mobile ">
       <div className="column is-12">
-        <div className="columns ">
-          <div className="column is-2 ">
+        <div className="columns Inner is-mobile">
+          <div className="column is-2 has-text-centered">
             <span className="icon is-size-2">
               <i className="fab fa-bitcoin" />
             </span>
@@ -37,8 +46,8 @@ const BusinessAppBenefits = () => {
         </div>
       </div>
       <div className="column is-12">
-        <div className="columns">
-          <div className="column is-2">
+        <div className="columns Inner is-mobile">
+          <div className="column is-2 has-text-centered">
             <span className="icon is-size-2">
               {' '}
               <i className="fas fa-cube" />
@@ -54,8 +63,8 @@ const BusinessAppBenefits = () => {
         </div>
       </div>
       <div className="column is-12">
-        <div className="columns">
-          <div className="column is-2">
+        <div className="columns Inner is-mobile">
+          <div className="column is-2 has-text-centered">
             <span className="icon is-size-2">
               {' '}
               <i className="fas fa-chart-bar" />
