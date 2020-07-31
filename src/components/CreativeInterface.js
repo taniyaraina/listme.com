@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Heading from './elements/Heading';
 
 import { theme } from '../utils/theme';
 import ImageCollection2 from './ImageCollection2';
@@ -36,12 +37,12 @@ const CreativeInterface = () => {
     <section className="section">
       <Container className="columns is-centered ">
         <div className="column is-5">
-          <h1 className="title is-5 greenColor">{`< creative_interface >`}</h1>
           <div className="columns">
             <div className="column is-10">
-              <h1 className="title is-2 has-text-weight-bold">
-                Your Own Crypto Wallet Credit Card
-              </h1>
+              <Heading
+                title="Your Own Crypto Wallet Credit Card"
+                subtitle="< creative_interface >"
+              />
             </div>
           </div>
           <h1 className="subtitle is-6">

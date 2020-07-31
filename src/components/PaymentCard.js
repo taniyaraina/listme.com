@@ -113,7 +113,7 @@ const PaymentCard = () => {
           <div className="services_circle_wrapper">
             <div className="services_circle" />
           </div>
-          <i className="fas fa-home" />
+          <i className="fab fa-bitcoin" />
         </div>
         <h1 className="title is-5 has-text-weight-semibold">Any Payments</h1>
         <div className="content">
