@@ -23,11 +23,11 @@ const Section = styled.div`
 const Bitcoins = () => {
   return (
     <Section className="section">
-      <div className="columns is-centered">
-        <div className="column is-9">
-          <div className="columns is-centered">
+      <div className="columns is-centered is-vcentered">
+        <div className="column is-10">
+          <div className="columns">
             {Bitcoin.map(item => (
-              <div className="column is-2">
+              <div className="column is-2 has-text-centered">
                 <img
                   src={`images/${item.image}.png`}
                   className="zoom"

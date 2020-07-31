@@ -16,15 +16,15 @@ const Container = styled.div`
     width: 100%;
     padding: 0.5rem 0rem;
   }
-  .coloredCard {
-    color: ${theme.backgroundColor};
+  /* .coloredCard {
+    /* color: ${theme.backgroundColor}; */
     display: inline-block;
     padding: 0.5rem 2rem;
     border-radius: 50px;
-  }
-  .greenCard {
+  } */
+  /* .greenCard {
     background-color: ${theme.hoverColor};
-  }
+  } */
   .bold {
     font-weight: bold;
   }
@@ -57,6 +57,8 @@ const IndividualPricingPlan = () => {
             <PricingCard
               price="19.99"
               packages="Monthly Package"
+              button="basic"
+              buttonColor={theme.hoverColor}
               Analytics="25 Analytics"
               Keywords="1,300"
               Media="25 Social"
@@ -67,6 +69,8 @@ const IndividualPricingPlan = () => {
             <PricingCard
               price="29.99"
               packages="Year Package"
+              button="ultra"
+              buttonColor={theme.textColorLite}
               Analytics="28 Analytics"
               Keywords="1,600"
               Media="27 Social"
@@ -77,6 +81,8 @@ const IndividualPricingPlan = () => {
             <PricingCard
               price="39.99"
               packages="Monthly Package"
+              button="pro"
+              buttonColor={theme.darkAccent}
               Analytics="30 Analytics"
               Keywords="1,900"
               Media="29 Social"

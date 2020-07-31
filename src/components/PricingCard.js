@@ -16,10 +16,15 @@ const Container = styled.div`
     font-weight: 600;
   }
 `;
+const Button = styled.button`
+  background-color: ${props => props.color};
+`;
 
 const PricingCard = ({
   price,
   packages,
+  button,
+  buttonColor,
   Analytics,
   Keywords,
   Media,
@@ -35,7 +40,12 @@ const PricingCard = ({
         <h1 className="title is-5 is-size-6 has-text-weight-normal pack">
           {packages}
         </h1>
-        <h1 className="subtitle is-6 greenCard coloredCard">basic</h1>
+        <Button
+          className="button is-rounded has-text-white"
+          color={buttonColor}
+        >
+          {button}
+        </Button>
         <div className="list">
           <h1 className="title is-5 is-size-5 has-text-weight-light ">
             <span className="has-text-weight-normal">{Analytics}</span> Campaign
@@ -55,7 +65,11 @@ const PricingCard = ({
             <span className="has-text-weight-normal">24/7</span> Support
           </h1>
         </div>
-        <PurpleButton title="Get Started" className="is-size-5" />
+        <PurpleButton
+          title="Get Started"
+          className="is-size-5"
+          color={theme.textColor}
+        />
       </section>
     </Container>
   );
