@@ -57,7 +57,7 @@ const Numbers = () => {
                     decimal=""
                   />
                 </h1>
-                <h1 className="subtitle is-5">{`< happy_clients >`}</h1>
+                <h1 className="subtitle is-5">{`< lines_of_code >`}</h1>
               </div>
               <div className="column is-3">
                 <h1 className="title is-3">
@@ -69,7 +69,7 @@ const Numbers = () => {
                     decimal=""
                   />
                 </h1>
-                <h1 className="subtitle is-5">{`< happy_clients >`}</h1>
+                <h1 className="subtitle is-5">{`< great_features >`}</h1>
               </div>
               <div className="column is-3">
                 <h1 className="title is-3">
@@ -81,7 +81,7 @@ const Numbers = () => {
                     decimal=""
                   />
                 </h1>
-                <h1 className="subtitle is-5">{`< happy_clients >`}</h1>
+                <h1 className="subtitle is-5">{`< maga_block >`}</h1>
               </div>
             </div>
           </div>

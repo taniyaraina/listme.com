@@ -9,43 +9,21 @@ const Section = styled.div`
   padding: 1.5rem 1.5rem !important;
   font-family: ${props => props.theme.primaryFontFamily};
   .navbar {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
     background-color: rgba(255, 255, 255, 1);
+    padding: 0.8rem 1rem 0.8rem 1rem;
   }
-  @media only screen and (max-width: 1024px) {
-    .navbar {
-      background-color: ${theme.textColor};
-      padding-top: 0;
-      padding-bottom: 0;
-      display: flex;
-    }
+  .navbar-start {
+    flex: 1;
+    justify-content: center;
   }
   .navbar-item img {
     max-height: 2.375rem;
-  }
-  .image-to-show {
-    display: none;
-    position: relative;
-    left: -50%;
-  }
-  .absolute-position {
-    margin-top: 2rem;
-    position: absolute;
-    left: 50%;
-    top: 10px;
-  }
-  .navbar-menu {
-    @media screen and (min-width: 1180px) {
-      padding-left: 8rem;
-    }
   }
   .navbar-item {
     a {
       color: ${props => props.theme.textColor} !important;
     }
     font-weight: 500 !important;
-    padding-top: 0rem;
     font-family: ${props => props.theme.fontFamilyThin};
     color: ${props => props.theme.textColor} !important;
     :hover {
@@ -57,41 +35,10 @@ const Section = styled.div`
     color: #fff;
     opacity: 0.6;
     border-radius: 4px;
+    margin-left: 0px;
   }
-  @media screen and (max-width: 1024px) {
-    i {
-      color: ${props => props.theme.backgroundColor};
-    }
-    background-color: ${props => props.theme.headerColor};
-    .hidden {
-      display: none;
-    }
-    .navbar-burger {
-      margin-left: 10px;
-      margin-top: 2.2rem;
-    }
-    .navbar-menu {
-      position: absolute;
-      width: 100%;
-      transition: 0.6s;
-    }
-    .navbar-end {
-      margin-left: 15rem;
-      margin-top: 3rem;
-    }
-    .image-to-hide {
-      display: none;
-    }
-    .image-to-show {
-      display: inline;
-    }
-    .searchBar {
-      color: ${theme.backgroundColor} !important;
-    }
-  }
-  .image-to-show-image {
-    width: auto;
-    min-height: 2rem;
+  .searchBar {
+    margin-right: 1rem;
   }
   .navbar-link:not(.is-arrowless)::after,
   .select:not(.is-multiple):not(.is-loading)::after {
@@ -100,12 +47,32 @@ const Section = styled.div`
     content: '+';
     transform: rotate(-90deg);
     width: 0.9em;
+    margin-top: -4px;
   }
   .navbar-link:not(.is-arrowless) {
     padding-right: 2em;
   }
-  .Navbutton {
+  .navButton {
     padding: 1rem 2rem 1rem 2rem;
+  }
+  @media only screen and (max-width: 768px) {
+    .navbar {
+      background-color: ${theme.textColor};
+      padding: 0;
+    }
+    .navbar-menu {
+      height: 100vh;
+    }
+    .navbar-brand {
+      align-items: center;
+      justify-content: space-between;
+    }
+    .hidden {
+      display: none;
+    }
+    .searchBar {
+      color: ${theme.backgroundColor} !important;
+    }
   }
 `;
 
@@ -122,25 +89,32 @@ const Header = () => {
       >
         <div className="navbar-brand">
           <Link className="navbar-item image-to-hide" to="/">
-            <img src="/images/listmelogo.png" alt="site logo" />
+            <img src="/images/newListmeLogo.png" alt="site logo" />
           </Link>
-          <a
-            href="#"
-            role="button"
-            className={
-              menuActive
-                ? 'navbar-burger burger mobile is-active'
-                : 'navbar-burger burger mobile'
-            }
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
-            onClick={handleMobileMenu}
-          >
-            <span aria-hidden="true" />
-            <span aria-hidden="true" />
-            <span aria-hidden="true" />
-          </a>
+          <>
+            <UseAnimations
+              className="navbar-item searchBar is-hidden-desktop"
+              animationKey="searchToX"
+              size={50}
+            />
+            <a
+              href="#"
+              role="button"
+              className={
+                menuActive
+                  ? 'navbar-burger burger mobile is-active'
+                  : 'navbar-burger burger mobile'
+              }
+              aria-label="menu"
+              aria-expanded="false"
+              data-target="navbarBasicExample"
+              onClick={handleMobileMenu}
+            >
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+            </a>
+          </>
         </div>
         <div className={menuActive ? 'navbar-menu is-active' : 'navbar-menu'}>
           <div className="navbar-start">
@@ -160,40 +134,15 @@ const Header = () => {
               </Link>
             </div>
             <div className="navbar-item has-dropdown is-hoverable">
-              <Link to="/shop" className="navbar-link">
-                Shop
-              </Link>
-              <div className="navbar-dropdown">
-                <Link to="/shop">
-                  <a className="navbar-item">Shop</a>
-                </Link>
-                <Link to="/product">
-                  <a className="navbar-item">Product</a>
-                </Link>
-                <Link to="/cart">
-                  <a className="navbar-item">Cart</a>
-                </Link>
-              </div>
-            </div>
-            <div className="navbar-item has-dropdown is-hoverable">
-              <Link to="/contact" className="navbar-link">
+              <Link to="/contact" className="navbar-item contact">
                 Contacts
               </Link>
             </div>
           </div>
         </div>
-        <div className="absolute-position">
-          <Link className="navbar-item image-to-show" to="/">
-            <img
-              src="/images/listmelogo.png"
-              className="image-to-show-image"
-              alt="site logo"
-            />
-          </Link>
-        </div>
         <div className="navbar-end">
           <UseAnimations
-            className="navbar-item searchBar"
+            className="navbar-item searchBar is-hidden-touch"
             animationKey="searchToX"
             size={50}
           />
@@ -212,7 +161,7 @@ const Header = () => {
               </div>
             </Search> */}
           <div className="navbar-item hidden">
-            <PurpleButton title="Try Free" className="Navbutton" />
+            <PurpleButton title="Try Free" className="navButton" />
           </div>
         </div>
       </nav>

@@ -31,6 +31,9 @@ const Container = styled.div`
   .up {
     margin-top: -1rem;
   }
+  .icon {
+    color: ${theme.mainBrandColor};
+  }
   input {
     border-radius: 100px;
     margin-bottom: 1rem;

@@ -110,7 +110,11 @@ const PaySpend = () => {
         variants={TextAnimate}
         transition={{ delay: 2, duration: 1 }}
       >
-        <PurpleButton className="is-medium" title="How it Works" />
+        <PurpleButton
+          className="has-text-weight-semibold"
+          title="How it Works"
+          color={theme.textColor}
+        />
         <>
           <IconWrapper href="/" className="icon">
             <i className="fab fa-apple" />
