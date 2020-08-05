@@ -67,7 +67,7 @@ const PricingCard = ({
         </div>
         <PurpleButton
           title="Get Started"
-          className="is-size-5"
+          className=""
           color={theme.textColor}
         />
       </section>

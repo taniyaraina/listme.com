@@ -34,8 +34,12 @@ const Container = styled.div`
       }
     }
   }
+  .is-1 {
+    font-size: 4rem !important;
+    margin-bottom: 2rem;
+  }
   .appStoreBack {
-    margin: 0.5rem 1rem;
+    margin: 1.5rem 0.5rem;
     display: inline-block;
     background-image: radial-gradient(
       circle farthest-corner at 100% 150%,
@@ -82,7 +86,7 @@ const DownloadApp = () => {
   return (
     <Container>
       <section className="section has-text-centered">
-        <h1 className="title is-1 has-text-weight-bold">
+        <h1 className="title is-1 has-text-weight-bold has-text-black">
           Download App <span className="greenColor">{`</>`}</span>
         </h1>
         <div className="columns is-centered">
@@ -96,13 +100,13 @@ const DownloadApp = () => {
         </div>
         <div className="appStoreBack">
           <button type="button" className="button is-medium appStore">
-            <i className="fab fa-apple is-size-4 appleIcon"></i>
+            <i className="fab fa-apple is-size-4 appleIcon" />
             App Store
           </button>
         </div>
         <div className="playStoreBack">
           <button type="button" className="button is-medium playStore">
-            <i className="fab fa-google-play is-size-4 playIcon"></i>
+            <i className="fab fa-google-play is-size-4 playIcon" />
             Google Play
           </button>
         </div>
