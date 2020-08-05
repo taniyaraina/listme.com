@@ -26,7 +26,8 @@ const Container = styled.div`
       color: ${theme.darkAccent};
     }
   }
-  .margin {
+  .subtitle {
+    margin-top: -15px !important;
   }
 `;
 

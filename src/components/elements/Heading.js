@@ -7,6 +7,7 @@ const Section = styled.div`
   }
   .title.is-3 {
     line-height: 1.4 !important;
+    font-size: 36px !important;
   }
 `;
 

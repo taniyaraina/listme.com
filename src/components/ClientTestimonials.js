@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Heading from './elements/Heading';
-import { theme } from '../utils/theme';
 
 const Container = styled.div`
   img {
@@ -11,6 +10,7 @@ const Container = styled.div`
     line-height: 1.875;
     margin-bottom: 2rem;
     margin-top: 2rem;
+    font-size: ${props => props.theme.fontSizeMedium}px !important;
   }
 `;
 
