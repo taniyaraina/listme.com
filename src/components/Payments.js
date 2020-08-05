@@ -9,12 +9,13 @@ const MovingDownColumn = styled.div`
   margin-top: 70px;
 `;
 const ContentWrapper = styled.div`
-  margin-top: 70px;
+  margin-top: 6rem;
   .title.is-6 {
     color: ${theme.hoverColor} !important;
+    margin-bottom: 1rem !important;
   }
-  title.is-3 {
-    line-height: 45px;
+  .title.is-3 {
+    line-height: 1.3 !important;
   }
   .has-text-weight-normal {
     font-size: 0.9rem;
@@ -30,6 +31,9 @@ const ContentWrapper = styled.div`
 
 const Article = styled.article`
   align-items: center;
+  .content h1 {
+    font-size: 18px !important;
+  }
   span {
     color: ${theme.mainBrandColor} !important;
   }
@@ -66,7 +70,7 @@ const Payments = () => {
               </figure>
               <div className="media-content">
                 <div className="content">
-                  <h1 className="title is-6 has-text-weight-bold">
+                  <h1 className="is-size-6 has-text-weight-bold">
                     Jina Nilson,<span className="purple">UI Designer</span>
                   </h1>
                 </div>

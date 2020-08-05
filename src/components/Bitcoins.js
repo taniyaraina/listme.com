@@ -11,6 +11,7 @@ const Bitcoin = [
 ];
 
 const Section = styled.div`
+  margin-top: 5rem;
   .zoom {
     transition: all 400ms;
   }
