@@ -45,6 +45,11 @@ const Container = styled.div`
       font-size: 100%;
     }
   }
+  .title {
+    font-size: 3rem;
+    font-family: Poppins;
+    line-height: 1.3;
+  }
   .margin {
     margin-bottom: 1rem !important;
   }
@@ -98,7 +103,7 @@ const PaySpend = () => {
           animate="end"
           variants={TextAnimate}
           transition={{ delay: 2, duration: 1 }}
-          className="title is-1 has-text-weight-bold"
+          className="has-text-weight-bold title is-size-6-mobile"
         >
           Pay, Spend & Store Bitcoins on <br />
           Your Terms
@@ -116,10 +121,10 @@ const PaySpend = () => {
           color={theme.textColor}
         />
         <>
-          <IconWrapper href="/" className="icon">
+          <IconWrapper href="/" className="icon is-hidden-touch">
             <i className="fab fa-apple" />
           </IconWrapper>
-          <IconWrapper href="/" className="icon">
+          <IconWrapper href="/" className="icon is-hidden-touch">
             <i className="fab fa-android" />
           </IconWrapper>
         </>
