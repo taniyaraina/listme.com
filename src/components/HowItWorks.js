@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import Heading from './elements/Heading';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import Heading from './elements/Heading';
 
 import { theme } from '../utils/theme';
 
 const Container = styled.div`
+  margin-top: 4rem;
   .reverse {
     flex-direction: row-reverse;
     text-align: right;
@@ -15,9 +16,10 @@ const Container = styled.div`
     color: ${theme.darkAccent} !important;
   }
   .is-6 {
-    font-size: 0.8rem;
-    line-height: 1.3rem;
+    font-size: 1rem;
+    line-height: 1.7rem;
     margin-top: -0.5rem;
+    font-family: ${theme.secondaryFontFamily};
   }
   .card {
     padding: 1rem;
@@ -28,6 +30,9 @@ const Container = styled.div`
     :hover {
       box-shadow: inset 0px 14px 20px 0px rgba(0, 0, 0, 0.08);
     }
+  }
+  .wrap {
+    width: 30% !important;
   }
 `;
 
@@ -139,7 +144,7 @@ const HowItWorks = () => {
               </div>
             </div>
           </div>
-          <div className="column is-3">
+          <div className="column is-4 wrap">
             {Data1.map(item => (
               <ListItem
                 number={item.number}
@@ -152,7 +157,7 @@ const HowItWorks = () => {
           <div className="column is-4">
             <img src="/images/iphone-1.png" alt="iphone" />
           </div>
-          <div className="column is-3">
+          <div className="column is-4 wrap">
             {Data2.map(item => (
               <ListItem
                 number={item.number}
