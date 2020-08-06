@@ -19,6 +19,9 @@ const Container = styled.div`
   .head {
     font-size: ${props => props.theme.fontSizeMedium}px !important;
   }
+  .wrap {
+    width: 30% !important;
+  }
   .is-6 {
     font-size: 1rem;
     line-height: 1.7rem;
@@ -35,8 +38,10 @@ const Container = styled.div`
       box-shadow: inset 0px 14px 20px 0px rgba(0, 0, 0, 0.08);
     }
   }
-  .wrap {
-    width: 30% !important;
+  @media only screen and (max-width: 768px) {
+    .wrap {
+      width: 100% !important;
+    }
   }
 `;
 

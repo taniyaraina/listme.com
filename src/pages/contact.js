@@ -27,11 +27,10 @@ const Section = styled.div`
 const Contact = () => (
   <Layout>
     <Seo title="Contact Us" />
-    <MapHero Title="Contact" />
+    <MapHero Title="Contact" subtitle="contact" />
     <Section className="section">
       <ContactUs />
     </Section>
   </Layout>
 );
-
 export default Contact;
