@@ -47,6 +47,7 @@ export const theme = {
   headerColor: '#222239',
   lightColor: '#F7F9FD',
   darkPurple: '#121225',
+  lightGreen: '#54E0C4',
   red: '#EE1D52',
   lightGrey: '#c4cdd7',
   twitterIconColor: '#1da1f2',

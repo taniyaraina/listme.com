@@ -21,9 +21,13 @@ const FooterStyled = styled.footer`
   min-height: 30rem;
   width: 100%;
   padding-top: 10.5rem;
-  .is-6 {
+  .is-size-6 {
     font-size: 0.85rem;
     line-height: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .is-4 {
+    font-size: ${props => props.theme.fontSizeMedium}px !important;
   }
   .footer-logo {
     height: 2.5rem;
@@ -34,6 +38,8 @@ const FooterStyled = styled.footer`
   }
   .grey {
     color: ${theme.lightGrey} !important;
+    font-family: ${theme.secondaryFontFamily};
+    line-height: 1.5;
   }
   .bold {
     font-weight: bold;
@@ -54,7 +60,8 @@ const FooterStyled = styled.footer`
     padding: 0rem 3rem;
     margin-top: 1rem;
     height: 3rem;
-    background-color: ${theme.hoverColor} !important;
+    background-color: ${theme.lightGreen} !important;
+    border-color: ${theme.lightGreen} !important;
     font-weight: 600;
   }
   .is-borderTop {
@@ -95,7 +102,7 @@ const Footer = () => {
                 className="footer-logo"
               />
             </Link>
-            <h1 className="title is-6 has-text-weight-light grey small">
+            <h1 className="title is-size-6 has-text-weight-medium grey small">
               We are a software house from USA focused on custom software
               development, e-commerce platforms, ERP className systems
               development.
@@ -111,22 +118,22 @@ const Footer = () => {
           </div>
           <div className="column is-3">
             <h1 className="title is-4 has-text-weight-bold">Contact Us</h1>
-            <h1 className="title is-6 lineHeight  has-text-weight-light ">
+            <h1 className="title is-size-6 lineHeight  has-text-weight-light ">
               <span className="bold"> Adress:</span>
               {` `}
               27 Division St, New York, NY 10002, United States of America
             </h1>
-            <h1 className="title is-6   has-text-weight-light ">
+            <h1 className="title is-size-6   has-text-weight-light ">
               <span className="bold"> Website:</span>
               {`  `}
               <a>Softlab.wdl.net</a>
             </h1>
-            <h1 className="title is-6   has-text-weight-light ">
+            <h1 className="title is-size-6   has-text-weight-light ">
               <span className="bold"> Email:</span>
               {`  `}
               <a>Softlab@gmail.com</a>
             </h1>
-            <h1 className="title is-6   has-text-weight-light ">
+            <h1 className="title is-size-6   has-text-weight-light ">
               <span className="bold"> Phone:</span>
               {`  `}
               <a>+91 8146851290</a>
@@ -134,42 +141,48 @@ const Footer = () => {
           </div>
           <div className="column is-2">
             <h1 className="title is-5  ">
-              <span className="bold"> Useful Links</span>
+              <h1 className=" title is-4 has-text-weight-bold">
+                {' '}
+                Useful Links
+              </h1>
             </h1>
-            <h1 className="title is-6  has-text-weight-light ">
+            <h1 className="title is-size-6  has-text-weight-light ">
               {' '}
               <Link to="/">About Us</Link>
             </h1>
-            <h1 className="title is-6  has-text-weight-light ">
+            <h1 className="title is-size-6  has-text-weight-light ">
               {' '}
               <Link to="/">Help Link</Link>
             </h1>
-            <h1 className="title is-6  has-text-weight-light ">
+            <h1 className="title is-size-6  has-text-weight-light ">
               <Link to="/">Terms & Conditions</Link>
             </h1>
-            <h1 className="title is-6  has-text-weight-light ">
+            <h1 className="title is-size-6  has-text-weight-light ">
               <Link to="/contact">Contact Us</Link>
             </h1>
-            <h1 className="title is-6  has-text-weight-light ">
+            <h1 className="title is-size-6  has-text-weight-light ">
               <Link to="/">Privacy Policy</Link>
             </h1>
           </div>
           <div className="column is-3">
             <h1 className="title is-4 has-text-weight-bold "> Newsletter</h1>
-            <div class="field">
-              <p class="control has-icons-right">
+            <div className="field">
+              <p className="control has-icons-left has-icons-right">
                 <input
-                  class="input is-medium"
+                  className="input is-medium ml-1"
                   type="email"
                   placeholder="Your Email"
                 />
-                <span class="icon is-small is-right">
-                  <i class="fas fa-envelope"></i>
+                <span className="icon is-small is-right">
+                  <i className="fas fa-envelope" />
                 </span>
               </p>
             </div>
-            <button type="button" className="button is-primary is-medium">
-              Submit
+            <button
+              type="button"
+              className="button is-medium has-text-white is-size-6"
+            >
+              Subcribe
             </button>
           </div>
         </div>
@@ -177,13 +190,13 @@ const Footer = () => {
           <div className="column is-11">
             <div className="columns is-borderTop">
               <div className="column is-5">
-                <h1 className="subtitle is-6 grey">
+                <h1 className="subtitle is-size-6 grey">
                   Terms of Use | Privacy Environmental Policy
                 </h1>
               </div>
               <div className="column is-2" />
-              <div className="column is-6">
-                <h1 className="subtitle is-6 grey">
+              <div className="column is-size-6">
+                <h1 className="subtitle is-size-6 grey">
                   Copyright © 2019 Softlab by{' '}
                   <a className="has-text-white underline">WebGeniusLab.</a> All
                   Rights Reserved.
