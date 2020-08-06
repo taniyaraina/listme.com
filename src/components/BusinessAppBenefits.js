@@ -11,7 +11,7 @@ const BusinessAppBenefits = () => {
     <Container className="columns is-multiline  is-mobile ">
       <div className="column is-12">
         <BenefitItem
-          icon="fab fa-bitcoin"
+          icon="/images/threeD-icon.png"
           heading="   Web application providing access to the decentralized peer to peer
               network through anonymously created accounts with optional
               biometric security."
@@ -19,7 +19,7 @@ const BusinessAppBenefits = () => {
       </div>
       <div className="column is-12">
         <BenefitItem
-          icon="fas fa-cube"
+          icon="/images/threeD-icon.png"
           heading="The application feature set includes transaction overview, sending
               and receiving payments, price charts, payee management and a
               indicator displaying."
@@ -27,7 +27,7 @@ const BusinessAppBenefits = () => {
       </div>
       <div className="column is-12">
         <BenefitItem
-          icon="fas fa-chart-bar"
+          icon="/images/growth-icon.png"
           heading=" Individuals and business entities meeting the requirements for
               becoming a local partner can register with the platform and begin
               trading."

@@ -67,7 +67,7 @@ const FooterStyled = styled.footer`
   .is-borderTop {
     border: 0px solid #fff;
     border-top-width: 1px;
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
   a {
     transition: 0.6s;
@@ -167,7 +167,7 @@ const Footer = () => {
           <div className="column is-3">
             <h1 className="title is-4 has-text-weight-bold "> Newsletter</h1>
             <div className="field">
-              <p className="control has-icons-left has-icons-right">
+              <p className="control has-icons-right">
                 <input
                   className="input is-medium ml-1"
                   type="email"
@@ -195,7 +195,7 @@ const Footer = () => {
                 </h1>
               </div>
               <div className="column is-2" />
-              <div className="column is-size-6">
+              <div className="column">
                 <h1 className="subtitle is-size-6 grey">
                   Copyright © 2019 Softlab by{' '}
                   <a className="has-text-white underline">WebGeniusLab.</a> All

@@ -10,7 +10,7 @@ const Section = styled.div`
   font-family: ${props => props.theme.primaryFontFamily};
   .navbar {
     background-color: rgba(255, 255, 255, 1);
-    padding: 0.8rem 1rem 0.8rem 1rem;
+    padding: 1.3rem 1rem 0.8rem 1rem;
   }
   .navbar-start {
     flex: 1;
