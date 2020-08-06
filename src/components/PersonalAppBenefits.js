@@ -9,7 +9,7 @@ const PersonalAppBenefits = () => {
     <Container className="columns is-multiline is-mobile ">
       <div className="column is-12">
         <BenefitItem
-          icon="fas fa-shopping-bag"
+          icon="/images/shopping-bag (2).png"
           heading=" The application feature set includes transaction overview, sending
               and receiving payments, price charts, payee management and a
               indicator displaying."
@@ -17,7 +17,7 @@ const PersonalAppBenefits = () => {
       </div>
       <div className="column is-12">
         <BenefitItem
-          icon="fas fa-box-open"
+          icon="/images/gift-icon.png"
           heading=" The application feature set includes transaction overview, sending
               and receiving payments, price charts, payee management and a
               indicator displaying."
@@ -25,7 +25,7 @@ const PersonalAppBenefits = () => {
       </div>
       <div className="column is-12">
         <BenefitItem
-          icon="fas fa-dollar-sign"
+          icon="/images/money-icon.png"
           heading=" The application feature set includes transaction overview, sending
               and receiving payments, price charts, payee management and a
               indicator displaying."

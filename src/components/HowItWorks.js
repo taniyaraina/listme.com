@@ -14,6 +14,10 @@ const Container = styled.div`
   }
   .purple {
     color: ${theme.darkAccent} !important;
+    font-size: 1.3rem !important;
+  }
+  .head {
+    font-size: ${props => props.theme.fontSizeMedium}px !important;
   }
   .is-6 {
     font-size: 1rem;
@@ -118,7 +122,7 @@ const ListItem = ({ number, title, subtitle, variants }) => {
         <h1 className="title is-size-6 purple">{number}</h1>
       </div>
       <div className="column is-10">
-        <h1 className="title is-size-6  has-text-left has-text-weight-bold">
+        <h1 className="title is-size-6 has-text-left has-text-weight-bold head">
           {title}
         </h1>
         <h1 className="title is-6 has-text-left has-text-weight-light">

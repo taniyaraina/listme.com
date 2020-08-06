@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import PricingCard from '../components/PricingCard';
+import PricingCard from './PricingCard';
 
 import { theme } from '../utils/theme';
 
@@ -58,7 +58,7 @@ const IndividualPricingPlan = () => {
               price="19.99"
               packages="Monthly Package"
               button="basic"
-              buttonColor={theme.hoverColor}
+              buttonColor={theme.lightGreen}
               Analytics="25 Analytics"
               Keywords="1,300"
               Media="25 Social"
@@ -70,7 +70,7 @@ const IndividualPricingPlan = () => {
               price="29.99"
               packages="Year Package"
               button="ultra"
-              buttonColor={theme.textColorLite}
+              buttonColor="#AA55C0"
               Analytics="28 Analytics"
               Keywords="1,600"
               Media="27 Social"
@@ -82,7 +82,7 @@ const IndividualPricingPlan = () => {
               price="39.99"
               packages="Monthly Package"
               button="pro"
-              buttonColor={theme.darkAccent}
+              buttonColor="#664BC4"
               Analytics="30 Analytics"
               Keywords="1,900"
               Media="29 Social"

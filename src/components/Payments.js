@@ -33,6 +33,7 @@ const Article = styled.article`
   align-items: center;
   .content h1 {
     font-size: 18px !important;
+    margin-top: 12px;
   }
   span {
     color: ${theme.mainBrandColor} !important;

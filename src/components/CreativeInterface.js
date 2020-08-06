@@ -13,6 +13,9 @@ const Container = styled.div`
     font-size: 1rem;
     line-height: 1.5rem;
   }
+  .wrapper {
+    margin-top: 5rem;
+  }
   .icon {
     margin-top: 1rem;
     margin-left: 0.5rem;
@@ -36,7 +39,7 @@ const CreativeInterface = () => {
   return (
     <section className="section">
       <Container className="columns is-centered ">
-        <div className="column is-5">
+        <div className="column is-5 wrapper">
           <div className="columns">
             <div className="column is-10">
               <Heading
@@ -56,10 +59,10 @@ const CreativeInterface = () => {
             Get the App
           </button>
           <a href="/" className="icon ">
-            <i className="fab fa-apple has-text-primary"></i>
+            <i className="fab fa-apple has-text-primary" />
           </a>
           <a href="/" className="icon">
-            <i className=" fab fa-android has-text-primary"></i>
+            <i className=" fab fa-android has-text-primary" />
           </a>
         </div>
         <div className="column is-5">

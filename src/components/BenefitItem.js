@@ -32,7 +32,7 @@ const BenefitItem = ({ icon, heading }) => {
       <div className="columns Inner is-mobile">
         <div className="column is-2 ">
           <span className="icon is-size-2">
-            <i className={icon} />
+            <img src={icon} />
           </span>
         </div>
         <div className="column is-10">
