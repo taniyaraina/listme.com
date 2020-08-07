@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import MapHero from '../components/MapHero';
 import Layout from '../components/Layout';
 import { theme } from '../utils/theme';
-import BlogGridCard from '../components/blog-gridCard';
+import BlogGridCard from '../components/BlogGridCard';
 
 const Container = styled.div`
   min-height: 20rem;
