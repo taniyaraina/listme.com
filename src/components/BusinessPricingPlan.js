@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import PricingCard from '../components/PricingCard';
+import PricingCard from './PricingCard';
 import { theme } from '../utils/theme';
 
 const Container = styled.div`
@@ -56,6 +56,8 @@ const BusinessPlanPricing = () => {
             <PricingCard
               price="190.99"
               packages="Monthly Package"
+              button="basic"
+              buttonColor={theme.lightGreen}
               Analytics="25 Analytics"
               Keywords="1,600"
               Media="22 Social"
@@ -66,6 +68,8 @@ const BusinessPlanPricing = () => {
             <PricingCard
               price="290.99"
               packages="Year Package"
+              button="ulta"
+              buttonColor="#AA55C0"
               Analytics="29 Analytics"
               Keywords="1,200"
               Media="23 Social"
@@ -76,6 +80,8 @@ const BusinessPlanPricing = () => {
             <PricingCard
               price="390.99"
               packages="Monthly Package"
+              button="pro"
+              buttonColor="#664BC4"
               Analytics="25 Analytics"
               Keywords="1,800"
               Media="21 Social"
