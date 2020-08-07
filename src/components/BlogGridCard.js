@@ -63,10 +63,7 @@ const BlogGridCard = () => {
     <Container>
       <div className="hoverDiv">
         <h1 className="card title is-6">February 14,2019</h1>
-        <img
-          src="http://softlab.wgl-demo.net/wp-content/uploads/2019/02/blog_10-1170x725.jpg"
-          alt="phone"
-        />
+        <img src="/images/blog-grid.jpg" alt="phone" />
       </div>
       <h1 className="title is-6 category">apps / business</h1>
 
