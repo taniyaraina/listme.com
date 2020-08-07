@@ -40,6 +40,7 @@ const FooterStyled = styled.footer`
     color: ${theme.lightGrey} !important;
     font-family: ${theme.secondaryFontFamily};
     line-height: 1.5;
+    font-size: 14px !important;
   }
   .bold {
     font-weight: bold;
@@ -65,7 +66,7 @@ const FooterStyled = styled.footer`
     font-weight: 600;
   }
   .is-borderTop {
-    border: 0px solid #fff;
+    border: 0px solid #4f4e4e;
     border-top-width: 1px;
     margin-top: 3rem;
   }
