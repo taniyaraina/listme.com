@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { theme } from '../utils/theme';
 import GoogleMap from './GoogleMap';
+import PurpleButton from './elements/PurpleButton';
 
 const Container = styled.div`
   .greenColor {
@@ -51,9 +52,6 @@ const Container = styled.div`
     );
     transition: 0.6s;
     color: ${theme.backgroundColor};
-    padding: 0rem 2rem;
-    font-weight: bold;
-    border-radius: 50px;
     background-color: ${theme.darkAccent};
     :hover {
       background-image: none;
@@ -124,9 +122,7 @@ const ContactUs = () => {
               className="textarea is-medium"
               placeholder="Your Message *"
             />
-            <button className="button is-medium" type="button">
-              Send a Message
-            </button>
+            <PurpleButton title="Send A Message" className="is-medium" />
           </div>
         </div>
       </div>
