@@ -19,6 +19,11 @@ const Container = styled.div`
     margin-bottom: 2rem;
     font-family: ${theme.secondaryFontFamily};
   }
+  .input {
+    ::placeholder {
+      font-size: 1rem !important;
+    }
+  }
   .card {
     padding-right: 1rem;
     padding-left: 1rem;
@@ -108,8 +113,8 @@ const ContactUs = () => {
                     </span>
                   </div>
                 </div>
-                <div className="column">
-                  <h1 className="title is-6 has-text-weight-semibold">
+                <div className="column mb-4">
+                  <h1 className="title is-6 has-text-weight-semibold mb-5">
                     {item.title}
                   </h1>
                   <h1 className="title is-6 has-text-weight-normal up">
