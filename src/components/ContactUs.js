@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Heading from './elements/Heading';
 import { theme } from '../utils/theme';
 import GoogleMap from './GoogleMap';
 import PurpleButton from './elements/PurpleButton';
@@ -12,8 +13,11 @@ const Container = styled.div`
     color: ${theme.textColorLite} !important;
   }
   .smallText {
-    font-size: 0.9rem;
-    line-height: 1.3rem;
+    /* font-size: 0.9rem; */
+    line-height: 1.8;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-family: ${theme.secondaryFontFamily};
   }
   .card {
     padding-right: 1rem;
@@ -89,9 +93,8 @@ const ContactUs = () => {
           </div>
           <div className="column is-1" />
           <div className="column is-5">
-            <h1 className="title is-6 greenColor">{`< our_contacts >`}</h1>
-            <h1 className="title is-2 has-text-weight-bold">Get in Touch</h1>
-            <h1 className="title smallText grey has-text-weight-light">
+            <Heading subtitle={`< our_contacts >`} title="Get in Touch" />
+            <h1 className="title smallText grey has-text-weight-light is-size-6">
               Got a project in mind? We’d love to hear about it. Take five
               minutes to fill out our project form so that we can get to know
               you and understand your project.
@@ -100,13 +103,13 @@ const ContactUs = () => {
               <div className="columns is-mobile">
                 <div className="column is-2">
                   <div className="card ">
-                    <span className="icon is-size-3 ">
+                    <span className="icon is-size-4 ">
                       <i className={item.icon} />
                     </span>
                   </div>
                 </div>
                 <div className="column">
-                  <h1 className="title is-5 has-text-weight-bold">
+                  <h1 className="title is-6 has-text-weight-semibold">
                     {item.title}
                   </h1>
                   <h1 className="title is-6 has-text-weight-normal up">

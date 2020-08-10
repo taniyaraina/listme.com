@@ -5,7 +5,9 @@ import { theme } from '../utils/theme';
 
 const Container = styled.div`
   .lineHeight {
-    line-height: 1.5rem;
+    font-family: ${props => props.theme.secondaryFontFamily};
+    line-height: 2rem;
+    margin-top: 1rem;
   }
   img {
     max-width: fit-content;
@@ -49,16 +51,16 @@ const AboutApp = () => {
               businesses to accept bitcoin payments. We are currently the
               largest bitcoin payment processor in the world, serving
               industry-leading merchants on six continents. We’ve created a
-              seamless, secure bitcoin
+              seamless, secure bitcoin.
             </h1>
             <button type="button" className="button is-medium">
               Get the App
             </button>
             <a href="/" className="icon ">
-              <i className="fab fa-apple has-text-primary"></i>
+              <i className="fab fa-apple has-text-primary" />
             </a>
             <a href="/" className="icon">
-              <i className=" fab fa-android has-text-primary"></i>
+              <i className=" fab fa-android has-text-primary" />
             </a>
           </div>
           <div className="column is-6 has-text-centered sidebarImage">
