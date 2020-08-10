@@ -63,7 +63,9 @@ const BlogGridCard = () => {
     <Container>
       <div className="hoverDiv">
         <h1 className="card title is-6">February 14,2019</h1>
-        <img src="/images/blog-grid.jpg" alt="phone" />
+        <a href="http://softlab.wgl-demo.net/facts-tips-about-bitcoin-miner-fees/">
+          <img src="/images/blog-grid.jpg" alt="phone" />
+        </a>
       </div>
       <h1 className="title is-6 category">apps / business</h1>
 

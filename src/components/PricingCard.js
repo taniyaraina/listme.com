@@ -58,7 +58,7 @@ const PricingCard = ({
             Reviews
           </h1>
           <h1 className="title is-5 is-size-5 faded has-text-weight-light">
-            <span className="has-text-weight-normal">{Optimization}</span>
+            <span className="has-text-weight-normal">{Optimization}</span>{' '}
             Optimization
           </h1>
           <h1 className="title is-5 is-size-5 faded has-text-weight-light">

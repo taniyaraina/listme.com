@@ -18,10 +18,10 @@ const Container = styled.div`
   }
   /* .coloredCard {
     /* color: ${theme.backgroundColor}; */
-    display: inline-block;
-    padding: 0.5rem 2rem;
+    /* display: inline-block; */
+    /* padding: 0.5rem 2rem;
     border-radius: 50px;
-  } */
+  } */ */
   /* .greenCard {
     background-color: ${theme.hoverColor};
   } */
