@@ -7,6 +7,9 @@ const Container = styled.div`
   .icon {
     color: ${theme.darkAccent};
   }
+  img {
+    max-height: 1.7rem !important;
+  }
   .Inner {
     display: flex;
   }
@@ -31,7 +34,7 @@ const BenefitItem = ({ icon, heading }) => {
     <Container>
       <div className="columns Inner is-mobile">
         <div className="column is-2 ">
-          <span className="icon is-size-2">
+          <span className="icon">
             <img src={icon} />
           </span>
         </div>

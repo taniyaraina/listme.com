@@ -198,9 +198,9 @@ const Footer = () => {
               <div className="column is-2" />
               <div className="column">
                 <h1 className="subtitle is-size-6 grey">
-                  Copyright © 2019 Softlab by{' '}
-                  <a className="has-text-white underline">WebGeniusLab.</a> All
-                  Rights Reserved.
+                  Copyright © 2020 ListMe by{' '}
+                  <a className="has-text-white underline">Zeiq.</a> All Rights
+                  Reserved.
                 </h1>
               </div>
             </div>
