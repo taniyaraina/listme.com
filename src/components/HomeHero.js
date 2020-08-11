@@ -19,6 +19,11 @@ const Section = styled.section`
     padding-top: 1rem;
     padding-left: 1rem;
   }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .is-6-mobile {
+      width: auto !important;
+    }
+  }
 `;
 
 const SocialIcons = styled.div`
