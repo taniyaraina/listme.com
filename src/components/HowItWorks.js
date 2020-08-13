@@ -45,6 +45,11 @@ const Container = styled.div`
   }
 `;
 
+const Wrapper = styled.div`
+  flex-direction: ${props => (props.reverse ? 'row-reverse' : '')};
+  margin-bottom: 3rem !important;
+`;
+
 const Data1 = [
   {
     number: '01',
@@ -106,7 +111,7 @@ const RightAnimatedDiv = {
   },
 };
 
-const ListItem = ({ number, title, subtitle, variants }) => {
+const ListItem = ({ number, title, subtitle, variants, reverse }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
 
@@ -121,19 +126,31 @@ const ListItem = ({ number, title, subtitle, variants }) => {
       animate={controls}
       initial="start"
       variants={variants}
-      className="columns is-gapless is-multiline is-mobile card"
     >
-      <div className="column is-2">
-        <h1 className="title is-size-6 purple">{number}</h1>
-      </div>
-      <div className="column is-10">
-        <h1 className="title is-size-6 has-text-left has-text-weight-bold head">
-          {title}
-        </h1>
-        <h1 className="title is-6 has-text-left has-text-weight-light">
-          {subtitle}
-        </h1>
-      </div>
+      <Wrapper
+        className="columns is-gapless is-multiline is-mobile card"
+        reverse={reverse}
+      >
+        <div className="column is-2">
+          <h1 className="title is-size-6 purple">{number}</h1>
+        </div>
+        <div className="column is-10">
+          <h1
+            className={` title is-size-6  has-text-weight-bold head ${
+              reverse ? 'has-text-right' : 'has-text-left'
+            }`}
+          >
+            {title}
+          </h1>
+          <h1
+            className={`title is-6 has-text-left has-text-weight-light ${
+              reverse ? 'has-text-right' : 'has-text-left'
+            }`}
+          >
+            {subtitle}
+          </h1>
+        </div>
+      </Wrapper>
     </motion.div>
   );
 };
@@ -173,6 +190,7 @@ const HowItWorks = () => {
                 title={item.title}
                 subtitle={item.subtitle}
                 variants={RightAnimatedDiv}
+                reverse
               />
             ))}
           </div>

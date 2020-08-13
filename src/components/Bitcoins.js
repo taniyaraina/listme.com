@@ -25,7 +25,7 @@ const Bitcoins = () => {
   return (
     <Section className="section">
       <div className="columns is-centered is-vcentered">
-        <div className="column is-10">
+        <div className="column is-11">
           <div className="columns">
             {Bitcoin.map(item => (
               <div className="column is-2 has-text-centered">

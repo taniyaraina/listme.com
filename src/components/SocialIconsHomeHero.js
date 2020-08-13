@@ -5,7 +5,7 @@ import { theme } from '../utils/theme';
 
 const Container = styled.ul`
   justify-content: flex-start;
-  width: 85px;
+  width: 35px;
   li {
     transition: 0.5s;
     justify-content: center;
