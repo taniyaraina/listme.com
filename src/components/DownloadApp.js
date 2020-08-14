@@ -24,7 +24,7 @@ const Container = styled.div`
     color: ${theme.backgroundColor};
     font-family: ${theme.primaryFontFamily};
     font-weight: initial;
-    box-shadow: 0px 9px 30px 0 rgba(106, 75, 196, 0.4) !important;
+    box-shadow: 0px 9px 30px 0 rgba(157,43,126,0.4)!important;
     :hover {
       background-color: ${theme.backgroundColor} !important;
       color: ${theme.textColor} !important;
@@ -41,14 +41,19 @@ const Container = styled.div`
   .appStoreBack {
     margin: 1.5rem 0.5rem;
     display: inline-block;
-    background-image: radial-gradient(
+    /* background-image: radial-gradient(
       circle farthest-corner at 100% 150%,
       #d75dbc 10%,
       #6a4bc4 50%
+    ); */
+    background-image: radial-gradient(
+      circle farthest-corner at 100% 150%,
+      #d75dbc 10%,
+      #9d2b7e 50%
     );
     border-radius: 100px;
   }
-  .playStore {
+  /* .playStore {
     font-family: ${theme.primaryFontFamily};
     font-weight: initial;
     border-color: ${theme.darkAccent};
@@ -63,7 +68,7 @@ const Container = styled.div`
         circle farthest-corner at 100% 150%,
         #d75dbc 10%,
         #6a4bc4 50%
-      );
+      ); */
       button {
         color: ${theme.backgroundColor};
         box-shadow: 0px 9px 30px 0 rgba(106, 75, 196, 0.4) !important;
@@ -87,7 +92,7 @@ const DownloadApp = () => {
     <Container>
       <section className="section has-text-centered">
         <h1 className="title is-1 has-text-weight-bold has-text-black">
-          Download App <span className="greenColor">{`</>`}</span>
+          Download App
         </h1>
         <div className="columns is-centered">
           <div className="column is-8">
@@ -104,12 +109,12 @@ const DownloadApp = () => {
             App Store
           </button>
         </div>
-        <div className="playStoreBack">
+        {/* <div className="playStoreBack">
           <button type="button" className="button is-medium playStore">
             <i className="fab fa-google-play is-size-4 playIcon" />
             Google Play
           </button>
-        </div>
+        </div> */}
       </section>
     </Container>
   );

@@ -12,6 +12,9 @@ const Container = styled.div`
     flex-direction: row-reverse;
     text-align: right;
   }
+  .header {
+    margin-bottom: 3rem;
+  }
   .purple {
     color: ${theme.darkAccent} !important;
     font-size: 1.3rem !important;
@@ -162,10 +165,10 @@ const HowItWorks = () => {
         <div className="columns is-multiline is-vcentered is-centered has-text-centered">
           <div className="column is-12">
             <div className="columns is-centered">
-              <div className="column is-5">
+              <div className="column is-4 header">
                 <Heading
-                  subtitle={`< how_it_works >`}
-                  title="Get Started in a Few Minutes with WallApp"
+                  subtitle="How ListMe Works"
+                  title="Our Application Interface"
                 />
               </div>
             </div>
