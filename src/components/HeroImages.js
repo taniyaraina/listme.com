@@ -108,7 +108,7 @@ const HeroImages = () => {
         animate="end"
         variants={WImage}
         transition={{ duration: 1 }}
-        src="/images/w.png"
+        src="/images/HomeHero-1.png"
         alt="w"
         className="w card1"
       />

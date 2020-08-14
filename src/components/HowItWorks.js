@@ -162,7 +162,7 @@ const HowItWorks = () => {
         <div className="columns is-multiline is-vcentered is-centered has-text-centered">
           <div className="column is-12">
             <div className="columns is-centered">
-              <div className="column is-4">
+              <div className="column is-5">
                 <Heading
                   subtitle={`< how_it_works >`}
                   title="Get Started in a Few Minutes with WallApp"

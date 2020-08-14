@@ -6,7 +6,8 @@ import { theme } from '../../utils/theme';
 
 const Button = styled.button`
   color: ${props => (props.color ? props.color : props.theme.darkAccent)};
-  font-size: ${props => (props.size ? props.size : props.theme.fontSizeMedium)};
+  font-size: ${props =>
+    props.size ? props.fontSizeExtraSmall : props.theme.fontSizeMedium}px;
   border-radius: 100px !important;
   background-color: transparent !important;
   border-color: ${theme.darkAccent} !important;
@@ -15,16 +16,15 @@ const Button = styled.button`
   :hover {
     background-color: ${theme.darkAccent} !important;
     color: ${theme.backgroundColor} !important;
-    box-shadow: 0px 9px 30px 0px rgba(102, 75, 196, 0.4) !important ;
   }
 `;
-const PurpleButton = ({ title, className, link, color, size }) => {
+const PurpleButton = ({ title, className, href, color, size }) => {
   return (
-    <Link to={link}>
+    <a href={href}>
       <Button className={`button ${className}`} color={color} size={size}>
         {title}
       </Button>
-    </Link>
+    </a>
   );
 };
 export default PurpleButton;

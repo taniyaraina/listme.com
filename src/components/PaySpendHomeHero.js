@@ -53,14 +53,8 @@ const Container = styled.div`
   .margin {
     margin-bottom: 1rem !important;
   }
-  .wallet-background {
-    min-width: 5.5rem;
-    min-height: 4.5rem;
-    max-height: 5.5rem;
-    max-width: 6.5rem;
-    background-color: ${theme.mainBrandColor};
-    border-radius: 30px;
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 7px 18px !important ;
+  .wallet {
+    width: 20%;
   }
   button {
     height: 3rem;
@@ -68,35 +62,26 @@ const Container = styled.div`
   }
 `;
 
-const IconWrapper = styled.a`
-  margin: 10px 6px 0px 6px;
-
-  color: ${theme.mainBrandColor};
-  :hover {
-    color: ${theme.hoverColor}!important;
-    transition: color 0.25s;
-  }
-`;
-
 const PaySpend = () => {
   return (
     <Container>
-      <motion.div
+      <motion.img
         initial="start"
         animate="end"
         variants={ImageEntry}
         transition={{ delay: 3, duration: 1 }}
-        className="wallet-background"
+        alt="wallet"
+        src="images/Logowallet.png"
+        className="wallet"
       >
-        <motion.figure
+        {/* <motion.figure
           initial="start"
           animate="end"
           variants={WalletImageBounce}
           transition={{ yoyo: Infinity, delay: 4, duration: 1 }}
         >
-          <img alt="wallet" src="images/wallet.png" />
-        </motion.figure>
-      </motion.div>
+        </motion.figure> */}
+      </motion.img>
       <div className="my-5">
         <motion.h1
           initial="start"
@@ -105,8 +90,8 @@ const PaySpend = () => {
           transition={{ delay: 2, duration: 1 }}
           className="has-text-weight-bold title is-size-6-mobile"
         >
-          Pay, Spend & Store Bitcoins on <br />
-          Your Terms
+          Wallet Free with <br />
+          security in mind
         </motion.h1>
       </div>
       <motion.div
@@ -117,17 +102,9 @@ const PaySpend = () => {
       >
         <PurpleButton
           className="has-text-weight-semibold"
-          title="How it Works"
+          title="DOWNLOAD"
           color={theme.textColor}
         />
-        <>
-          <IconWrapper href="/" className="icon is-hidden-touch">
-            <i className="fab fa-apple" />
-          </IconWrapper>
-          <IconWrapper href="/" className="icon is-hidden-touch">
-            <i className="fab fa-android" />
-          </IconWrapper>
-        </>
       </motion.div>
     </Container>
   );

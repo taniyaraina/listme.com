@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import UseAnimations from 'react-useanimations';
+// import UseAnimations from 'react-useanimations';
 import PurpleButton from './elements/PurpleButton';
 import { theme } from '../utils/theme';
 
@@ -37,10 +37,13 @@ const Section = styled.div`
     border-radius: 4px;
     margin-left: 0px;
   }
-  .searchBar {
-    margin-right: 1rem;
+  .btn{
+    padding: 18px 22px;
   }
-  .navbar-link:not(.is-arrowless)::after,
+  /* .searchBar {
+    margin-right: 1rem;
+  } */
+  /* .navbar-link:not(.is-arrowless)::after,
   .select:not(.is-multiple):not(.is-loading)::after {
     border: 3px solid transparent;
     color: #161616;
@@ -48,13 +51,10 @@ const Section = styled.div`
     transform: rotate(-90deg);
     width: 0.9em;
     margin-top: -4px;
-  }
-  .navbar-link:not(.is-arrowless) {
+  } */
+  /* .navbar-link:not(.is-arrowless) {
     padding-right: 2em;
-  }
-  .navButton {
-    padding: 1rem 2rem 1rem 2rem;
-  }
+  } */
   @media only screen and (max-width: 768px) {
     .navbar {
       background-color: ${theme.textColor};
@@ -70,9 +70,9 @@ const Section = styled.div`
     .hidden {
       display: none;
     }
-    .searchBar {
+    /* .searchBar {
       color: ${theme.backgroundColor} !important;
-    }
+    } */
   }
 `;
 
@@ -89,14 +89,14 @@ const Header = () => {
       >
         <div className="navbar-brand">
           <Link className="navbar-item image-to-hide" to="/">
-            <img src="/images/newListmeLogo.png" alt="site logo" />
+            <img src="/images/ListMe-newLogo.png" alt="site logo" />
           </Link>
           <>
-            <UseAnimations
+            {/* <UseAnimations
               className="navbar-item searchBar is-hidden-desktop"
               animationKey="searchToX"
               size={50}
-            />
+            /> */}
             <a
               href="#"
               role="button"
@@ -119,33 +119,42 @@ const Header = () => {
         <div className={menuActive ? 'navbar-menu is-active' : 'navbar-menu'}>
           <div className="navbar-start">
             <div className="navbar-item has-dropdown is-hoverable">
-              <Link to="/" className="navbar-link">
+              <Link to="/" className="navbar-item has-text-weight-semibold">
                 Home
               </Link>
             </div>
             <div className="navbar-item has-dropdown is-hoverable">
-              <Link to="/about" className="navbar-link">
-                About
+              <Link
+                to="/about"
+                className="navbar-item has-text-weight-semibold"
+              >
+                Bussiness
               </Link>
             </div>
             <div className="navbar-item has-dropdown is-hoverable">
-              <Link to="/blog-grid" className="navbar-link">
-                Blog
+              <Link
+                to="/blog-grid"
+                className="navbar-item has-text-weight-semibold"
+              >
+                FAQs
               </Link>
             </div>
             <div className="navbar-item has-dropdown is-hoverable">
-              <Link to="/contact" className="navbar-item contact">
-                Contacts
+              <Link
+                to="/contact"
+                className="navbar-item has-text-weight-semibold"
+              >
+                Contact us
               </Link>
             </div>
           </div>
         </div>
         <div className="navbar-end">
-          <UseAnimations
+          {/* <UseAnimations
             className="navbar-item searchBar is-hidden-touch"
             animationKey="searchToX"
             size={50}
-          />
+          /> */}
           {/* <Search className="header_search-field">
               <div className="field has-addons">
                 <div className="control">
@@ -161,7 +170,11 @@ const Header = () => {
               </div>
             </Search> */}
           <div className="navbar-item hidden">
-            <PurpleButton title="Try Free" className="navButton" />
+            <PurpleButton
+              title="ListMe Now"
+              className="btn"
+              href="https://apps.apple.com/in/app/listme-app/id1462565783"
+            />
           </div>
         </div>
       </nav>
