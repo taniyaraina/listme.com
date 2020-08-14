@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import Heading from './elements/Heading';
 import PaymentCard from './PaymentCard';
 
 import { theme } from '../utils/theme';
@@ -29,16 +29,16 @@ const ContentWrapper = styled.div`
   }
 `;
 
-const Article = styled.article`
-  align-items: center;
-  .content h1 {
-    font-size: 18px !important;
-    margin-top: 12px;
-  }
-  span {
-    color: ${theme.mainBrandColor} !important;
-  }
-`;
+// const Article = styled.article`
+//   align-items: center;
+//   .content h1 {
+//     font-size: 18px !important;
+//     margin-top: 12px;
+//   }
+//   span {
+//     color: ${theme.mainBrandColor} !important;
+//   }
+// `;
 
 const Payments = () => {
   return (
@@ -52,18 +52,15 @@ const Payments = () => {
             <PaymentCard />
           </MovingDownColumn>
           <ContentWrapper className="column is-4 has-text-left ">
-            <h1 className="title is-6">{`< about_app >`}</h1>
-            <h1 className="title is-3 has-text-weight-bold">
-              Get Started with Crypto Payments
-            </h1>
+            <Heading
+              subtitle="Let the fun begin"
+              title="Get listed for club in 2020!"
+            />
             <p className="title has-text-weight-normal">
-              We have created a few plugins for the most popular shopping carts
-              to make integrations fast and easy, even for a non-technical user.
-              <strong className="has-text-weight-semibold">
-                Get start accepting Crypto Payments today!
-              </strong>
+              Tailor your unique nightlife, meet new people and explore new
+              venues all on ListMe
             </p>
-            <Article className="media">
+            {/* <Article className="media">
               <figure className="media-left">
                 <h1 className="image is-64x64">
                   <img src="/images/girl.jpg" alt="girl" />
@@ -76,7 +73,7 @@ const Payments = () => {
                   </h1>
                 </div>
               </div>
-            </Article>
+            </Article> */}
           </ContentWrapper>
         </div>
       </div>

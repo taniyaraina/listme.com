@@ -4,7 +4,7 @@ import { darken, lighten } from 'polished';
 
 const mainBrandColor = '#9d2b7e';
 const lightShades = '#F5F5F5';
-const darkAccent = '#9d2b7e';
+const darkAccent = '#68044d';
 const darkShades = '#161616';
 
 export const theme = {
