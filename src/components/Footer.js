@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 import { theme } from '../utils/theme';
-import Image from '../../static/images/footer_home_1.png';
+import Image from '../../static/images/Footerbackground.png';
 
 const Icons = [
   { icon: 'fab fa-twitter', onHover: `${theme.twitterIconColor}` },
@@ -18,9 +18,6 @@ const FooterStyled = styled.footer`
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  min-height: 30rem;
-  width: 100%;
-  padding-top: 10.5rem;
   .is-size-6 {
     font-size: 0.85rem;
     line-height: 1.5rem;
@@ -33,6 +30,9 @@ const FooterStyled = styled.footer`
     height: 2.5rem;
     margin-bottom: 1rem;
   }
+  .wrap {
+    margin-top: 4rem;
+  }
   h1 {
     color: ${theme.backgroundColor} !important;
   }
@@ -44,26 +44,6 @@ const FooterStyled = styled.footer`
   }
   .bold {
     font-weight: bold;
-  }
-  input {
-    background-color: ${theme.darkPurple};
-    border-radius: 100px;
-    border: none;
-    ::placeholder {
-      color: ${theme.lightGrey};
-    }
-    :hover {
-      background-color: ${theme.backgroundColor};
-    }
-  }
-  button {
-    border-radius: 100px;
-    padding: 0rem 3rem;
-    margin-top: 1rem;
-    height: 3rem;
-    background-color: ${theme.lightGreen} !important;
-    border-color: ${theme.lightGreen} !important;
-    font-weight: 600;
   }
   .is-borderTop {
     border: 0px solid #4f4e4e;
@@ -94,116 +74,85 @@ const Footer = () => {
   return (
     <FooterStyled>
       <section className="section">
-        <div className="columns is-centered has-text-left">
-          <div className="column is-3">
-            <Link className="" to="/">
-              <img
-                src="/images/listmelogo.png"
-                alt="site logo"
-                className="footer-logo"
-              />
-            </Link>
-            <h1 className="title is-size-6 has-text-weight-medium grey small">
-              We are a software house from USA focused on custom software
-              development, e-commerce platforms, ERP className systems
-              development.
-            </h1>
-            {Icons.map(item => (
-              <IconsGroup
-                hoverColor={item.onHover}
-                className="icon is-size-7 has-text-white"
-              >
-                <i className={item.icon} />
-              </IconsGroup>
-            ))}
-          </div>
-          <div className="column is-3">
-            <h1 className="title is-4 has-text-weight-bold">Contact Us</h1>
-            <h1 className="title is-size-6 lineHeight  has-text-weight-light ">
-              <span className="bold"> Adress:</span>
-              {` `}
-              27 Division St, New York, NY 10002, United States of America
-            </h1>
-            <h1 className="title is-size-6   has-text-weight-light ">
-              <span className="bold"> Website:</span>
-              {`  `}
-              <a>Softlab.wdl.net</a>
-            </h1>
-            <h1 className="title is-size-6   has-text-weight-light ">
-              <span className="bold"> Email:</span>
-              {`  `}
-              <a>Softlab@gmail.com</a>
-            </h1>
-            <h1 className="title is-size-6   has-text-weight-light ">
-              <span className="bold"> Phone:</span>
-              {`  `}
-              <a>+91 8146851290</a>
-            </h1>
-          </div>
-          <div className="column is-2">
-            <h1 className="title is-5  ">
-              <h1 className=" title is-4 has-text-weight-bold">
-                {' '}
-                Useful Links
-              </h1>
-            </h1>
-            <h1 className="title is-size-6  has-text-weight-light ">
-              {' '}
-              <Link to="/">About Us</Link>
-            </h1>
-            <h1 className="title is-size-6  has-text-weight-light ">
-              {' '}
-              <Link to="/">Help Link</Link>
-            </h1>
-            <h1 className="title is-size-6  has-text-weight-light ">
-              <Link to="/">Terms & Conditions</Link>
-            </h1>
-            <h1 className="title is-size-6  has-text-weight-light ">
-              <Link to="/contact">Contact Us</Link>
-            </h1>
-            <h1 className="title is-size-6  has-text-weight-light ">
-              <Link to="/">Privacy Policy</Link>
-            </h1>
-          </div>
-          <div className="column is-3">
-            <h1 className="title is-4 has-text-weight-bold "> Newsletter</h1>
-            <div className="field">
-              <p className="control has-icons-right">
-                <input
-                  className="input is-medium ml-1"
-                  type="email"
-                  placeholder="Your Email"
+        <div className="container">
+          <div className="columns wrap">
+            <div className="column is-4">
+              <Link className="" to="/">
+                <img
+                  src="/images/footer-Logo.png"
+                  alt="site logo"
+                  className="footer-logo"
                 />
-                <span className="icon is-small is-right">
-                  <i className="fas fa-envelope" />
-                </span>
-              </p>
+              </Link>
+              <h1 className="title is-size-6 has-text-weight-medium grey small">
+                We are a software house from USA focused on custom software
+                development, e-commerce platforms, ERP className systems
+                development.
+              </h1>
+              {Icons.map(item => (
+                <IconsGroup
+                  hoverColor={item.onHover}
+                  className="icon is-size-7 has-text-white"
+                >
+                  <i className={item.icon} />
+                </IconsGroup>
+              ))}
             </div>
-            <button
-              type="button"
-              className="button is-medium has-text-white is-size-6"
-            >
-              Subcribe
-            </button>
+            <div className="column is-4">
+              <h1 className="title is-4 has-text-weight-bold">Contact Us</h1>
+              <h1 className="title is-size-6 lineHeight  has-text-weight-light ">
+                <span className="bold"> Adress:</span>
+                {` `}
+                27 Division St, New York, NY 10002, United States of America
+              </h1>
+              <h1 className="title is-size-6   has-text-weight-light ">
+                <span className="bold"> Website:</span>
+                {`  `}
+                <a>Softlab.wdl.net</a>
+              </h1>
+              <h1 className="title is-size-6   has-text-weight-light ">
+                <span className="bold"> Email:</span>
+                {`  `}
+                <a>Softlab@gmail.com</a>
+              </h1>
+              <h1 className="title is-size-6   has-text-weight-light ">
+                <span className="bold"> Phone:</span>
+                {`  `}
+                <a>+91 8146851290</a>
+              </h1>
+            </div>
+            <div className="column is-4">
+              <h1 className="title is-5  ">
+                <h1 className=" title is-4 has-text-weight-bold">
+                  {' '}
+                  Useful Links
+                </h1>
+              </h1>
+              <h1 className="title is-size-6  has-text-weight-light ">
+                {' '}
+                <Link to="/">About Us</Link>
+              </h1>
+              <h1 className="title is-size-6  has-text-weight-light ">
+                {' '}
+                <Link to="/">Help Link</Link>
+              </h1>
+              <h1 className="title is-size-6  has-text-weight-light ">
+                <Link to="/">Terms & Conditions</Link>
+              </h1>
+              <h1 className="title is-size-6  has-text-weight-light ">
+                <Link to="/contact">Contact Us</Link>
+              </h1>
+              <h1 className="title is-size-6  has-text-weight-light ">
+                <Link to="/">Privacy Policy</Link>
+              </h1>
+            </div>
           </div>
-        </div>
-        <div className="columns is-centered">
-          <div className="column is-11">
-            <div className="columns is-borderTop">
-              <div className="column is-5">
-                <h1 className="subtitle is-size-6 grey">
-                  Terms of Use | Privacy Environmental Policy
-                </h1>
-              </div>
-              <div className="column is-2" />
-              <div className="column">
-                <h1 className="subtitle is-size-6 grey">
-                  Copyright © 2020 ListMe by{' '}
-                  <a className="has-text-white underline">Zeiq.</a> All Rights
-                  Reserved.
-                </h1>
-              </div>
-            </div>
+          <div className="is-borderTop">
+            <h1 className="subtitle is-size-6 grey has-text-right">
+              Copyright © 2020 ListMe by{' '}
+              <a className="has-text-white underline">Zeiq.</a> All Rights
+              Reserved.
+            </h1>
           </div>
         </div>
       </section>
