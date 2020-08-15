@@ -69,10 +69,12 @@ const InfoCards = () => {
                   </h1>
                 </div>
                 <div className="column is-2">
-                  <img src="images/arrow.png" alt="left-arrow" />
-                  {/* <span className="icon is-size-4 arrow">
+                  <a href="/">
+                    <img src="images/arrow.png" alt="left-arrow" />
+                    {/* <span className="icon is-size-4 arrow">
                     <i className="fas fa-arrow-right" />
                   </span> */}
+                  </a>
                 </div>
               </div>
             </div>

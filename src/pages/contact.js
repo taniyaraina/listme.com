@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import ContactUs from '../components/ContactUs';
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
-import MapHero from '../components/MapHero';
+// import MapHero from '../components/MapHero';
 
 const Section = styled.div`
   .container {
@@ -27,10 +27,8 @@ const Section = styled.div`
 const Contact = () => (
   <Layout>
     <Seo title="Contact Us" />
-    <MapHero Title="Contact" subtitle="contact" />
-    <Section className="section">
-      <ContactUs />
-    </Section>
+    {/* <MapHero Title="Contact" subtitle="contact" /> */}
+    <ContactUs />
   </Layout>
 );
 export default Contact;
