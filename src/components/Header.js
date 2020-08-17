@@ -132,10 +132,7 @@ const Header = () => {
               </Link>
             </div>
             <div className="navbar-item has-dropdown is-hoverable">
-              <Link
-                to="/blog-grid"
-                className="navbar-item has-text-weight-semibold"
-              >
+              <Link to="/faq" className="navbar-item has-text-weight-semibold">
                 FAQs
               </Link>
             </div>
