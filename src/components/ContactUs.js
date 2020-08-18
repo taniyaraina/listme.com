@@ -87,7 +87,7 @@ const ContactUs = () => {
   return (
     <Section className="section">
       <div className="container">
-        <div className="columns is-mobile is-centered">
+        <div className="columns is-centered">
           <div className="column is-half is-offset-is-three-quarters has-text-centered">
             <Heading title="Get in Touch" />
             <h1 className="title smallText grey has-text-weight-light is-size-6">
