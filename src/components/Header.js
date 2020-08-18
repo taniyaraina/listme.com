@@ -85,8 +85,7 @@ const Header = () => {
       <nav
         className="navbar is-fixed-top"
         role="navigation"
-        aria-label="main navigation"
-      >
+        aria-label="main navigation">
         <div className="navbar-brand">
           <Link className="navbar-item image-to-hide" to="/">
             <img src="/images/ListMe-newLogo.png" alt="site logo" />
@@ -108,8 +107,7 @@ const Header = () => {
               aria-label="menu"
               aria-expanded="false"
               data-target="navbarBasicExample"
-              onClick={handleMobileMenu}
-            >
+              onClick={handleMobileMenu}>
               <span aria-hidden="true" />
               <span aria-hidden="true" />
               <span aria-hidden="true" />
@@ -125,9 +123,8 @@ const Header = () => {
             </div>
             <div className="navbar-item has-dropdown is-hoverable">
               <Link
-                to="/about"
-                className="navbar-item has-text-weight-semibold"
-              >
+                to="/business"
+                className="navbar-item has-text-weight-semibold">
                 Bussiness
               </Link>
             </div>
@@ -139,8 +136,7 @@ const Header = () => {
             <div className="navbar-item has-dropdown is-hoverable">
               <Link
                 to="/contact"
-                className="navbar-item has-text-weight-semibold"
-              >
+                className="navbar-item has-text-weight-semibold">
                 Contact us
               </Link>
             </div>

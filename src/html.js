@@ -28,7 +28,12 @@ export default class HTML extends React.Component {
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
           />
-
+          <link
+            rel="stylesheet"
+            type="text/css"
+            charset="UTF-8"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+          />
           <script
             defer
             src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"

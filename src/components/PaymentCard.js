@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 import { theme } from '../utils/theme';
 
 const CardWrapper = styled.div`
-  min-height: 28rem;
+  width: 19rem;
+  height: 25rem;
   border-radius: 30px;
   box-shadow: 0px 15px 38px rgba(0, 0, 0, 0.1);
   h2 {
@@ -102,7 +102,7 @@ const CardWrapper = styled.div`
   }
 `;
 
-const PaymentCard = () => {
+const PaymentCard = ({ icon, title, subtitle }) => {
   return (
     <CardWrapper className="card">
       <div className="card-content">
@@ -113,18 +113,14 @@ const PaymentCard = () => {
           <div className="services_circle_wrapper">
             <div className="services_circle" />
           </div>
-          <i className="fab fa-bitcoin" />
+          <i className={icon} />
         </div>
-        <h1 className="title is-5 has-text-weight-semibold">Any Payments</h1>
+        <h1 className="title is-5 has-text-weight-semibold">{title}</h1>
         <div className="content">
           <p className="subtitle has-text-weight-light has-text-grey-lighter">
-            Accept Crypto payments from your online customers on your
-            smartphone.
+            {subtitle}
           </p>
         </div>
-        <Link to="/">
-          <h2 className="subtitle is-6 has-text-weight-bold">{`< Read More >`}</h2>
-        </Link>
       </div>
     </CardWrapper>
   );
