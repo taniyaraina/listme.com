@@ -8,6 +8,7 @@ import OurWorkWith from '../components/OurWorkWith';
 import ClientTestimonials from '../components/ClientTestimonials';
 import Event from '../components/Event';
 import GlobelInformation from '../components/GlobelInformation';
+import CreativeInterface from '../components/CreativeInterface';
 
 const Container = styled.div``;
 
@@ -21,6 +22,7 @@ const Business = () => {
         <OurWorkWith />
         <GlobelInformation />
         <ClientTestimonials />
+        <CreativeInterface />
       </Container>
     </Layout>
   );

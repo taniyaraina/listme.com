@@ -30,16 +30,6 @@ const Square = {
     opacity: 1,
   },
 };
-const Square01 = {
-  start: {
-    transform: 'translate(-250%,-40%)',
-    opacity: 0,
-  },
-  end: {
-    transform: 'translate(-300%,-10%)',
-    opacity: 1,
-  },
-};
 
 const Container = styled.div`
   display: flex;
@@ -52,27 +42,21 @@ const ImageCollection2 = () => {
         initial="start"
         animate="end"
         variants={Phone}
-        src="images/phone01.png"
+        src="images/Event-Image1.png"
         alt="phone"
       />
       <motion.img
         initial="start"
         animate="end"
         variants={Credit}
-        src="images/credit.png"
+        src="images/Event-Image2.png"
         alt="credit"
       />
       <motion.img
         initial="start"
         animate="end"
         variants={Square}
-        src="images/square.png"
-      />
-      <motion.img
-        initial="start"
-        animate="end"
-        variants={Square01}
-        src="images/square01.png"
+        src="images/Event-Image3.png"
       />
     </Container>
   );

@@ -12,27 +12,30 @@ const Container = styled.div`
     margin-top: 2rem;
     font-size: ${props => props.theme.fontSizeMedium}px !important;
   }
+  .column.is-6 {
+    margin-left: 3rem;
+  }
 `;
 
 const TheySay = () => {
   return (
     <section className="section">
       <div className="container">
-        <Container className="columns is-vcentered">
-          <div className="column is-6">
-            <img src="/images/personComputer.jpg" alt="personComputer" />
+        <Container className="columns is-vcentered is-variable is-8">
+          <div className="column is-5">
+            <img src="/images/ListMeTrio1-1.jpg" alt="personComputer" />
           </div>
           <div className="column is-6">
-            <Heading subtitle={`< they_say >`} title="Clients Testimonials" />
+            <Heading subtitle="They Say" title="Clients Testimonials" />
             <p>
-              “WallApp has consistently impressed us with its service and engi
-              neering. We are excited to see where bitcoin is headed, and we are
-              confident that we are working with the best company to carry this
-              technology forward.”
+              “I went to Rozu Dining for a throwback brunch that they held there
+              and the process was so easy! No issues on the door, it was quick
+              and simple. I also keep in touch with someone I met through the
+              event on there too which I thought was a good feature. ”
             </p>
             <div className="content">
-              <h1 className="title is-5">Arnold Wilson</h1>
-              <h2 className="subtitle is-6 ">React Developer</h2>
+              <h1 className="title is-5">Email Id</h1>
+              <h2 className="subtitle is-6 ">User</h2>
             </div>
           </div>
         </Container>

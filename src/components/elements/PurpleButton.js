@@ -14,7 +14,7 @@ const Button = styled.button`
   box-shadow: none !important ;
   transition: 0.5s;
   :hover {
-    background-color: ${theme.darkAccent} !important;
+    background-color: ${theme.mainBrandColor} !important;
     color: ${theme.backgroundColor} !important;
   }
 `;

@@ -4,34 +4,15 @@ import Heading from './elements/Heading';
 
 import { theme } from '../utils/theme';
 import ImageCollection2 from './ImageCollection2';
+import PurpleButton from './elements/PurpleButton';
 
 const Container = styled.div`
-  .greenColor {
-    color: ${theme.hoverColor} !important;
-  }
   .is-6 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
   .wrapper {
     margin-top: 5rem;
-  }
-  .icon {
-    margin-top: 1rem;
-    margin-left: 0.5rem;
-  }
-  button {
-    padding: 0rem 3rem;
-    height: 3.5rem;
-    border-radius: 100px;
-    transition: 0.5s;
-    box-shadow: none;
-    font-weight: bold;
-    border-color: ${theme.darkAccent};
-    :hover {
-      background-color: #6a4bc4 !important;
-      color: ${theme.backgroundColor};
-    }
   }
 `;
 
@@ -43,27 +24,22 @@ const CreativeInterface = () => {
           <div className="columns">
             <div className="column is-10">
               <Heading
-                title="Your Own Crypto Wallet Credit Card"
-                subtitle="< creative_interface >"
+                title="Scale Your Business With Us"
+                subtitle="We can help your business."
               />
             </div>
           </div>
           <h1 className="subtitle is-6">
-            We create e-commerce solutions and slick, eye-pleasing and
-            user-friendly online stores, that let you focus on your business.
-            The most popular form of e-commerce is the online store. It is
-            nothing but a website with a catalog of products and the possibility
-            of buying them by visitors.
+            ListMe is an event social networking service for brands to build &
+            engage with their followers, a seamless virtual door with a cashless
+            feature to accommodate the change in user behaviour. Join the
+            digital ecosystem and create guess success.
           </h1>
-          <button type="button" className="button is-medium">
-            Get the App
-          </button>
-          <a href="/" className="icon ">
-            <i className="fab fa-apple has-text-primary" />
-          </a>
-          <a href="/" className="icon">
-            <i className=" fab fa-android has-text-primary" />
-          </a>
+          <PurpleButton
+            title="Book A Meeting"
+            color={theme.textColor}
+            className="is-medium has-text-weight-semibold"
+          />
         </div>
         <div className="column is-5">
           <ImageCollection2 />
