@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import CardSteps from './CardSteps';
 
 const Section = styled.div`
   h1 {
@@ -22,7 +23,9 @@ const StepAppProcess = () => {
             <img src="images/Steps-image.png" alt="appimage" />
           </figure>
         </div>
-        <div className="column">Second column</div>
+        <div className="column">
+          <CardSteps />
+        </div>
       </div>
     </Section>
   );

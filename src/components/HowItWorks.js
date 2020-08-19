@@ -56,39 +56,38 @@ const Wrapper = styled.div`
 const Data1 = [
   {
     number: '01',
-    title: 'Create Payment Address',
-    subtitle:
-      'Provide your payout wallet address and callback URL to WallApp API.',
+    title: 'Get the APP',
+    subtitle: 'You are just a moment away from thousands of events to explore.',
   },
   {
     number: '02',
-    title: 'Ask for Payment',
-    subtitle: 'Show customer the wallet address as well as the payment amount.',
+    title: ' Check credentials',
+    subtitle: 'Now your ID is with ListMe and partners.',
   },
   {
     number: '03',
-    title: 'Wait for Payment',
-    subtitle: 'Confirmation on blockchain may take a minute or two. Wait it.',
+    title: 'ListMet',
+    subtitle: 'Find events that suit you & get guest-listed.',
   },
 ];
 
 const Data2 = [
   {
     number: '04',
-    title: 'Get Payment Notification',
+    title: 'Entry Payments',
     subtitle:
-      'Callbacks are sent to the URL you specified. You can process order.',
+      'Automatically make payment to the venue once you are checked in..',
   },
   {
     number: '05',
-    title: 'Get Your Paid',
-    subtitle: 'Payment is sent to the payout wallet immediately. Take money.',
+    title: 'Organize night with friends',
+    subtitle:
+      'Discuss event options with friends and make social planning easier.',
   },
   {
     number: '06',
-    title: 'Enjoy Our App',
-    subtitle:
-      'Confirmation on blockchain may take a minute or two. Wait for it.',
+    title: 'Enjoy the Night',
+    subtitle: 'Enjoy the night with your phone only this time.',
   },
 ];
 
