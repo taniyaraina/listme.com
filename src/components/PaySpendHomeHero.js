@@ -94,6 +94,17 @@ const PaySpend = () => {
           security in mind
         </motion.h1>
       </div>
+      <div className="my-5">
+        <motion.h1
+          initial="start"
+          animate="end"
+          variants={TextAnimate}
+          transition={{ delay: 2, duration: 1 }}
+          className="has-text-weight-bold is-size-5 is-size-6-mobile"
+        >
+          About time to enjoy nights in the way of 2020
+        </motion.h1>
+      </div>
       <motion.div
         initial="start"
         animate="end"
