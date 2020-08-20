@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-// import UseAnimations from 'react-useanimations';
 import PurpleButton from './elements/PurpleButton';
 import { theme } from '../utils/theme';
 
@@ -15,6 +14,7 @@ const Section = styled.div`
   .navbar-start {
     flex: 1;
     justify-content: center;
+    margin-right: 2rem;
   }
   .navbar-item img {
     max-height: 2.375rem;
@@ -23,7 +23,7 @@ const Section = styled.div`
     a {
       color: ${props => props.theme.textColor} !important;
     }
-    font-weight: 500 !important;
+    font-weight: 600 !important;
     font-family: ${props => props.theme.fontFamilyThin};
     color: ${props => props.theme.textColor} !important;
     :hover {
@@ -37,24 +37,10 @@ const Section = styled.div`
     border-radius: 4px;
     margin-left: 0px;
   }
-  .btn{
+  .btn {
     padding: 18px 22px;
   }
-  /* .searchBar {
-    margin-right: 1rem;
-  } */
-  /* .navbar-link:not(.is-arrowless)::after,
-  .select:not(.is-multiple):not(.is-loading)::after {
-    border: 3px solid transparent;
-    color: #161616;
-    content: '+';
-    transform: rotate(-90deg);
-    width: 0.9em;
-    margin-top: -4px;
-  } */
-  /* .navbar-link:not(.is-arrowless) {
-    padding-right: 2em;
-  } */
+
   @media only screen and (max-width: 768px) {
     .navbar {
       background-color: ${theme.textColor};
@@ -70,9 +56,6 @@ const Section = styled.div`
     .hidden {
       display: none;
     }
-    /* .searchBar {
-      color: ${theme.backgroundColor} !important;
-    } */
   }
 `;
 
@@ -85,17 +68,13 @@ const Header = () => {
       <nav
         className="navbar is-fixed-top"
         role="navigation"
-        aria-label="main navigation">
+        aria-label="main navigation"
+      >
         <div className="navbar-brand">
           <Link className="navbar-item image-to-hide" to="/">
             <img src="/images/ListMe-newLogo.png" alt="site logo" />
           </Link>
           <>
-            {/* <UseAnimations
-              className="navbar-item searchBar is-hidden-desktop"
-              animationKey="searchToX"
-              size={50}
-            /> */}
             <a
               href="#"
               role="button"
@@ -107,7 +86,8 @@ const Header = () => {
               aria-label="menu"
               aria-expanded="false"
               data-target="navbarBasicExample"
-              onClick={handleMobileMenu}>
+              onClick={handleMobileMenu}
+            >
               <span aria-hidden="true" />
               <span aria-hidden="true" />
               <span aria-hidden="true" />
@@ -117,56 +97,46 @@ const Header = () => {
         <div className={menuActive ? 'navbar-menu is-active' : 'navbar-menu'}>
           <div className="navbar-start">
             <div className="navbar-item has-dropdown is-hoverable">
-              <Link to="/" className="navbar-item has-text-weight-semibold">
+              <Link
+                to="/"
+                className="navbar-item has-text-weight-semibold is-size-6"
+              >
                 Home
               </Link>
             </div>
             <div className="navbar-item has-dropdown is-hoverable">
               <Link
                 to="/business"
-                className="navbar-item has-text-weight-semibold">
+                className="navbar-item has-text-weight-semibold is-size-6"
+              >
                 Bussiness
               </Link>
             </div>
             <div className="navbar-item has-dropdown is-hoverable">
-              <Link to="/faq" className="navbar-item has-text-weight-semibold">
+              <Link
+                to="/faq"
+                className="navbar-item has-text-weight-semibold is-size-6"
+              >
                 FAQs
               </Link>
             </div>
             <div className="navbar-item has-dropdown is-hoverable">
               <Link
                 to="/contact"
-                className="navbar-item has-text-weight-semibold">
+                className="navbar-item has-text-weight-semibold is-size-6"
+              >
                 Contact us
               </Link>
             </div>
           </div>
         </div>
         <div className="navbar-end">
-          {/* <UseAnimations
-            className="navbar-item searchBar is-hidden-touch"
-            animationKey="searchToX"
-            size={50}
-          /> */}
-          {/* <Search className="header_search-field">
-              <div className="field has-addons">
-                <div className="control">
-                  <input
-                    className="input"
-                    type="text"
-                    placeholder="Find a repository"
-                  />
-                </div>
-                <div className="control">
-                  <a className="button is-info">Search</a>
-                </div>
-              </div>
-            </Search> */}
           <div className="navbar-item hidden">
             <PurpleButton
               title="ListMe Now"
               className="btn"
               href="https://apps.apple.com/in/app/listme-app/id1462565783"
+              size="14"
             />
           </div>
         </div>

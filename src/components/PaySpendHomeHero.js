@@ -57,8 +57,8 @@ const Container = styled.div`
     width: 20%;
   }
   button {
-    height: 3rem;
-    width: 10rem;
+    height: 3.5rem;
+    width: 10.7rem;
   }
 `;
 
@@ -112,9 +112,11 @@ const PaySpend = () => {
         transition={{ delay: 2, duration: 1 }}
       >
         <PurpleButton
-          className="has-text-weight-semibold"
+          className="is-medium has-text-weight-semibold"
           title="DOWNLOAD"
           color={theme.textColor}
+          height
+          width
         />
       </motion.div>
     </Container>

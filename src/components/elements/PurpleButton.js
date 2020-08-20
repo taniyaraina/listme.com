@@ -1,13 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 
 import { theme } from '../../utils/theme';
 
 const Button = styled.button`
   color: ${props => (props.color ? props.color : props.theme.darkAccent)};
   font-size: ${props =>
-    props.size ? props.fontSizeExtraSmall : props.theme.fontSizeMedium}px;
+    props.size ? props.size : props.theme.fontSizeMedium}px;
   border-radius: 100px !important;
   background-color: transparent !important;
   border-color: ${theme.darkAccent} !important;
@@ -18,10 +17,24 @@ const Button = styled.button`
     color: ${theme.backgroundColor} !important;
   }
 `;
-const PurpleButton = ({ title, className, href, color, size }) => {
+const PurpleButton = ({
+  title,
+  className,
+  href,
+  color,
+  size,
+  height,
+  width,
+}) => {
   return (
     <a href={href}>
-      <Button className={`button ${className}`} color={color} size={size}>
+      <Button
+        className={`button ${className}`}
+        color={color}
+        size={size}
+        height={height}
+        width={width}
+      >
         {title}
       </Button>
     </a>

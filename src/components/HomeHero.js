@@ -9,6 +9,9 @@ const Section = styled.section`
   padding-top: 4rem;
   overflow-x: hidden;
   overflow-y: hidden;
+  .firstcolm {
+    margin-top: 8rem;
+  }
   .is-hidden-mobile {
     transform: translateY(2%);
     @media screen and (max-width: 768px) {
@@ -39,8 +42,8 @@ const HomeHero = () => {
       </SocialIcons>
       <Section className="section">
         <div className="container">
-          <div className="columns is-vcentered is-mobile">
-            <div className="column is-5-desktop is-mobile">
+          <div className="columns is-mobile">
+            <div className="column is-5-desktop is-mobile firstcolm">
               <PaySpendHomeHero />
             </div>
             <div className="column is-9-desktop is-6-mobile">
