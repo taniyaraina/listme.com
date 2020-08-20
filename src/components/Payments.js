@@ -47,14 +47,14 @@ const Payments = () => {
         <div className="columns has-text-centered is-variable is-8">
           <div className="column is-4">
             <PaymentCard
-              icon="fab fa-bitcoin"
+              icon="fas fa-mobile-alt"
               title="Wallet Free"
               subtitle="With ListMe, your phone is the only thing you need to enjoy a night."
             />
           </div>
           <MovingDownColumn className="column is-4">
             <PaymentCard
-              icon="fab fa-bitcoin"
+              icon="fas fa-user"
               title="Discover"
               subtitle="Discover somewhere new and meet a new dance partner."
             />

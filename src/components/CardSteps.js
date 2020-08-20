@@ -6,6 +6,7 @@ const Section = styled.div`
     margin-bottom: 5rem;
     width: 85%;
     border-radius: 2rem;
+    box-shadow: 0px 15px 38px 0px rgba(0, 0, 0, 0.1);
   }
   img {
     height: auto;

@@ -35,14 +35,14 @@ const Event = () => {
         <div className="columns has-text-centered is-variable is-4">
           <div className="column is-4">
             <PaymentCard
-              icon="fab fa-bitcoin"
+              icon="fas fa-mobile-alt"
               title="Paperless"
               subtitle="We are more than a paperless solution. We help you become paperless"
             />
           </div>
           <MovingDownColumn className="column is-4">
             <PaymentCard
-              icon="fab fa-bitcoin"
+              icon="fas fa-user"
               title="Cashless"
               subtitle="Frictionless “Uber” like social payment method"
             />
