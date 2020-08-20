@@ -95,7 +95,7 @@ const Container = styled.div`
   }
   .topMargin {
     /* margin-top: 16rem; */
-    max-height: 30%;
+    height: 700px;
   }
   display: flex;
   /* flex-direction: row; */
