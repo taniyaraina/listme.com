@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-// import UseAnimations from 'react-useanimations';
 import PurpleButton from './elements/PurpleButton';
 import { theme } from '../utils/theme';
 
@@ -10,20 +9,20 @@ const Section = styled.div`
   font-family: ${props => props.theme.primaryFontFamily};
   .navbar {
     background-color: rgba(255, 255, 255, 1);
-    padding: 1.3rem 1rem 0.8rem 1rem;
+    padding: 1rem 1.875rem 1rem 1.875rem;
   }
   .navbar-start {
     flex: 1;
     justify-content: center;
   }
   .navbar-item img {
-    max-height: 2.375rem;
+    max-height: 2.125rem;
   }
   .navbar-item {
     a {
       color: ${props => props.theme.textColor} !important;
     }
-    font-weight: 500 !important;
+    font-weight: 600 !important;
     font-family: ${props => props.theme.fontFamilyThin};
     color: ${props => props.theme.textColor} !important;
     :hover {
@@ -38,7 +37,7 @@ const Section = styled.div`
     margin-left: 0px;
   }
   .btn{
-    padding: 18px 22px;
+    padding: 10px 17px;
   }
   /* .searchBar {
     margin-right: 1rem;
@@ -85,7 +84,8 @@ const Header = () => {
       <nav
         className="navbar is-fixed-top"
         role="navigation"
-        aria-label="main navigation">
+        aria-label="main navigation"
+      >
         <div className="navbar-brand">
           <Link className="navbar-item image-to-hide" to="/">
             <img src="/images/ListMe-newLogo.png" alt="site logo" />
@@ -107,7 +107,8 @@ const Header = () => {
               aria-label="menu"
               aria-expanded="false"
               data-target="navbarBasicExample"
-              onClick={handleMobileMenu}>
+              onClick={handleMobileMenu}
+            >
               <span aria-hidden="true" />
               <span aria-hidden="true" />
               <span aria-hidden="true" />
@@ -124,7 +125,8 @@ const Header = () => {
             <div className="navbar-item has-dropdown is-hoverable">
               <Link
                 to="/business"
-                className="navbar-item has-text-weight-semibold">
+                className="navbar-item has-text-weight-semibold"
+              >
                 Bussiness
               </Link>
             </div>
@@ -136,7 +138,8 @@ const Header = () => {
             <div className="navbar-item has-dropdown is-hoverable">
               <Link
                 to="/contact"
-                className="navbar-item has-text-weight-semibold">
+                className="navbar-item has-text-weight-semibold"
+              >
                 Contact us
               </Link>
             </div>
@@ -164,6 +167,7 @@ const Header = () => {
             </Search> */}
           <div className="navbar-item hidden">
             <PurpleButton
+              size
               title="ListMe Now"
               className="btn"
               href="https://apps.apple.com/in/app/listme-app/id1462565783"
