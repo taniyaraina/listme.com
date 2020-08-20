@@ -10,28 +10,33 @@ const Section = styled.div`
   img {
     height: auto;
     width: 30%;
-    position: absolute;
-    left: 33%;
-    top: -23%;
+    margin-top: -4rem;
   }
+  p {
+    font-family: ${props => props.theme.secondaryFontFamily} !important;
+  }
+`;
+
+const SecondCard = styled.div`
+  margin-top: 2rem;
 `;
 
 const CardOne = [
   {
     img: 'images/step-1.png',
-    name: 'Step One',
-    alterEgo: 'Create an account within minutes',
+    title: 'Step One',
+    subtitle: 'Create an account within minutes',
   },
   {
     img: 'images/step-3.png',
-    name: 'Step Three',
-    alterEgo:
+    title: 'Step Three',
+    subtitle:
       'Create the events for the whole year within a seamless number of clicks.',
   },
   {
     img: 'images/step-5.png',
-    name: 'Step Five',
-    alterEgo:
+    title: 'Step Five',
+    subtitle:
       'Respond to guests questions within seconds with the in-chat feature',
   },
 ];
@@ -39,20 +44,20 @@ const CardOne = [
 const CardTwo = [
   {
     img: 'images/step-2.png',
-    name: 'Step Two',
-    alterEgo:
+    title: 'Step Two',
+    subtitle:
       'Connect your database to the ListMe ecosystem and we will automatically inform the customers to download the app to see your events.',
   },
   {
-    img: 'images/step-6.png',
-    name: 'Step Four',
-    alterEgo:
+    img: 'images/safety-Icon.png',
+    title: 'Step Four',
+    subtitle:
       'ListMe will manage and verify all IDs and support contactless social change in behaviour.',
   },
   {
     img: 'images/step-6.png',
-    name: 'Step Six',
-    alterEgo: 'Events Made Simple. Try it for free today.',
+    title: 'Step Six',
+    subtitle: 'Events Made Simple. Try it for free today.',
   },
 ];
 
@@ -66,13 +71,10 @@ const CardSteps = () => {
               <div className="card">
                 <div className="card-content">
                   <img src={item.img} alt="IconImage" />
-                  <h1 className="title is-5 has-text-weight-semibold">
-                    {' '}
-                    {item.name}
-                  </h1>
+                  <h1 className="is-5 has-text-weight-bold"> {item.title}</h1>
                   <div className="content">
-                    <p className="subtitle has-text-weight-light has-text-grey-lighter">
-                      {item.alterEgo}
+                    <p className="is-size-6 has-text-weight-light has-text-grey-lighter">
+                      {item.subtitle}
                     </p>
                   </div>
                 </div>
@@ -81,19 +83,17 @@ const CardSteps = () => {
           </div>
           <div className="column">
             {CardTwo.map(item => (
-              <div className="card">
+              <SecondCard className="card ">
                 <div className="card-content">
                   <img src={item.img} alt="IconImage" />
-                  <h1 className="title is-5 has-text-weight-semibold">
-                    {item.name}
-                  </h1>
+                  <h1 className="is-5 has-text-weight-bold">{item.title}</h1>
                   <div className="content">
-                    <p className="subtitle has-text-weight-light has-text-grey-lighter">
-                      {item.alterEgo}
+                    <p className="is-size-6 has-text-weight-light has-text-grey-lighter">
+                      {item.subtitle}
                     </p>
                   </div>
                 </div>
-              </div>
+              </SecondCard>
             ))}
           </div>
         </div>
