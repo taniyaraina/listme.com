@@ -1,61 +1,104 @@
 import React from 'react';
 import styled from 'styled-components';
-import PaymentCard from './PaymentCard';
 
-const MovingDownColumn = styled.div`
-  margin-top: 70px;
+const Section = styled.div`
+  .card {
+    margin-bottom: 5rem;
+    width: 85%;
+    border-radius: 2rem;
+  }
+  img {
+    height: auto;
+    width: 30%;
+    position: absolute;
+    left: 33%;
+    top: -23%;
+  }
 `;
+
+const CardOne = [
+  {
+    img: 'images/step-1.png',
+    name: 'Step One',
+    alterEgo: 'Create an account within minutes',
+  },
+  {
+    img: 'images/step-3.png',
+    name: 'Step Three',
+    alterEgo:
+      'Create the events for the whole year within a seamless number of clicks.',
+  },
+  {
+    img: 'images/step-5.png',
+    name: 'Step Five',
+    alterEgo:
+      'Respond to guests questions within seconds with the in-chat feature',
+  },
+];
+
+const CardTwo = [
+  {
+    img: 'images/step-2.png',
+    name: 'Step Two',
+    alterEgo:
+      'Connect your database to the ListMe ecosystem and we will automatically inform the customers to download the app to see your events.',
+  },
+  {
+    img: 'images/step-6.png',
+    name: 'Step Four',
+    alterEgo:
+      'ListMe will manage and verify all IDs and support contactless social change in behaviour.',
+  },
+  {
+    img: 'images/step-6.png',
+    name: 'Step Six',
+    alterEgo: 'Events Made Simple. Try it for free today.',
+  },
+];
 
 const CardSteps = () => {
   return (
-    <section className="section">
+    <Section className="section">
       <div className="container">
-        <div className="columns is-multiline has-text-centered is-variable is-8">
-          <div className="column ">
-            <PaymentCard
-              icon="fab fa-bitcoin"
-              title="Wallet Free"
-              subtitle="With ListMe, your phone is the only thing you need to enjoy a night."
-            />
+        <div className="columns is-multiline has-text-centered is-variable is-4">
+          <div className="column">
+            {CardOne.map(item => (
+              <div className="card">
+                <div className="card-content">
+                  <img src={item.img} alt="IconImage" />
+                  <h1 className="title is-5 has-text-weight-semibold">
+                    {' '}
+                    {item.name}
+                  </h1>
+                  <div className="content">
+                    <p className="subtitle has-text-weight-light has-text-grey-lighter">
+                      {item.alterEgo}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-          <MovingDownColumn className="column ">
-            <PaymentCard
-              icon="fab fa-bitcoin"
-              title="Discover"
-              subtitle="Discover somewhere new and meet a new dance partner."
-            />
-          </MovingDownColumn>
-          <div className="column ">
-            <PaymentCard
-              icon="fab fa-bitcoin"
-              title="Wallet Free"
-              subtitle="With ListMe, your phone is the only thing you need to enjoy a night."
-            />
+          <div className="column">
+            {CardTwo.map(item => (
+              <div className="card">
+                <div className="card-content">
+                  <img src={item.img} alt="IconImage" />
+                  <h1 className="title is-5 has-text-weight-semibold">
+                    {item.name}
+                  </h1>
+                  <div className="content">
+                    <p className="subtitle has-text-weight-light has-text-grey-lighter">
+                      {item.alterEgo}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-          <MovingDownColumn className="column ">
-            <PaymentCard
-              icon="fab fa-bitcoin"
-              title="Discover"
-              subtitle="Discover somewhere new and meet a new dance partner."
-            />
-          </MovingDownColumn>
-          <div className="column ">
-            <PaymentCard
-              icon="fab fa-bitcoin"
-              title="Wallet Free"
-              subtitle="With ListMe, your phone is the only thing you need to enjoy a night."
-            />
-          </div>
-          <MovingDownColumn className="column ">
-            <PaymentCard
-              icon="fab fa-bitcoin"
-              title="Discover"
-              subtitle="Discover somewhere new and meet a new dance partner."
-            />
-          </MovingDownColumn>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 export default CardSteps;
