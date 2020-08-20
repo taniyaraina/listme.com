@@ -46,7 +46,7 @@ const Container = styled.div`
     }
   }
   .title {
-    font-size: 3rem;
+    font-size: 3.4375rem;
     font-family: Poppins;
     line-height: 1.3;
   }
@@ -100,7 +100,7 @@ const PaySpend = () => {
           animate="end"
           variants={TextAnimate}
           transition={{ delay: 2, duration: 1 }}
-          className="has-text-weight-bold is-size-5 is-size-6-mobile"
+          className="title has-text-weight-bold is-size-5 is-size-6-mobile"
         >
           About time to enjoy nights in the way of 2020
         </motion.h1>

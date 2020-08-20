@@ -9,7 +9,7 @@ const Section = styled.div`
   font-family: ${props => props.theme.primaryFontFamily};
   .navbar {
     background-color: rgba(255, 255, 255, 1);
-    padding: 1.3rem 1rem 0.8rem 1rem;
+    padding: 1rem 1.875rem 1rem 1.875rem;
   }
   .navbar-start {
     flex: 1;
@@ -17,7 +17,7 @@ const Section = styled.div`
     margin-right: 2rem;
   }
   .navbar-item img {
-    max-height: 2.375rem;
+    max-height: 2.125rem;
   }
   .navbar-item {
     a {
@@ -38,7 +38,7 @@ const Section = styled.div`
     margin-left: 0px;
   }
   .btn {
-    padding: 18px 22px;
+    padding: 10px 17px;
   }
 
   @media only screen and (max-width: 768px) {
@@ -107,7 +107,7 @@ const Header = () => {
             <div className="navbar-item has-dropdown is-hoverable">
               <Link
                 to="/business"
-                className="navbar-item has-text-weight-semibold is-size-6"
+                className="navbar-item has-text-weight-semibold"
               >
                 Bussiness
               </Link>
@@ -123,7 +123,7 @@ const Header = () => {
             <div className="navbar-item has-dropdown is-hoverable">
               <Link
                 to="/contact"
-                className="navbar-item has-text-weight-semibold is-size-6"
+                className="navbar-item has-text-weight-semibold"
               >
                 Contact us
               </Link>
@@ -133,6 +133,7 @@ const Header = () => {
         <div className="navbar-end">
           <div className="navbar-item hidden">
             <PurpleButton
+              size
               title="ListMe Now"
               className="btn"
               href="https://apps.apple.com/in/app/listme-app/id1462565783"

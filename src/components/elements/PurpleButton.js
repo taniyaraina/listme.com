@@ -4,12 +4,12 @@ import styled from 'styled-components';
 import { theme } from '../../utils/theme';
 
 const Button = styled.button`
-  color: ${props => (props.color ? props.color : props.theme.darkAccent)};
+  color: ${props => (props.color ? props.color : props.theme.secondaryBorder)};
   font-size: ${props =>
     props.size ? props.size : props.theme.fontSizeMedium}px;
   border-radius: 100px !important;
   background-color: transparent !important;
-  border-color: ${theme.darkAccent} !important;
+  border-color: ${theme.secondaryBorder} !important;
   box-shadow: none !important ;
   transition: 0.5s;
   :hover {

@@ -26,6 +26,7 @@ export const theme = {
   dangerColor: '#f44336',
 
   primaryColor: mainBrandColor,
+  secondaryBorder: 'rgba(157,43,126,1)',
   borderColor: '#e0e6ef',
   backgroundColor: '#FFFFFF',
   backgroundInputColor: lightShades,
