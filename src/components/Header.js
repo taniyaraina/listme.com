@@ -23,7 +23,11 @@ const Section = styled.div`
     a {
       color: ${props => props.theme.textColor} !important;
     }
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
     font-weight: 600 !important;
+    margin-right: 16px;
     font-family: ${props => props.theme.fontFamilyThin};
     color: ${props => props.theme.textColor} !important;
     :hover {
@@ -38,7 +42,7 @@ const Section = styled.div`
     margin-left: 0px;
   }
   .btn {
-    padding: 10px 17px;
+    padding: 20px 22px;
   }
 
   @media only screen and (max-width: 768px) {
@@ -109,7 +113,7 @@ const Header = () => {
                 to="/business"
                 className="navbar-item has-text-weight-semibold"
               >
-                Bussiness
+                Bussiness Users
               </Link>
             </div>
             <div className="navbar-item has-dropdown is-hoverable">
