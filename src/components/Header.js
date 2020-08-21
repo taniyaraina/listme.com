@@ -14,10 +14,12 @@ const Section = styled.div`
   .navbar-start {
     flex: 1;
     justify-content: center;
-    margin-right: 2rem;
+    margin-right: 1rem;
+    margin-top: 22px;
   }
   .navbar-item img {
     max-height: 2.125rem;
+    margin-top: 20px;
   }
   .navbar-item {
     a {
@@ -40,6 +42,9 @@ const Section = styled.div`
     opacity: 0.6;
     border-radius: 4px;
     margin-left: 0px;
+  }
+  .navbar-end {
+    align-items: flex-end;
   }
   .btn {
     padding: 20px 22px;
@@ -113,7 +118,7 @@ const Header = () => {
                 to="/business"
                 className="navbar-item has-text-weight-semibold"
               >
-                Bussiness Users
+                Business Users
               </Link>
             </div>
             <div className="navbar-item has-dropdown is-hoverable">
@@ -129,7 +134,7 @@ const Header = () => {
                 to="/contact"
                 className="navbar-item has-text-weight-semibold"
               >
-                Contact us
+                Contact Us
               </Link>
             </div>
           </div>
