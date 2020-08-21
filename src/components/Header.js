@@ -8,8 +8,8 @@ const Section = styled.div`
   padding: 1.5rem 1.5rem !important;
   font-family: ${props => props.theme.primaryFontFamily};
   .navbar {
-    background-color: rgba(255, 255, 255, 1);
-    padding: 1rem 1.875rem 1rem 1.875rem;
+    /* background-color: rgba(255, 255, 255, 1); */
+    /* padding: 1rem 1.875rem 1rem 1.875rem; */
   }
   .navbar-start {
     flex: 1;
@@ -74,11 +74,7 @@ const Header = () => {
   const handleMobileMenu = () => setMenuActive(!menuActive);
   return (
     <Section className="section">
-      <nav
-        className="navbar is-fixed-top"
-        role="navigation"
-        aria-label="main navigation"
-      >
+      <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <Link className="navbar-item image-to-hide" to="/">
             <img src="/images/ListMe-newLogo.png" alt="site logo" />

@@ -33,6 +33,7 @@ const Container = styled.div`
   }
   .section {
     padding-top: 0rem;
+    margin-left: 4rem;
   }
   .buttonBorder {
     border: 1px solid ${theme.textColorLite};

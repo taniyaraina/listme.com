@@ -36,6 +36,9 @@ const Container = styled.div`
     border-radius: 100px;
     box-shadow: 0px 15px 38px rgba(0, 0, 0, 0.1);
   }
+  img{
+    width: 35%;
+  }
   /* .arrow {
     transition: 0.5s;
     :hover {
@@ -70,10 +73,7 @@ const InfoCards = () => {
                 </div>
                 <div className="column is-2">
                   <a href="/">
-                    <img src="images/arrow.png" alt="left-arrow" />
-                    {/* <span className="icon is-size-4 arrow">
-                    <i className="fas fa-arrow-right" />
-                  </span> */}
+                    <img src="images/newright-arrow.png" alt="left-arrow" />
                   </a>
                 </div>
               </div>

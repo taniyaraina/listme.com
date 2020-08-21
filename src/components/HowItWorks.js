@@ -16,7 +16,7 @@ const Container = styled.div`
     margin-bottom: 3rem;
   }
   .purple {
-    color: ${theme.darkAccent} !important;
+    color: #664bc4;
     font-size: 1.3rem !important;
   }
   .head {
@@ -27,7 +27,7 @@ const Container = styled.div`
   }
   .is-6 {
     font-size: 1rem;
-    line-height: 1.7rem;
+    line-height: 30px;
     margin-top: -0.5rem;
     font-family: ${theme.secondaryFontFamily};
   }

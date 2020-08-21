@@ -26,25 +26,15 @@ const ContentWrapper = styled.div`
   }
   p {
     line-height: 1.875 !important;
+    font-family: ${props => props.theme.secondaryFontFamily};
   }
 `;
-
-// const Article = styled.article`
-//   align-items: center;
-//   .content h1 {
-//     font-size: 18px !important;
-//     margin-top: 12px;
-//   }
-//   span {
-//     color: ${theme.mainBrandColor} !important;
-//   }
-// `;
 
 const Payments = () => {
   return (
     <section className="section">
       <div className="container">
-        <div className="columns has-text-centered is-variable is-8">
+        <div className="columns has-text-centered is-variable is-6">
           <div className="column is-4">
             <PaymentCard
               icon="fas fa-mobile-alt"
@@ -62,9 +52,9 @@ const Payments = () => {
           <ContentWrapper className="column is-4 has-text-left ">
             <Heading
               subtitle="Let the fun begin"
-              title="Get listed for club in 2020!"
+              title="Get listed for night events in 2020!"
             />
-            <p className="title has-text-weight-normal">
+            <p className="is-size-6 has-text-weight-normal mt-4">
               Tailor your unique nightlife, meet new people and explore new
               venues all on ListMe
             </p>
