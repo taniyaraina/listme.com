@@ -88,9 +88,9 @@ const PaySpend = () => {
           animate="end"
           variants={TextAnimate}
           transition={{ delay: 2, duration: 1 }}
-          className="has-text-weight-bold title is-size-6-mobile"
+          className="has-text-weight-bold has-text-black title is-size-6-mobile"
         >
-          Wallet Free with <br />
+          Wallet free with <br />
           security in mind
         </motion.h1>
       </div>

@@ -10,7 +10,7 @@ const Section = styled.section`
   overflow-x: hidden;
   overflow-y: hidden;
   .firstcolm {
-    margin-top: 8rem;
+    margin-top: 5.5rem;
   }
   .is-hidden-mobile {
     transform: translateY(2%);

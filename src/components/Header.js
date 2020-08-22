@@ -5,11 +5,9 @@ import PurpleButton from './elements/PurpleButton';
 import { theme } from '../utils/theme';
 
 const Section = styled.div`
-  padding: 1.5rem 1.5rem !important;
-  font-family: ${props => props.theme.primaryFontFamily};
   .navbar {
-    /* background-color: rgba(255, 255, 255, 1); */
-    /* padding: 1rem 1.875rem 1rem 1.875rem; */
+    padding: 1.3rem 1.8rem !important;
+    font-family: ${props => props.theme.primaryFontFamily};
   }
   .navbar-start {
     flex: 1;
@@ -45,15 +43,18 @@ const Section = styled.div`
   }
   .navbar-end {
     align-items: flex-end;
+    font-family: ${props => props.theme.fontFamilyThin};
+    color: ${props => props.theme.textColor} !important;
+    font-weight: 600 !important;
   }
   .btn {
-    padding: 20px 22px;
+    padding: 20px 25px;
   }
 
   @media only screen and (max-width: 768px) {
     .navbar {
       background-color: ${theme.textColor};
-      padding: 0;
+      padding: 0 !important;
     }
     .navbar-menu {
       height: 100vh;
@@ -62,7 +63,7 @@ const Section = styled.div`
       align-items: center;
       justify-content: space-between;
     }
-    .hidden {
+    .navbar-end {
       display: none;
     }
   }
@@ -73,7 +74,7 @@ const Header = () => {
 
   const handleMobileMenu = () => setMenuActive(!menuActive);
   return (
-    <Section className="section">
+    <Section>
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <Link className="navbar-item image-to-hide" to="/">
@@ -136,15 +137,13 @@ const Header = () => {
           </div>
         </div>
         <div className="navbar-end">
-          <div className="navbar-item hidden">
-            <PurpleButton
-              size
-              title="ListMe Now"
-              className="btn"
-              href="https://apps.apple.com/in/app/listme-app/id1462565783"
-              size="14"
-            />
-          </div>
+          <PurpleButton
+            size
+            title="ListMe Now"
+            className="btn"
+            href="https://apps.apple.com/in/app/listme-app/id1462565783"
+            size="14"
+          />
         </div>
       </nav>
     </Section>

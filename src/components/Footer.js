@@ -84,10 +84,9 @@ const Footer = () => {
                   className="footer-logo"
                 />
               </Link>
-              <h1 className="title is-size-6 has-text-weight-medium grey small">
-                We are a software house from USA focused on custom software
-                development, e-commerce platforms, ERP className systems
-                development.
+              <h1 className=" is-size-6 has-text-weight-medium grey small">
+                We are a technology-focused company with a focus on digital
+                transformation in the night-time industry B2B/B2C experiences.
               </h1>
               {Icons.map(item => (
                 <IconsGroup
@@ -101,24 +100,24 @@ const Footer = () => {
             <div className="column is-4">
               <h1 className="title is-4 has-text-weight-bold">Contact Us</h1>
               <h1 className="title is-size-6 lineHeight  has-text-weight-light ">
-                <span className="bold"> Adress:</span>
+                <span className="bold"> Address:</span>
                 {` `}
-                27 Division St, New York, NY 10002, United States of America
+                20-22 Wenlock Road London N1 7GU
               </h1>
               <h1 className="title is-size-6   has-text-weight-light ">
                 <span className="bold"> Website:</span>
                 {`  `}
-                <a>Softlab.wdl.net</a>
+                <a>list-me-development.netlify.app</a>
               </h1>
               <h1 className="title is-size-6   has-text-weight-light ">
                 <span className="bold"> Email:</span>
                 {`  `}
-                <a>Softlab@gmail.com</a>
+                <a>hello@listmeapp.co</a>
               </h1>
               <h1 className="title is-size-6   has-text-weight-light ">
-                <span className="bold"> Phone:</span>
+                <span className="bold"> WhatsApp:</span>
                 {`  `}
-                <a>+91 8146851290</a>
+                <a>+442080401901</a>
               </h1>
             </div>
             <div className="column is-4">
@@ -130,17 +129,11 @@ const Footer = () => {
               </h1>
               <h1 className="title is-size-6  has-text-weight-light ">
                 {' '}
-                <Link to="/">About Us</Link>
-              </h1>
-              <h1 className="title is-size-6  has-text-weight-light ">
-                {' '}
-                <Link to="/">Help Link</Link>
-              </h1>
-              <h1 className="title is-size-6  has-text-weight-light ">
                 <Link to="/">Terms & Conditions</Link>
               </h1>
               <h1 className="title is-size-6  has-text-weight-light ">
-                <Link to="/contact">Contact Us</Link>
+                {' '}
+                <Link to="/">Contact Us</Link>
               </h1>
               <h1 className="title is-size-6  has-text-weight-light ">
                 <Link to="/">Privacy Policy</Link>

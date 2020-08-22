@@ -21,7 +21,6 @@ const Container = styled.ul`
 const Icon = [
   { icon: 'fab fa-twitter' },
   { icon: 'fab fa-facebook-f' },
-  { icon: 'fab fa-google' },
   { icon: 'fab fa-linkedin-in' },
 ];
 
