@@ -115,9 +115,11 @@ const PaymentCard = ({ icon, title, subtitle }) => {
           </div>
           <i className={icon} />
         </div>
-        <h1 className="title is-5 has-text-weight-semibold">{title}</h1>
+        <h1 className="title is-5 has-text-black has-text-weight-semibold">
+          {title}
+        </h1>
         <div className="content">
-          <p className="subtitle has-text-weight-light has-text-grey-lighter">
+          <p className="subtitle has-text-weight-normal has-text-grey-lighter">
             {subtitle}
           </p>
         </div>

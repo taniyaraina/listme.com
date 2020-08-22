@@ -5,7 +5,7 @@ import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import HomeHero from '../components/HomeHero';
 import Payments from '../components/Payments';
-import Benefits from '../components/Benefits';
+import Features from '../components/Features';
 import HowItWorks from '../components/HowItWorks';
 import InfoCards from '../components/InfoCards';
 import DownloadApp from '../components/DownloadApp';
@@ -22,7 +22,7 @@ export default class IndexPage extends React.Component {
         <Container>
           <HomeHero />
           <Payments />
-          <Benefits />
+          <Features />
           <HowItWorks />
           <InfoCards />
           <DownloadApp />

@@ -24,6 +24,7 @@ const Container = styled.div`
   }
   .wrap {
     width: 30% !important;
+    margin-top: 5rem;
   }
   .is-6 {
     font-size: 1rem;
@@ -130,7 +131,7 @@ const ListItem = ({ number, title, subtitle, variants, reverse }) => {
       variants={variants}
     >
       <Wrapper
-        className="columns is-gapless is-multiline is-mobile card"
+        className="columns is-variable is-3 is-multiline is-mobile card"
         reverse={reverse}
       >
         <div className="column is-2">
@@ -145,7 +146,7 @@ const ListItem = ({ number, title, subtitle, variants, reverse }) => {
             {title}
           </h1>
           <h1
-            className={`title is-6 has-text-left has-text-weight-light ${
+            className={`is-6 has-text-left has-text-weight-normal ${
               reverse ? 'has-text-right' : 'has-text-left'
             }`}
           >
