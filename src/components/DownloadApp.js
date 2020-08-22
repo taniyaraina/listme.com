@@ -4,10 +4,7 @@ import styled from 'styled-components';
 import { theme } from '../utils/theme';
 
 const Container = styled.div`
-  .greenColor {
-    color: ${theme.hoverColor} !important;
-    font-size: 3.5rem;
-  }
+margin-top: 5rem;
   .subs {
     line-height: 2rem;
     font-family: ${theme.secondaryFontFamily};
@@ -41,11 +38,6 @@ const Container = styled.div`
   .appStoreBack {
     margin: 1.5rem 0.5rem;
     display: inline-block;
-    /* background-image: radial-gradient(
-      circle farthest-corner at 100% 150%,
-      #d75dbc 10%,
-      #6a4bc4 50%
-    ); */
     background-image: radial-gradient(
       circle farthest-corner at 100% 150%,
       #d75dbc 10%,
@@ -53,34 +45,11 @@ const Container = styled.div`
     );
     border-radius: 100px;
   }
-  /* .playStore {
-    font-family: ${theme.primaryFontFamily};
-    font-weight: initial;
-    border-color: ${theme.darkAccent};
-  }
-  .playStoreBack {
-    margin: 0.5rem 1rem;
-    display: inline-block;
-    border-radius: 100px;
-    transition: 1s;
-    :hover {
-      background-image: radial-gradient(
-        circle farthest-corner at 100% 150%,
-        #d75dbc 10%,
-        #6a4bc4 50%
-      ); */
       button {
         color: ${theme.backgroundColor};
         box-shadow: 0px 9px 30px 0 rgba(106, 75, 196, 0.4) !important;
       }
-      .playIcon {
-        color: ${theme.backgroundColor};
-      }
     }
-  }
-  .playIcon {
-    margin-right: 10px;
-    color: ${theme.darkAccent};
   }
   .appleIcon {
     margin-right: 10px;
@@ -97,9 +66,8 @@ const DownloadApp = () => {
         <div className="columns is-centered">
           <div className="column is-8">
             <h1 className="title is-5 has-text-grey-lighter subs">
-              Are you looking for trusted experts, who are ready to get insight
-              about your business needs? Here we are with our comprehensive
-              services!
+              Are you looking for a stress free nightlife experience? If so this
+              is the application for you!
             </h1>
           </div>
         </div>
@@ -109,12 +77,6 @@ const DownloadApp = () => {
             App Store
           </button>
         </div>
-        {/* <div className="playStoreBack">
-          <button type="button" className="button is-medium playStore">
-            <i className="fab fa-google-play is-size-4 playIcon" />
-            Google Play
-          </button>
-        </div> */}
       </section>
     </Container>
   );
