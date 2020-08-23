@@ -6,11 +6,10 @@ import { theme } from '../utils/theme';
 import Image from '../../static/images/Footerbackground.png';
 
 const Icons = [
-  { icon: 'fab fa-twitter', onHover: `${theme.twitterIconColor}` },
-  { icon: 'fab fa-facebook-f', onHover: `${theme.facebookIconColor}` },
-  { icon: 'fab fa-linkedin-in', onHover: `${theme.linkedinIconColor}` },
-  { icon: 'fab fa-instagram', onHover: `${theme.instagramIconColor}` },
-  { icon: 'fab fa-pinterest-p', onHover: `${theme.pinterestIconColor}` },
+  { icon: 'fab fa-twitter', onHover: '#1da1f2' },
+  { icon: 'fab fa-facebook-f', onHover: '#3b5998' },
+  { icon: 'fab fa-linkedin-in', onHover: '#007bb5' },
+  { icon: 'fab fa-instagram', onHover: '#c32aa3' },
 ];
 
 const FooterStyled = styled.footer`
@@ -25,25 +24,28 @@ const FooterStyled = styled.footer`
   }
   .is-4 {
     font-size: ${props => props.theme.fontSizeMedium}px !important;
+    font-family: ${theme.primaryFontFamily} !important;
   }
   .footer-logo {
     height: 2.5rem;
     margin-bottom: 1rem;
   }
   .wrap {
-    margin-top: 4rem;
+    margin-top: 5rem;
   }
   h1 {
     color: ${theme.backgroundColor} !important;
+    font-family: ${theme.secondaryFontFamily} !important;
   }
   .grey {
     color: ${theme.lightGrey} !important;
     font-family: ${theme.secondaryFontFamily};
-    line-height: 1.5;
-    font-size: 14px !important;
+    line-height: 1.8;
   }
   .bold {
     font-weight: bold;
+    font-family: ${theme.secondaryFontFamily} !important;
+    color: ${theme.backgroundColor} !important;
   }
   .is-borderTop {
     border: 0px solid #4f4e4e;
@@ -57,13 +59,11 @@ const FooterStyled = styled.footer`
       text-decoration: underline;
     }
   }
-  .underline {
-    text-decoration: underline;
-  }
 `;
 const IconsGroup = styled.a`
   margin-right: 10px;
-  background: ${theme.darkAccent};
+  margin-top: 1rem;
+  background: #664bc4;
   border-radius: 15px;
   :hover {
     background-color: ${props => props.hoverColor} !important;
@@ -75,7 +75,7 @@ const Footer = () => {
     <FooterStyled>
       <section className="section">
         <div className="container">
-          <div className="columns wrap">
+          <div className="columns is-variable is-8 wrap">
             <div className="column is-4">
               <Link className="" to="/">
                 <img
@@ -84,7 +84,7 @@ const Footer = () => {
                   className="footer-logo"
                 />
               </Link>
-              <h1 className=" is-size-6 has-text-weight-medium grey small">
+              <h1 className=" is-size-6 has-text-weight-normal grey small">
                 We are a technology-focused company with a focus on digital
                 transformation in the night-time industry B2B/B2C experiences.
               </h1>
@@ -98,23 +98,25 @@ const Footer = () => {
               ))}
             </div>
             <div className="column is-4">
-              <h1 className="title is-4 has-text-weight-bold">Contact Us</h1>
-              <h1 className="title is-size-6 lineHeight  has-text-weight-light ">
+              <h1 className="title is-4 has-text-weight-semibold mt-3">
+                Contact Us
+              </h1>
+              <h1 className="title is-size-6 lineHeight  has-text-weight-normal  grey  ">
                 <span className="bold"> Address:</span>
                 {` `}
                 20-22 Wenlock Road London N1 7GU
               </h1>
-              <h1 className="title is-size-6   has-text-weight-light ">
+              <h1 className="title is-size-6 has-text-weight-normal  grey ">
                 <span className="bold"> Website:</span>
                 {`  `}
                 <a>list-me-development.netlify.app</a>
               </h1>
-              <h1 className="title is-size-6   has-text-weight-light ">
+              <h1 className="title is-size-6   has-text-weight-normal  grey  ">
                 <span className="bold"> Email:</span>
                 {`  `}
                 <a>hello@listmeapp.co</a>
               </h1>
-              <h1 className="title is-size-6   has-text-weight-light ">
+              <h1 className="title is-size-6   has-text-weight-normal  grey ">
                 <span className="bold"> WhatsApp:</span>
                 {`  `}
                 <a>+442080401901</a>
@@ -122,29 +124,27 @@ const Footer = () => {
             </div>
             <div className="column is-4">
               <h1 className="title is-5  ">
-                <h1 className=" title is-4 has-text-weight-bold">
+                <h1 className=" title is-4 has-text-weight-semibold mt-3">
                   {' '}
                   Useful Links
                 </h1>
               </h1>
-              <h1 className="title is-size-6  has-text-weight-light ">
+              <h1 className="title is-size-6  has-text-weight-normal ">
                 {' '}
                 <Link to="/">Terms & Conditions</Link>
               </h1>
-              <h1 className="title is-size-6  has-text-weight-light ">
+              <h1 className="title is-size-6  has-text-weight-normal ">
                 {' '}
-                <Link to="/">Contact Us</Link>
+                <Link to="/contact">Contact Us</Link>
               </h1>
-              <h1 className="title is-size-6  has-text-weight-light ">
+              <h1 className="title is-size-6  has-text-weight-normal ">
                 <Link to="/">Privacy Policy</Link>
               </h1>
             </div>
           </div>
           <div className="is-borderTop">
             <h1 className="subtitle is-size-6 grey has-text-right">
-              Copyright © 2020 ListMe by{' '}
-              <a className="has-text-white underline">Zeiq.</a> All Rights
-              Reserved.
+              Copyright © 2020 ListMe by ListMe Team All Rights Reserved.
             </h1>
           </div>
         </div>

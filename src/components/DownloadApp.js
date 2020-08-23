@@ -64,7 +64,7 @@ const DownloadApp = () => {
           Download App
         </h1>
         <div className="columns is-centered">
-          <div className="column is-8">
+          <div className="column is-7">
             <h1 className="title is-5 has-text-grey-lighter subs">
               Are you looking for a stress free nightlife experience? If so this
               is the application for you!
