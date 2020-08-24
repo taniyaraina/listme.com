@@ -4,9 +4,15 @@ import styled from 'styled-components';
 const Section = styled.div`
   .card {
     margin-bottom: 5rem;
-    width: 85%;
     border-radius: 2rem;
     box-shadow: 0px 15px 38px 0px rgba(0, 0, 0, 0.1);
+  }
+  .head {
+    font-size: 18px;
+    color: ${props => props.theme.textColor} !important;
+  }
+  .is-size-6 {
+    line-height: 30px;
   }
   img {
     height: auto;
@@ -20,6 +26,7 @@ const Section = styled.div`
 
 const SecondCard = styled.div`
   margin-top: 2rem;
+  padding: 0.8rem;
 `;
 
 const CardOne = [
@@ -66,15 +73,15 @@ const CardSteps = () => {
   return (
     <Section className="section">
       <div className="container">
-        <div className="columns is-multiline has-text-centered is-variable is-4">
+        <div className="columns is-multiline has-text-centered ">
           <div className="column">
             {CardOne.map(item => (
               <div className="card">
                 <div className="card-content">
                   <img src={item.img} alt="IconImage" />
-                  <h1 className="is-5 has-text-weight-bold"> {item.title}</h1>
+                  <h1 className="head has-text-weight-bold"> {item.title}</h1>
                   <div className="content">
-                    <p className="is-size-6 has-text-weight-light has-text-grey-lighter">
+                    <p className="is-size-6 has-text-weight-normal has-text-grey-lighter">
                       {item.subtitle}
                     </p>
                   </div>
@@ -87,9 +94,9 @@ const CardSteps = () => {
               <SecondCard className="card ">
                 <div className="card-content">
                   <img src={item.img} alt="IconImage" />
-                  <h1 className="is-5 has-text-weight-bold">{item.title}</h1>
+                  <h1 className="head has-text-weight-bold">{item.title}</h1>
                   <div className="content">
-                    <p className="is-size-6 has-text-weight-light has-text-grey-lighter">
+                    <p className="is-size-6 has-text-weight-normal has-text-grey-lighter">
                       {item.subtitle}
                     </p>
                   </div>

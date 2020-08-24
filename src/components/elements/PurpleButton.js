@@ -6,16 +6,18 @@ import { theme } from '../../utils/theme';
 const Button = styled.button`
   color: ${props => (props.color ? props.color : props.theme.secondaryBorder)};
   font-size: ${props =>
-    props.size ? props.size : props.theme.fontSizeMedium}px;
+    props.size ? props.size : props.theme.fontSizeMedium}px !important;
   border-radius: 100px !important;
   background-color: transparent !important;
   border-color: ${theme.secondaryBorder} !important;
-  box-shadow:${props => (props.Shadow ? props.theme.buttonBoxShadow:'none')} !important;
+  box-shadow: ${props =>
+    props.Shadow ? props.theme.buttonBoxShadow : 'none'} !important;
   transition: 0.5s;
   :hover {
     background-color: ${theme.mainBrandColor} !important;
     color: ${theme.backgroundColor} !important;
-    box-shadow:${props => (props.hoverShadow ? props.theme.buttonBoxShadow:'none')} !important;
+    box-shadow: ${props =>
+      props.hoverShadow ? props.theme.buttonBoxShadow : 'none'} !important;
   }
 `;
 const PurpleButton = ({

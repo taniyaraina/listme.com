@@ -12,7 +12,7 @@ const Container = styled.ul`
     display: flex;
     :hover {
       padding: 10px;
-      background-color: ${theme.hoverColor};
+      background-color: ${theme.darkAccent};
       border-bottom-right-radius: 100px;
       border-top-right-radius: 100px;
     }

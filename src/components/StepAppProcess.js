@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import CardSteps from './CardSteps';
 
 const Section = styled.div`
+  .columns {
+    justify-content: space-between;
+  }
   h1 {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -23,7 +26,7 @@ const StepAppProcess = () => {
             <img src="images/Steps-image.png" alt="appimage" />
           </figure>
         </div>
-        <div className="column">
+        <div className="column is-half">
           <CardSteps />
         </div>
       </div>

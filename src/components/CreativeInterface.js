@@ -14,6 +14,10 @@ const Container = styled.div`
   .wrapper {
     margin-top: 5rem;
   }
+  button {
+    height: 3.7rem;
+    width: 12rem;
+  }
 `;
 
 const CreativeInterface = () => {
@@ -39,6 +43,7 @@ const CreativeInterface = () => {
             title="Book A Meeting"
             color={theme.textColor}
             className="is-medium has-text-weight-semibold"
+            size="18"
           />
         </div>
         <div className="column is-5">

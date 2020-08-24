@@ -12,7 +12,7 @@ const Container = styled.div`
     margin-bottom: 3rem;
     font-size: 36px;
     font-family: ${props => props.theme.primaryFontFamily};
-    margin-left: 5rem;
+    margin-left: 10rem;
   }
   overflow-x: hidden;
   overflow-y: hidden;
