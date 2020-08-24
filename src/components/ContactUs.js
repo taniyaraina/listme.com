@@ -6,14 +6,10 @@ import { theme } from '../utils/theme';
 import PurpleButton from './elements/PurpleButton';
 
 const Section = styled.div`
-  .greenColor {
-    color: ${theme.hoverColor} !important;
-  }
   .grey {
     color: ${theme.textColorLite} !important;
   }
   .smallText {
-    /* font-size: 0.9rem; */
     line-height: 1.8;
     margin-top: 1rem;
     margin-bottom: 2rem;
@@ -21,7 +17,14 @@ const Section = styled.div`
   }
   .input {
     ::placeholder  {
-      font-size: 1rem !important;
+      font-size: 16px !important;
+      font-family: ${theme.secondaryFontFamily};
+    }
+  }
+  .textarea {
+    ::placeholder  {
+      font-size: 16px !important;
+      font-family: ${theme.secondaryFontFamily};
     }
   }
   .card {
@@ -46,10 +49,20 @@ const Section = styled.div`
     border-radius: 100px;
     margin-bottom: 1rem;
     box-shadow: none;
+    :hover{
+      border-color:${theme.darkAccent};
+    }
   }
   textarea {
     box-shadow: none;
     border-radius: 40px;
+  }
+  .btn{
+    width: 12rem;
+    height: 4rem;
+  }
+  .inputButton{
+    width:13.5rem;
   }
   button {
     background: radial-gradient(circle farthest-corner at 100% 150%,#68044d 10%,#9d2b7e 50%);
@@ -57,6 +70,7 @@ const Section = styled.div`
     transition: 0.6s;
     color: ${theme.backgroundColor};
     background-color: ${theme.darkAccent};
+    box-shadow:${props => props.theme.buttonBoxShadow} !important;
     :hover {
       background-image: none;
       color: ${theme.backgroundColor};
@@ -108,15 +122,12 @@ const ContactUs = () => {
                   <h1 className="title is-6 has-text-weight-normal mb-5">
                     {item.title}
                   </h1>
-                  <h1 className="title is-6 has-text-weight-normal up">
-                    {/* {item.subtitle} */}
-                  </h1>
                 </div>
               </div>
             ))}
             <PurpleButton
               title="Book A Demo"
-              className="button is-medium mb-6"
+              className="is-medium has-text-weight-semibold mb-6 btn"
             />
             <h1 className="title is-4 has-text-weight-bold has-text-left">
               Drop Us a Line
@@ -127,7 +138,12 @@ const ContactUs = () => {
               className="textarea is-medium"
               placeholder="Your Message *"
             />
-            <PurpleButton title="Send A Message" className="is-medium mt-4" />
+            <div className="has-text-left">
+              <PurpleButton
+                title="Send A Message"
+                className="is-medium mt-4 inputButton"
+              />
+            </div>
           </div>
         </div>
       </div>

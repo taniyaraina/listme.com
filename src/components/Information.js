@@ -5,7 +5,7 @@ import FaqItem from './FaqItem';
 
 const Section = styled.div`
   .maincolm {
-    margin-top: 2rem;
+    margin-top: -1rem;
   }
   h1 {
     line-height: 3rem;
