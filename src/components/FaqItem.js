@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  .button {
-    margin-bottom: 2rem;
+  .button,
+  .Icon {
+    margin-bottom: 0;
     border-radius: 2rem;
     font-family: ${props => props.theme.primaryFontFamily};
     box-shadow: none !important;
@@ -15,18 +16,6 @@ const Container = styled.div`
       );
       color: #ffff;
     }
-  }
-  .Icon {
-    color: ${props => props.theme.mainBrandColor};
-    :hover {
-      color: #ffff;
-    }
-    /* @media only screen and (max-width: 600px) {
-      margin: -38px 5px;
-    }
-    @media only screen and (max-device-width: 768px) {
-      margin: -38px 5px;
-    } */
   }
 `;
 
@@ -57,7 +46,7 @@ class FaqItem extends React.Component {
     return (
       <Container>
         <button
-          className="button is-medium is-fullwidth level"
+          className="button is-medium is-fullwidth level mb-5"
           type="button"
           onClick={this.toggleDiv}
         >

@@ -34,7 +34,7 @@ module.exports = {
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: 'minimal-ui',
-        icon: './static/images/listmelogo.png',
+        icon: './static/images/Logowallet.png',
       },
     },
     `gatsby-plugin-offline`,
