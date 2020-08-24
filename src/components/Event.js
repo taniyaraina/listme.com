@@ -25,6 +25,8 @@ const ContentWrapper = styled.div`
   }
   p {
     line-height: 2 !important;
+    font-family: ${props => props.theme.secondaryFontFamily};
+    color: ${props => props.theme.textColorLite} !important;
   }
 `;
 
@@ -32,7 +34,7 @@ const Event = () => {
   return (
     <section className="section">
       <div className="container">
-        <div className="columns has-text-centered is-variable is-4">
+        <div className="columns has-text-centered is-variable is-1">
           <div className="column is-4">
             <PaymentCard
               icon="fas fa-mobile-alt"
@@ -52,7 +54,7 @@ const Event = () => {
               subtitle="Let the fun begin"
               title="All you need for venue management"
             />
-            <p className="title has-text-weight-normal mt-4">
+            <p className="is-size-6 has-text-weight-normal mt-4">
               ListMe app is the one-stop service for managing venues. From
               branding, management to engaging customers. We are the Uber of
               nightlife.
