@@ -17,9 +17,9 @@ const Container = styled.div``;
 const Business = () => {
   return (
     <Layout>
-      <Seo title="about" />
+      <Seo title="Business Users" />
       <Container>
-        <MapHero Title="Business App" subtitle="Business App" />
+        <MapHero Title="Business Users" subtitle="Business Users" />
         <Event />
         <OurWorkWith />
         <GlobelInformation />

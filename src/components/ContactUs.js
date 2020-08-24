@@ -57,6 +57,10 @@ const Section = styled.div`
     box-shadow: none;
     border-radius: 40px;
   }
+  .textarea, input:focus {
+    border-color: 0000;
+    box-shadow:none;
+}
   .btn{
     width: 12rem;
     height: 4rem;

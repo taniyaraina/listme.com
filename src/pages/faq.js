@@ -10,7 +10,7 @@ const Container = styled.div``;
 const Faq = () => {
   return (
     <Layout>
-      <Seo title="Single Product" />
+      <Seo title="FAQs" />
       <Container>
         <Information />
       </Container>
