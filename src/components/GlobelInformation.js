@@ -61,6 +61,9 @@ const Wrapper = styled.div`
   .is-size-6 {
     color: ${props => props.theme.textColorLite} !important;
   }
+  p {
+    line-height: 30px !important;
+  }
 `;
 
 const GlobeInformation = () => {
@@ -71,12 +74,14 @@ const GlobeInformation = () => {
         <div className="column is-6">
           <section className="section">
             <Heading title="Reap the benefit of digitization" />
-            {BenefitList.map(item => (
-              <Wrapper>
-                <img src={item.img} className="img" alt="icon" />
-                <p className="is-size-6">{item.title}</p>
-              </Wrapper>
-            ))}
+            <div className="mt-6">
+              {BenefitList.map(item => (
+                <Wrapper>
+                  <img src={item.img} className="img" alt="icon" />
+                  <p className="is-size-6">{item.title}</p>
+                </Wrapper>
+              ))}
+            </div>
           </section>
         </div>
         <div className="column">
