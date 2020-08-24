@@ -2,9 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
+.level-right {
+  font-size: 2rem;
+  color:${props => props.theme.mainBrandColor};
+}
   .button,
   .Icon {
-    margin-bottom: 0;
+    margin-bottom: 2rem;
     border-radius: 2rem;
     font-family: ${props => props.theme.primaryFontFamily};
     box-shadow: none !important;
@@ -17,6 +21,20 @@ const Container = styled.div`
       color: #ffff;
     }
   }
+
+  .button {
+    :hover {
+     .level-right {
+     color: #fff;
+     }
+      );
+  }
+  /* .Icon {
+    color: ${props => props.theme.mainBrandColor};
+    :hover {
+      color: #ffff;
+    }
+  } */
 `;
 
 const AnswerContainer = styled.div`
@@ -46,16 +64,14 @@ class FaqItem extends React.Component {
     return (
       <Container>
         <button
-          className="button is-medium is-fullwidth level mb-5"
+          className="button is-medium is-fullwidth level"
           type="button"
           onClick={this.toggleDiv}
         >
           <div className="level-left">
             <h1 className="is-size-6">{questions} </h1>
           </div>
-          <a className="level-right">
-            <i className="Icon fas fa-plus " />
-          </a>
+          <a className="level-right">{show ? '-' : '+'}</a>
         </button>
         {show && (
           <AnswerContainer>
