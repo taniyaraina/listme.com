@@ -13,7 +13,7 @@ const Icons = [
 ];
 
 const FooterStyled = styled.footer`
-  background-image: url(${Image});
+  background-image: url('${Image}');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -31,7 +31,7 @@ const FooterStyled = styled.footer`
     margin-bottom: 1rem;
   }
   .wrap {
-    margin-top: 5rem;
+    margin-top: 8rem;
   }
   h1 {
     color: ${theme.backgroundColor} !important;
@@ -51,6 +51,9 @@ const FooterStyled = styled.footer`
     border: 0px solid #4f4e4e;
     border-top-width: 1px;
     margin-top: 3rem;
+  }
+  .foot{
+    font-size:14px;
   }
   a {
     transition: 0.6s;
@@ -143,7 +146,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="is-borderTop">
-            <h1 className="subtitle is-size-6 grey has-text-right">
+            <h1 className="subtitle grey has-text-right foot">
               Copyright © 2020 ListMe by ListMe Team All Rights Reserved.
             </h1>
           </div>

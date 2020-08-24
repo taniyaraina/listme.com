@@ -143,6 +143,7 @@ const Header = () => {
             className="btn"
             href="https://apps.apple.com/in/app/listme-app/id1462565783"
             size="14"
+            hoverShadow
           />
         </div>
       </nav>

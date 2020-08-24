@@ -1,7 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import ImgSlider from './ImgSlider';
 
 const Container = styled.div`
+  .column {
+    :focus {
+      outline: none;
+    }
+  }
   h1 {
     margin-bottom: 3rem;
     font-size: 36px;
@@ -30,6 +36,22 @@ const Data = [
     noColor: '/images/BambuClubLogo-nocolor.png',
     Color: '/images/BambuClubLogo-color.png',
   },
+  {
+    noColor: '/images/stories-NoColor.png',
+    Color: '/images/stories-Color.png',
+  },
+  {
+    noColor: '/images/BambuClubLogo-nocolor.png',
+    Color: '/images/BambuClubLogo-color.png',
+  },
+  {
+    noColor: '/images/stories-NoColor.png',
+    Color: '/images/stories-Color.png',
+  },
+  {
+    noColor: '/images/BambuClubLogo-nocolor.png',
+    Color: '/images/BambuClubLogo-color.png',
+  },
 ];
 
 const OurPartner = () => {
@@ -38,7 +60,7 @@ const OurPartner = () => {
       <div className="columns is-gapless is-centered">
         <div className="column is-12">
           <h1 className="has-text-weight-bold">The ListMe family</h1>
-          <div className="columns has-text-centered is-centered">
+          <ImgSlider>
             {Data.map(item => (
               <div className="column is-3">
                 <img
@@ -53,7 +75,7 @@ const OurPartner = () => {
                 />
               </div>
             ))}
-          </div>
+          </ImgSlider>
         </div>
       </div>
     </Container>

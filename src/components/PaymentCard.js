@@ -18,7 +18,7 @@ const CardWrapper = styled.div`
     font-size: 18px !important;
   }
   .card-content {
-    padding: 2.8125rem !important;
+    padding: 2.5rem !important;
   }
 
   .icon {

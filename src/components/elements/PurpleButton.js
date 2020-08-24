@@ -10,11 +10,12 @@ const Button = styled.button`
   border-radius: 100px !important;
   background-color: transparent !important;
   border-color: ${theme.secondaryBorder} !important;
-  box-shadow: none !important ;
+  box-shadow:${props => (props.Shadow ? props.theme.buttonBoxShadow:'none')} !important;
   transition: 0.5s;
   :hover {
     background-color: ${theme.mainBrandColor} !important;
     color: ${theme.backgroundColor} !important;
+    box-shadow:${props => (props.hoverShadow ? props.theme.buttonBoxShadow:'none')} !important;
   }
 `;
 const PurpleButton = ({
@@ -25,6 +26,8 @@ const PurpleButton = ({
   size,
   height,
   width,
+  hoverShadow,
+  Shadow,
 }) => {
   return (
     <a href={href}>
@@ -34,6 +37,8 @@ const PurpleButton = ({
         size={size}
         height={height}
         width={width}
+        hoverShadow={hoverShadow}
+        Shadow={Shadow}
       >
         {title}
       </Button>

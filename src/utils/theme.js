@@ -44,6 +44,7 @@ export const theme = {
   primaryFontFamily: "'Poppins',sans-serif",
   secondaryFontFamily: "'Nunito', sans-serif",
   boxShadow: 'rgba(0,0,0,0.08) 0px 7px 18px',
+  buttonBoxShadow: '0px 9px 30px 0px rgba(157,43,126,0.4)',
   fontFamilyThin: " 'Poppins', sans-serif",
   headerColor: '#222239',
   lightColor: '#F7F9FD',
