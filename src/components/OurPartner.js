@@ -8,11 +8,19 @@ const Container = styled.div`
       outline: none;
     }
   }
+  img {
+    margin: auto;
+  }
   h1 {
     margin-bottom: 3rem;
     font-size: 36px;
     font-family: ${props => props.theme.primaryFontFamily};
     margin-left: 10rem;
+  }
+  @media only screen and (max-width: 768px) {
+    h1 {
+      margin-left: 2rem;
+    }
   }
   overflow-x: hidden;
   overflow-y: hidden;
@@ -57,7 +65,7 @@ const Data = [
 const OurPartner = () => {
   return (
     <Container className="container">
-      <div className="columns is-gapless is-centered">
+      <div className="columns is-gapless is-centered is-vcentered">
         <div className="column is-12">
           <h1 className="has-text-weight-bold">The ListMe family</h1>
           <ImgSlider>

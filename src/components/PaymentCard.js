@@ -7,6 +7,9 @@ const CardWrapper = styled.div`
   height: 25rem;
   border-radius: 30px;
   box-shadow: 0px 15px 38px rgba(0, 0, 0, 0.1);
+  @media only screen and (max-width: 768px) {
+    width: auto;
+  }
   h2 {
     color: ${theme.darkAccent} !important;
     :hover {
@@ -20,6 +23,13 @@ const CardWrapper = styled.div`
   .card-content {
     padding: 2.5rem !important;
   }
+  @media only screen and (max-width: 768px) {
+    .card {
+      width: auto !important;
+      height: auto !important;
+    }
+  }
+
   .icon {
     position: absolute;
     top: 21%;

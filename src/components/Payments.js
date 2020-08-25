@@ -34,7 +34,7 @@ const Payments = () => {
   return (
     <section className="section">
       <div className="container">
-        <div className="columns has-text-centered is-variable is-6">
+        <div className="columns has-text-centered">
           <div className="column is-4">
             <PaymentCard
               icon="fas fa-mobile-alt"

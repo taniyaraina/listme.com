@@ -25,6 +25,11 @@ const Section = styled.div`
     font-family: ${props => props.theme.primaryFontFamily};
     margin-left: 5rem;
   }
+  @media only screen and (max-width: 768px) {
+    h1 {
+      margin-left: 0;
+    }
+  }
   margin-top: 5rem;
   margin-bottom: 4rem;
   .zoom {

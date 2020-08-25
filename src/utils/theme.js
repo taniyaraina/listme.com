@@ -61,6 +61,9 @@ const GlobalStyle = createGlobalStyle`
     color: ${theme.textColor};
     letter-spacing: 0.03rem !important;
     font-size: 16px;
+    @media only screen and (max-width: 768px) {
+    overflow: hidden;
+    }
   }
   .title {
     font-family: ${theme.primaryFontFamily};
