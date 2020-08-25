@@ -22,10 +22,11 @@ const CardWrapper = styled.div`
   }
 
   .icon {
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-
-    color: ${theme.hoverColor} !important;
+    position: absolute;
+    top: 21%;
+    right: 46%;
+    font-size: 2.7rem;
+    color: #6a4bc4;
   }
   .services_icon_wrapper :hover {
     animation: services_circle_wrapper 2s infinite linear;
@@ -113,6 +114,8 @@ const PaymentCard = ({ icon, title, subtitle }) => {
           <div className="services_circle_wrapper">
             <div className="services_circle" />
           </div>
+        </div>
+        <div className="icon">
           <i className={icon} />
         </div>
         <h1 className="title is-5 has-text-black has-text-weight-semibold">
