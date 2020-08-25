@@ -20,7 +20,6 @@ const CardWrapper = styled.div`
   .card-content {
     padding: 2.5rem !important;
   }
-
   .icon {
     position: absolute;
     top: 21%;

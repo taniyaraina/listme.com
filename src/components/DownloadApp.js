@@ -31,9 +31,14 @@ margin-top: 5rem;
       }
     }
   }
-  .is-1 {
+  .heading {
     font-size: 4rem !important;
     margin-bottom: 2rem;
+  }
+  @media only screen and (max-width: 768px) {
+    .heading {
+      font-size:3rem !important;
+    }
   }
   .appStoreBack {
     margin: 1.5rem 0.5rem;
@@ -60,7 +65,7 @@ const DownloadApp = () => {
   return (
     <Container>
       <section className="section has-text-centered">
-        <h1 className="title is-1 has-text-weight-bold has-text-black">
+        <h1 className="title has-text-weight-bold has-text-black heading">
           Download App
         </h1>
         <div className="columns is-centered">

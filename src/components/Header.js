@@ -35,11 +35,8 @@ const Section = styled.div`
     }
   }
   .navbar-burger {
-    background-color: #1c1323;
-    color: #fff;
-    opacity: 0.6;
-    border-radius: 4px;
-    margin-left: 0px;
+    background-color: transparent;
+    color: ${props => props.theme.mainBrandColor} !important;
   }
   .navbar-end {
     align-items: flex-end;
@@ -53,8 +50,13 @@ const Section = styled.div`
 
   @media only screen and (max-width: 768px) {
     .navbar {
-      background-color: ${theme.textColor};
+      background-color: #f9f9f9;
       padding: 0 !important;
+    }
+    .navbar-item img {
+      height: 1.5rem;
+      margin-left: 20px;
+      margin-top: 2px;
     }
     .navbar-menu {
       height: 100vh;

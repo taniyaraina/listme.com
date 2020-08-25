@@ -32,6 +32,12 @@ const Container = styled.div`
     padding-top: 0rem;
     margin-left: 4rem;
   }
+  @media only screen and (max-width: 768px) {
+    .section {
+      padding-top: 0rem;
+      margin-left: 0rem;
+    }
+  }
 `;
 
 const Wrapper = styled.div`
