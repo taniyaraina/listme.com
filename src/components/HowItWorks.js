@@ -131,10 +131,10 @@ const ListItem = ({ number, title, subtitle, variants, reverse }) => {
       variants={variants}
     >
       <Wrapper
-        className="columns is-variable is-3 is-multiline is-mobile card"
+        className="columns is-variable is-3 is-mobile card"
         reverse={reverse}
       >
-        <div className="column is-2">
+        <div className="column is-3">
           <h1 className="title is-size-6 purple">{number}</h1>
         </div>
         <div className="column is-10">

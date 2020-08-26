@@ -49,7 +49,7 @@ const Event = () => {
               subtitle="Frictionless “Uber” like social payment method"
             />
           </MovingDownColumn>
-          <ContentWrapper className="column is-4 has-text-left mt-0 ">
+          <ContentWrapper className="column is-4 has-text-left">
             <Heading
               subtitle="Let the fun begin"
               title="All you need for venue management"

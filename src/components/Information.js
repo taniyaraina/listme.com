@@ -4,10 +4,7 @@ import PurpleButton from './elements/PurpleButton';
 import FaqItem from './FaqItem';
 
 const Section = styled.div`
-  .maincolm {
-    margin-top: -1rem;
-  }
-  h1 {
+  .is-size-3 {
     line-height: 3rem;
     font-family: ${props => props.theme.primaryFontFamily};
   }
@@ -17,8 +14,8 @@ const Information = () => {
   return (
     <Section className="section">
       <div className="container">
-        <div className="columns is-centered maincolm">
-          <div className="column is-12">
+        <div className="columns is-centered">
+          <div className="column">
             <div className="columns is-variable is-8">
               <div className="column is-4">
                 <h1 className="is-size-3 has-text-weight-bold has-text-right">
@@ -26,7 +23,7 @@ const Information = () => {
                 </h1>
                 <PurpleButton
                   title="Get in Touch"
-                  className="mt-6 is-pulled-right"
+                  className="mt-6 mb-6 is-pulled-right"
                 />
               </div>
               <div className="column">
