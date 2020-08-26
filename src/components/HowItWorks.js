@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Heading from './elements/Heading';
-
 import { theme } from '../utils/theme';
 
 const Container = styled.div`
@@ -184,7 +183,10 @@ const HowItWorks = () => {
             ))}
           </div>
           <div className="column is-4">
-            <img src="/images/iphone-1.png" alt="iphone" />
+            <img
+              src="https://thelistmeapp.com/wp-content/uploads/2020/04/001-3.png"
+              alt="imageSlider"
+            />
           </div>
           <div className="column is-4 wrap">
             {Data2.map(item => (

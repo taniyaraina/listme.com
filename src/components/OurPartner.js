@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ImgSlider from './ImgSlider';
+import LogoSlider from './LogoSlider';
 
 const Container = styled.div`
   .column {
@@ -68,7 +68,7 @@ const OurPartner = () => {
       <div className="columns is-gapless is-centered is-vcentered">
         <div className="column is-12">
           <h1 className="has-text-weight-bold">The ListMe family</h1>
-          <ImgSlider>
+          <LogoSlider>
             {Data.map(item => (
               <div className="column is-3">
                 <img
@@ -83,7 +83,7 @@ const OurPartner = () => {
                 />
               </div>
             ))}
-          </ImgSlider>
+          </LogoSlider>
         </div>
       </div>
     </Container>

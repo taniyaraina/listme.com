@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ImgSlider from './ImgSlider';
+import LogoSlider from './LogoSlider';
 
 const Bitcoin = [
   { image: 'Fx-open-Logo' },
@@ -50,7 +50,7 @@ const OurWorkWith = () => {
             <h1 className="has-text-weight-bold">
               Our ID Provider works with…
             </h1>
-            <ImgSlider>
+            <LogoSlider>
               {Bitcoin.map(item => (
                 <div className="column is-3 has-text-centered">
                   <img
@@ -60,7 +60,7 @@ const OurWorkWith = () => {
                   />
                 </div>
               ))}
-            </ImgSlider>
+            </LogoSlider>
           </div>
         </div>
       </div>

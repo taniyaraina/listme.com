@@ -1,7 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 
-const ImgSlider = ({ children }) => {
+const LogoSlider = ({ children }) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -9,6 +9,10 @@ const ImgSlider = ({ children }) => {
     slidesToShow: 4,
     slidesToScroll: 1,
     initialSlide: 0,
+    autoplay: true,
+    speed: 3000,
+    autoplaySpeed: 4000,
+    cssEase: 'linear',
     responsive: [
       {
         breakpoint: 1024,
@@ -38,4 +42,4 @@ const ImgSlider = ({ children }) => {
   };
   return <Slider {...settings}>{children}</Slider>;
 };
-export default ImgSlider;
+export default LogoSlider;
