@@ -2,32 +2,23 @@ import React from 'react';
 import styled from 'styled-components';
 import Heading from './elements/Heading';
 import { theme } from '../utils/theme';
-// import GoogleMap from './GoogleMap';
 import PurpleButton from './elements/PurpleButton';
 
 const Section = styled.div`
-  .grey {
-    color: ${theme.textColorLite} !important;
-  }
   .smallText {
+    color: ${theme.textColorLite} !important;
     line-height: 1.8;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
     font-family: ${theme.secondaryFontFamily};
   }
-  .input {
+  .input,.textarea {
     ::placeholder  {
       font-size: 16px !important;
       font-family: ${theme.secondaryFontFamily};
-    }
-  }
-  .textarea {
-    ::placeholder  {
-      font-size: 16px !important;
-      font-family: ${theme.secondaryFontFamily};
+      font-weight:400;
     }
   }
   .card {
+    width: 4rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     transition: 0.6s;
@@ -39,11 +30,12 @@ const Section = styled.div`
       }
     }
   }
-  .up {
-    margin-top: -1rem;
-  }
   .icon {
     color: ${theme.mainBrandColor};
+  }
+  .column.is-2{
+    display: flex;
+    justify-content: center;
   }
   input {
     border-radius: 100px;
@@ -87,17 +79,14 @@ const Data = [
   {
     icon: 'fas fa-map-marker-alt',
     title: 'Address: 20-22 Wenlock Road London N1 7GU',
-    subtitle: '27 Division St, New York, NY 10002, USA',
   },
   {
     icon: 'fas fa-envelope',
     title: 'Mail Us: hello@listmeapp.co',
-    subtitle: 'softlab@mail.com',
   },
   {
     icon: 'fas fa-phone',
     title: 'WhatsApp: +442080401901',
-    subtitle: '+8 (256) 256 145 587',
   },
 ];
 
@@ -108,7 +97,7 @@ const ContactUs = () => {
         <div className="columns is-centered">
           <div className="column is-half is-offset-is-three-quarters has-text-centered">
             <Heading title="Get in Touch" />
-            <h1 className="title smallText grey has-text-weight-light is-size-6">
+            <h1 className="title smallText has-text-weight-normal is-size-6 mb-6">
               Got a question you would like to ask? Take five minutes to fill
               out our form so that we can get to know you and understand your
               query.
@@ -123,7 +112,7 @@ const ContactUs = () => {
                   </div>
                 </div>
                 <div className="column">
-                  <h1 className="title is-6 has-text-weight-normal mb-5">
+                  <h1 className="title is-6 has-text-weight-normal">
                     {item.title}
                   </h1>
                 </div>
