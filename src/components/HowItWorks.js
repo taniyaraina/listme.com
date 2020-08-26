@@ -183,10 +183,7 @@ const HowItWorks = () => {
             ))}
           </div>
           <div className="column is-4">
-            <img
-              src="https://thelistmeapp.com/wp-content/uploads/2020/04/001-3.png"
-              alt="imageSlider"
-            />
+            <img src="images/slider-Mockup-Image.png" alt="imageSlider" />
           </div>
           <div className="column is-4 wrap">
             {Data2.map(item => (

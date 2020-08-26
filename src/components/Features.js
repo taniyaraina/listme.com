@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Heading from './elements/Heading';
-import { theme } from '../utils/theme';
 
 const FeatureItem = [
   {
@@ -31,6 +30,35 @@ const Container = styled.div`
   .section {
     padding-top: 0rem;
     margin-left: 4rem;
+  }
+  .first {
+    position: absolute;
+    left: 64%;
+    width: 2.5rem;
+    margin-top: 3rem;
+  }
+  .second {
+    position: absolute;
+    left: 78%;
+    width: 2.5rem;
+    margin-top: 7rem;
+    :hover {
+      .tool {
+        border: 2px solid red;
+      }
+    }
+  }
+  .third {
+    position: absolute;
+    left: 67%;
+    width: 2.5rem;
+    margin-top: 14rem;
+  }
+  .toolImg {
+    position: absolute;
+    left: 73%;
+    margin-top: 4rem;
+    width: 11rem;
   }
   @media only screen and (max-width: 768px) {
     .section {
@@ -74,6 +102,26 @@ const Features = () => {
       </div>
       <div className="column">
         <img src="/images/contact/map.png" alt="map-world" />
+        <img
+          src="images/tooltip1.png"
+          alt="toolLip1"
+          className="first is-hidden-mobile"
+        />
+        <img
+          src="images/tooltip2.png"
+          alt="toolLip2"
+          className="second is-hidden-mobile"
+        />
+        <img
+          src="images/showtip1.png"
+          alt="tool"
+          className="toolImg is-hidden-mobile"
+        />
+        <img
+          src="images/tooltip3.png"
+          alt="toolLip3"
+          className="third is-hidden-mobile"
+        />
       </div>
     </Container>
   );
