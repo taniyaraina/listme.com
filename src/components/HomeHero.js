@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 import SocialIconsHomeHero from './SocialIconsHomeHero';
-import PaySpendHomeHero from './PaySpendHomeHero';
+import HomeHeroHeading from './HomeHeroHeading';
 import HeroImages from './HeroImages';
 
 const Section = styled.section`
   padding-top: 4rem;
   overflow-x: hidden;
   overflow-y: hidden;
-  .firstcolm {
+  .head {
     margin-top: 5.5rem;
   }
   .is-hidden-mobile {
@@ -43,8 +43,8 @@ const HomeHero = () => {
       <Section className="section">
         <div className="container">
           <div className="columns is-mobile">
-            <div className="column is-5-desktop is-mobile firstcolm">
-              <PaySpendHomeHero />
+            <div className="column is-5-desktop is-mobile head">
+              <HomeHeroHeading />
             </div>
             <div className="column is-9-desktop is-6-mobile">
               <HeroImages />

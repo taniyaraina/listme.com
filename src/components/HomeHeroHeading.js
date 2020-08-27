@@ -62,7 +62,7 @@ const Container = styled.div`
   }
 `;
 
-const PaySpend = () => {
+const HomeHeroHeading = () => {
   return (
     <Container>
       <motion.img
@@ -122,4 +122,4 @@ const PaySpend = () => {
     </Container>
   );
 };
-export default PaySpend;
+export default HomeHeroHeading;
