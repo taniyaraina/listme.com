@@ -112,7 +112,7 @@ const CardWrapper = styled.div`
   }
 `;
 
-const PaymentCard = ({ icon, title, subtitle }) => {
+const Cards = ({ icon, title, subtitle }) => {
   return (
     <CardWrapper className="card">
       <div className="card-content">
@@ -139,4 +139,4 @@ const PaymentCard = ({ icon, title, subtitle }) => {
     </CardWrapper>
   );
 };
-export default PaymentCard;
+export default Cards;

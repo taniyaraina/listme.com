@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import PaymentCard from './PaymentCard';
+import Cards from './Cards';
 import Heading from './elements/Heading';
 import { theme } from '../utils/theme';
 
@@ -36,14 +36,14 @@ const Event = () => {
       <div className="container">
         <div className="columns has-text-centered">
           <div className="column is-4">
-            <PaymentCard
+            <Cards
               icon="fas fa-mobile-alt"
               title="Paperless"
               subtitle="We are more than a paperless solution. We help you become paperless"
             />
           </div>
           <MovingDownColumn className="column is-4">
-            <PaymentCard
+            <Cards
               icon="fas fa-user"
               title="Cashless"
               subtitle="Frictionless “Uber” like social payment method"

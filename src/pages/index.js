@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import HomeHero from '../components/HomeHero';
-import Payments from '../components/Payments';
+import Categories from '../components/Categories';
 import Features from '../components/Features';
 import HowItWorks from '../components/HowItWorks';
 import InfoCards from '../components/InfoCards';
@@ -21,7 +21,7 @@ export default class IndexPage extends React.Component {
         <Seo title="Home" description="Welcome to ListMe" />
         <Container>
           <HomeHero />
-          <Payments />
+          <Categories />
           <Features />
           <HowItWorks />
           <InfoCards />

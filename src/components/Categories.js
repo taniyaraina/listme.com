@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Heading from './elements/Heading';
-import PaymentCard from './PaymentCard';
+import Cards from './Cards';
 
 import { theme } from '../utils/theme';
 
@@ -30,20 +30,20 @@ const ContentWrapper = styled.div`
   }
 `;
 
-const Payments = () => {
+const Categories = () => {
   return (
     <section className="section">
       <div className="container">
         <div className="columns has-text-centered">
           <div className="column is-4">
-            <PaymentCard
+            <Cards
               icon="fas fa-mobile-alt"
               title="Wallet Free"
               subtitle="With ListMe, your phone is the only thing you need to enjoy a night."
             />
           </div>
           <MovingDownColumn className="column is-4">
-            <PaymentCard
+            <Cards
               icon="fas fa-user"
               title="Discover"
               subtitle="Discover somewhere new and meet a new dance partner."
@@ -64,4 +64,4 @@ const Payments = () => {
     </section>
   );
 };
-export default Payments;
+export default Categories;
