@@ -15,6 +15,9 @@ const Container = styled.ul`
       background-color: ${theme.darkAccent};
       border-bottom-right-radius: 100px;
       border-top-right-radius: 100px;
+      svg {
+        color: #fff;
+      }
     }
   }
 `;

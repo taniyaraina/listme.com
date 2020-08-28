@@ -37,14 +37,17 @@ const Categories = () => {
         <div className="columns has-text-centered">
           <div className="column is-4">
             <Cards
-              icon="fas fa-mobile-alt"
+              circleColorOne
+              circleColorTwo
+              color
+              Img="images/phoneicon.png"
               title="Wallet Free"
               subtitle="With ListMe, your phone is the only thing you need to enjoy a night."
             />
           </div>
           <MovingDownColumn className="column is-4">
             <Cards
-              icon="fas fa-user"
+              Img="images/user-icon.png"
               title="Discover"
               subtitle="Discover somewhere new and meet a new dance partner."
             />

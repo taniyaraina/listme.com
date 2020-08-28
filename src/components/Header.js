@@ -12,7 +12,7 @@ const Section = styled.div`
   .navbar-start {
     flex: 1;
     justify-content: center;
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
     margin-top: 22px;
   }
   .navbar-item img {

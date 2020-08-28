@@ -32,13 +32,9 @@ const CardWrapper = styled.div`
 
   .icon {
     position: absolute;
-    top: 21%;
-    right: 46%;
-    font-size: 2.7rem;
-    color: #6a4bc4;
-  }
-  .services_icon_wrapper :hover {
-    animation: services_circle_wrapper 2s infinite linear;
+    top: 20%;
+    right: 42%;
+    width: 3rem;
   }
   @-webkit-keyframes services_circle_wrapper {
     0% {
@@ -60,36 +56,6 @@ const CardWrapper = styled.div`
       transform: rotate(359deg);
     }
   }
-
-  .services_icon_wrapper {
-    color: #6a4bc4;
-    border-color: #6a4bc4;
-    position: relative;
-    z-index: 1;
-    width: 110px;
-    height: 110px;
-    line-height: 110px;
-    font-size: 42px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    border: 1px solid CurrentColor;
-    box-sizing: content-box;
-    border-radius: 50%;
-    :before {
-      content: '';
-      z-index: -1;
-      left: 0;
-      width: 100%;
-      position: absolute;
-      height: 100%;
-      box-shadow: 0px 0px 25px 0px CurrentColor,
-        0px 0px 25px 0px CurrentColor inset;
-      border-radius: 50%;
-      opacity: 0.2;
-    }
-  }
-
   .services_circle_wrapper {
     width: 84%;
     height: 84%;
@@ -97,12 +63,6 @@ const CardWrapper = styled.div`
     top: 8%;
     position: absolute;
     z-index: -1;
-  }
-  .services_circle {
-    background-color: #ca5cbc;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
   }
 
   .services_circle_wrapper:nth-child(2) {
@@ -112,20 +72,78 @@ const CardWrapper = styled.div`
   }
 `;
 
-const Cards = ({ icon, title, subtitle }) => {
+const Wrapper = styled.div`
+  color: ${props => (props.color ? '#9d2b7e' : '#54e0c4')};
+  border-color: #6a4bc4;
+  position: relative;
+  z-index: 1;
+  width: 110px;
+  height: 110px;
+  line-height: 110px;
+  font-size: 42px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  border: 1px solid CurrentColor;
+  box-sizing: content-box;
+  border-radius: 50%;
+  :hover {
+    animation: services_circle_wrapper 2s infinite linear;
+  }
+  :before {
+    content: '';
+    z-index: -1;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    box-shadow: 0px 0px 25px 0px CurrentColor,
+      0px 0px 25px 0px CurrentColor inset;
+    border-radius: 50%;
+    opacity: 0.2;
+  }
+`;
+const ServiceCircle = styled.div`
+  background-color: ${props => (props.circleColorOne ? '#ca5cbc' : '#dd9933')};
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+`;
+
+const ServiceCircleSecond = styled.div`
+  background-color: ${props => (props.circleColorTwo ? '#9d2b7e' : '#ddcf63')};
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+`;
+
+const Cards = ({
+  Img,
+  title,
+  subtitle,
+  circleColorOne,
+  circleColorTwo,
+  color,
+}) => {
   return (
     <CardWrapper className="card">
       <div className="card-content">
-        <div className="services_icon_wrapper">
+        <Wrapper className="services_icon_wrapper" color={color}>
           <div className="services_circle_wrapper">
-            <div className="services_circle" />
+            <ServiceCircle
+              className="services_circle"
+              circleColorOne={circleColorOne}
+            />
           </div>
           <div className="services_circle_wrapper">
-            <div className="services_circle" />
+            <ServiceCircleSecond
+              className="services_circle"
+              circleColorTwo={circleColorTwo}
+            />
           </div>
-        </div>
+        </Wrapper>
         <div className="icon">
-          <i className={icon} />
+          <img src={Img} alt="iconImage" />
         </div>
         <h1 className="title is-5 has-text-black has-text-weight-semibold">
           {title}
