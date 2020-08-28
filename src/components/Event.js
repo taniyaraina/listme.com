@@ -37,14 +37,17 @@ const Event = () => {
         <div className="columns has-text-centered">
           <div className="column is-4">
             <Cards
-              icon="fas fa-mobile-alt"
+              circleColorOne
+              circleColorTwo
+              color
+              Img="images/phoneicon.png"
               title="Paperless"
               subtitle="We are more than a paperless solution. We help you become paperless"
             />
           </div>
           <MovingDownColumn className="column is-4">
             <Cards
-              icon="fas fa-user"
+              Img="images/user-icon.png"
               title="Cashless"
               subtitle="Frictionless “Uber” like social payment method"
             />
