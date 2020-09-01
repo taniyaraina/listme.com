@@ -22,6 +22,10 @@ const FooterStyled = styled.footer`
     line-height: 1.5rem;
     margin-bottom: 1rem;
   }
+  .icon{
+    height: 1.8rem !important;
+    width: 1.8rem !important;
+  }
   .is-4 {
     font-size: ${props => props.theme.fontSizeMedium}px !important;
     font-family: ${theme.primaryFontFamily} !important;
@@ -31,7 +35,7 @@ const FooterStyled = styled.footer`
     margin-bottom: 1rem;
   }
   .wrap {
-    margin-top: 8rem;
+    margin-top: 5rem;
   }
   h1 {
     color: ${theme.backgroundColor} !important;
