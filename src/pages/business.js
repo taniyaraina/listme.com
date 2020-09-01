@@ -159,7 +159,7 @@ const Content = () => {
 
 const Business = () => {
   return (
-    <Layout>
+    <Layout   buttonText="Try Free Now">
       <Seo title="Business Users" />
       <div style={{ position: 'absolute', top: '50%' }}>
         <SocialIcons />
@@ -175,6 +175,7 @@ const Business = () => {
         <div style={{ position: 'absolute', top: '1100px' }}>
           <Event />
         </div>
+
         <OurWorkWith />
         <GlobelInformation />
         <StepAppProcess />

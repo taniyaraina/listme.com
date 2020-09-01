@@ -71,7 +71,7 @@ const Section = styled.div`
   }
 `;
 
-const Header = () => {
+const Header = (props) => {
   const [menuActive, setMenuActive] = useState(false);
 
   const handleMobileMenu = () => setMenuActive(!menuActive);
@@ -141,7 +141,7 @@ const Header = () => {
         <div className="navbar-end">
           <PurpleButton
             size
-            title="ListMe Now"
+            title={props.buttonText ? props.buttonText: "ListMe Now"}
             className="btn"
             href="https://apps.apple.com/in/app/listme-app/id1462565783"
             size="14"
