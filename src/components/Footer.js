@@ -112,7 +112,8 @@ const Footer = () => {
               <h1 className="title is-size-6 has-text-weight-normal  grey ">
                 <span className="bold"> Website:</span>
                 {`  `}
-                <a>list-me-development.netlify.app</a>
+                <a>thelistmeapp.com</a>
+
               </h1>
               <h1 className="title is-size-6   has-text-weight-normal  grey  ">
                 <span className="bold"> Email:</span>

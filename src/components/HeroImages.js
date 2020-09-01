@@ -16,34 +16,38 @@ const WImage = {
 };
 const TextImage = {
   start: {
+    
     opacity: 0,
-    transform: 'translate(-80%,-200%)',
+    transform: 'translate(-20%,-100%)',
   },
   end: {
-    transform: 'translate(-80%,-10%)',
+    
+    transform: 'translate(-170%,-10%)',
     opacity: 1,
+  
   },
 };
 const PhoneImage = {
   start: {
+    display:'right',
     opacity: 0,
     transform: 'translate(-380%,100%)',
   },
   end: {
     opacity: 1,
-    transform: 'translate(-380%,10%)',
+    transform: 'translate(-250%,10%)',
   },
 };
-const PhoneImage1 = {
-  start: {
-    opacity: 0,
-    transform: 'translate(-380%,100%)',
-  },
-  end: {
-    opacity: 1,
-    transform: 'translate(-480%,10%)',
-  },
-};
+// const PhoneImage1 = {
+//   start: {
+//     opacity: 0,
+//     transform: 'translate(-380%,100%)',
+//   },
+//   end: {
+//     opacity: 1,
+//     transform: 'translate(-480%,10%)',
+//   },
+// };
 const PhoneImage2 = {
   start: {
     opacity: 0,
@@ -85,8 +89,8 @@ const Container = styled.div`
       min-width: 25rem;
     }
   }
-  .wallapp {
-    width: 100%;
+  .HomeLogo{
+    width: 300%;
     height: 100%;
     object-fit: contain;
     @media screen and (max-width: 738px) {
@@ -102,6 +106,16 @@ const Container = styled.div`
   }
   display: flex;
   /* flex-direction: row; */
+
+
+  
+
+
+
+
+
+
+
 `;
 const HeroImages = () => {
   return (
@@ -116,30 +130,31 @@ const HeroImages = () => {
         className="w card1"
       />
       <motion.img
-        initial="start"
-        animate="end"
+         initial="start"
+         animate="end"
         variants={TextImage}
         transition={{ delay: 1, duration: 1 }}
-        src="/images/wallapp.png"
-        className="wallapp"
+        src="/images/HomeLogo.png"
+        className="HomeLogo"
+        
       />
-      <motion.img
+       <motion.img
         initial="start"
         animate="end"
         variants={PhoneImage}
         transition={{ delay: 3, duration: 1 }}
-        src="/images/phone.png"
+        src="/images/Event-Image1.png"
         className="topMargin"
       />
 
-      <motion.img
+      {/* <motion.img
         initial="start"
         animate="end"
         variants={PhoneImage1}
         transition={{ delay: 3.5, duration: 1 }}
         src="images/phone2.png"
         className="topMargin"
-      />
+      />  */}
       <motion.img
         initial="start"
         animate="end"

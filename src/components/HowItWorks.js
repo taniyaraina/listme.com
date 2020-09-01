@@ -66,7 +66,7 @@ const Data1 = [
   },
   {
     number: '03',
-    title: 'ListMet',
+    title: 'ListMe',
     subtitle: 'Find events that suit you & get guest-listed.',
   },
 ];

@@ -30,8 +30,8 @@ const Section = styled.section`
 `;
 
 const SocialIcons = styled.div`
-  position: absolute;
-  top: 50%;
+  position:"absolute";
+  bottom:50%
 `;
 
 const HomeHero = () => {

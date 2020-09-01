@@ -88,6 +88,26 @@ const GlobeInformation = () => {
           <Map className="">
             <img src="/images/contact/map.png" alt="" />
           </Map>
+          <div
+            style={{
+              position: 'absolute',
+              top: '30px',
+              left: '850px',
+              height: '180px',
+              width: '150px',
+            }}
+          >
+            <img src="/images/showtip1.png" />
+          </div>
+          <div>
+          <img style={{position:"absolute" ,left:"895px", top:"70px" , height:"40px" ,width:"40px"}} src="/images/tooltip2.png" />
+          </div>
+          <div>
+          <img style={{position:"absolute" ,left:"775px" , top:"200px" , height:"40px" }} src="/images/tooltip3.png" />
+          </div>
+          <div>
+          <img style={{position:"absolute" ,left:"720px" , top:"40px" , height:"50px"}} src="/images/tooltip1.png" />
+          </div>
         </div>
       </div>
     </Container>

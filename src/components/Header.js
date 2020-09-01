@@ -102,7 +102,7 @@ const Header = () => {
             </a>
           </>
         </div>
-        <div className={menuActive ? 'navbar-menu is-active' : 'navbar-menu'}>
+        <div className={menuActive ? 'navbar-menu is-active' : 'navbar-menu'} cursor = "none">
           <div className="navbar-start">
             <div className="navbar-item has-dropdown is-hoverable">
               <Link
