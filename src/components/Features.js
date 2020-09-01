@@ -27,37 +27,34 @@ const FeatureItem = [
 const Container = styled.div`
   align-content: right;
   margin-top: 6rem !important;
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 11rem;
+    left: -29%;
+    top: -1.4rem;
+    position: absolute;
+  }
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
   .section {
     padding-top: 0rem;
     margin-left: 4rem;
   }
-  .first {
-    position: absolute;
-    left: 64%;
-    width: 2.5rem;
-    margin-top: 3rem;
+  .rightcolm {
+    background-image: url('/images/contact/map.png');
+    background-size: contain;
+    background-repeat: no-repeat;
   }
   .second {
     position: absolute;
     left: 78%;
     width: 2.5rem;
-    margin-top: 7rem;
-    :hover {
-      .tool {
-        border: 2px solid red;
-      }
-    }
-  }
-  .third {
-    position: absolute;
-    left: 67%;
-    width: 2.5rem;
-    margin-top: 14rem;
+    margin-top: 3rem;
   }
   .toolImg {
     position: absolute;
     left: 73%;
-    margin-top: 4rem;
     width: 11rem;
   }
   @media only screen and (max-width: 768px) {
@@ -66,6 +63,14 @@ const Container = styled.div`
       margin-left: 0rem;
     }
   }
+`;
+
+const ToolTip = styled.div`
+  position: relative;
+  display: inline-block;
+  left: ${props => (props.left ? '12%' : '20%')};
+  top: ${props => (props.top ? '4rem' : '12rem')};
+  width: 3rem;
 `;
 
 const Wrapper = styled.div`
@@ -100,28 +105,47 @@ const Features = () => {
           ))}
         </section>
       </div>
-      <div className="column">
-        <img src="/images/contact/map.png" alt="map-world" />
-        <img
-          src="images/tooltip1.png"
-          alt="toolLip1"
-          className="first is-hidden-mobile"
-        />
-        <img
-          src="images/tooltip2.png"
-          alt="toolLip2"
-          className="second is-hidden-mobile"
-        />
-        <img
-          src="images/showtip1.png"
-          alt="tool"
-          className="toolImg is-hidden-mobile"
-        />
-        <img
-          src="images/tooltip3.png"
-          alt="toolLip3"
-          className="third is-hidden-mobile"
-        />
+      <div className="column rightcolm">
+        <ToolTip className="tooltip" top left>
+          <img
+            src="images/tooltip1.png"
+            alt="toolLip1"
+            className=" is-hidden-mobile"
+          />
+          <span className="tooltiptext">
+            <img
+              src="images/hovertooltip1.png"
+              className="tooltiptext"
+              alt="tooltip"
+            />
+          </span>
+        </ToolTip>
+        <div className="nohoverImage">
+          <img
+            src="images/tooltip2.png"
+            alt="toolLip2"
+            className="second is-hidden-mobile"
+          />
+          <img
+            src="images/showtip1.png"
+            alt="tool"
+            className="toolImg is-hidden-mobile"
+          />
+        </div>
+        <ToolTip className="tooltip">
+          <img
+            src="images/tooltip3.png"
+            alt="toolLip1"
+            className=" is-hidden-mobile"
+          />
+          <span className="tooltiptext">
+            <img
+              className="tooltiptext"
+              src="images/hovertooltip2.png"
+              alt="tooltip"
+            />
+          </span>
+        </ToolTip>
       </div>
     </Container>
   );
