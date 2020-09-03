@@ -1,9 +1,36 @@
 import React from 'react';
+import styled from 'styled-components';
 import Slider from 'react-slick';
+
+const ImageItem = [
+  {
+    image: 'images/sliderone.png',
+  },
+  {
+    image: 'images/slidertwo.png',
+  },
+  {
+    image: 'images/sliderthree.png',
+  },
+  {
+    image: 'images/sliderfour.png',
+  },
+  {
+    image: 'images/sliderfifth.png',
+  },
+  {
+    image: 'images/slidersixth.png',
+  },
+];
+
+const Wrapper = styled.div`
+  .slick-slide {
+    outline: none;
+  }
+`;
 
 const ImageSlider = () => {
   const settings = {
-    infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -12,28 +39,15 @@ const ImageSlider = () => {
     autoplaySpeed: 2000,
   };
   return (
-    <div>
+    <Wrapper>
       <Slider {...settings}>
-        <div>
-          <img src="images/sliderone.png" alt="mock-up" />
-        </div>
-        <div>
-          <img src="images/slidertwo.png" alt="mock-up" />
-        </div>
-        <div>
-          <img src="images/sliderthree.png" alt="mock-up" />
-        </div>
-        <div>
-          <img src="images/sliderfour.png" alt="mock-up" />
-        </div>
-        <div>
-          <img src="images/sliderfifth.png" alt="mock-up" />
-        </div>
-        <div>
-          <img src="images/slidersixth.png" alt="mock-up" />
-        </div>
+        {ImageItem.map(item => (
+          <div>
+            <img src={item.image} alt="appImage" />
+          </div>
+        ))}
       </Slider>
-    </div>
+    </Wrapper>
   );
 };
 export default ImageSlider;

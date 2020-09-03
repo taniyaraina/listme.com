@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import LogoSlider from './LogoSlider';
 
-const Bitcoin = [
+const OurLogo = [
   { image: 'Fx-open-Logo' },
   { image: 'Paysend-Logo' },
   { image: 'MetaQuets-Image' },
@@ -51,7 +51,7 @@ const OurWorkWith = () => {
               Our ID Provider works with…
             </h1>
             <LogoSlider>
-              {Bitcoin.map(item => (
+              {OurLogo.map(item => (
                 <div className="column is-3 has-text-centered">
                   <img
                     src={`images/${item.image}.png`}
