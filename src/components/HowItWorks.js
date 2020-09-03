@@ -4,6 +4,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Heading from './elements/Heading';
 import { theme } from '../utils/theme';
+import ImageSlider from './ImageSlider';
 
 const Container = styled.div`
   margin-top: 4rem;
@@ -66,7 +67,7 @@ const Data1 = [
   },
   {
     number: '03',
-    title: 'ListMet',
+    title: 'ListMe',
     subtitle: 'Find events that suit you & get guest-listed.',
   },
 ];
@@ -183,7 +184,8 @@ const HowItWorks = () => {
             ))}
           </div>
           <div className="column is-4">
-            <img src="images/slider-Mockup-Image.png" alt="imageSlider" />
+            <ImageSlider />
+            {/* <img src="images/slider-Mockup-Image.png" alt="imageSlider" /> */}
           </div>
           <div className="column is-4 wrap">
             {Data2.map(item => (

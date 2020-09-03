@@ -12,7 +12,6 @@ const Section = styled.div`
   .navbar-start {
     flex: 1;
     justify-content: center;
-    /* margin-left: 1rem; */
     margin-top: 22px;
   }
   .navbar-item img {
@@ -27,7 +26,6 @@ const Section = styled.div`
     margin: 0;
     padding: 0;
     font-weight: 600 !important;
-    margin-right: 16px;
     font-family: ${props => props.theme.fontFamilyThin};
     color: ${props => props.theme.textColor} !important;
     :hover {
@@ -71,6 +69,44 @@ const Section = styled.div`
   }
 `;
 
+const NavItemContainer = styled.a`
+  margin-right: 2rem;
+  .dot {
+    width: 5px;
+    height: 5px;
+    opacity: 1;
+    margin: 3px auto;
+    background-color: transparent;
+    border-radius: 100%;
+  }
+  :hover {
+    .dot {
+      background-color: #9d2b7e;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .navbar-item {
+      margin-left: 1rem;
+    }
+  }
+`;
+
+const BottomItem = ({ link, navTitle }) => {
+  return (
+    <NavItemContainer>
+      <div className="navbar-item is-hoverable">
+        <Link
+          to={link}
+          className="navbar-item has-text-weight-semibold is-size-6"
+        >
+          {navTitle}
+        </Link>
+      </div>
+      <div className="dot is-hidden-mobile" />
+    </NavItemContainer>
+  );
+};
+
 const Header = () => {
   const [menuActive, setMenuActive] = useState(false);
 
@@ -104,38 +140,10 @@ const Header = () => {
         </div>
         <div className={menuActive ? 'navbar-menu is-active' : 'navbar-menu'}>
           <div className="navbar-start">
-            <div className="navbar-item has-dropdown is-hoverable">
-              <Link
-                to="/"
-                className="navbar-item has-text-weight-semibold is-size-6"
-              >
-                Home
-              </Link>
-            </div>
-            <div className="navbar-item has-dropdown is-hoverable">
-              <Link
-                to="/business"
-                className="navbar-item has-text-weight-semibold"
-              >
-                Business Users
-              </Link>
-            </div>
-            <div className="navbar-item has-dropdown is-hoverable">
-              <Link
-                to="/faq"
-                className="navbar-item has-text-weight-semibold is-size-6"
-              >
-                FAQs
-              </Link>
-            </div>
-            <div className="navbar-item has-dropdown is-hoverable">
-              <Link
-                to="/contact"
-                className="navbar-item has-text-weight-semibold"
-              >
-                Contact Us
-              </Link>
-            </div>
+            <BottomItem navTitle="Home" link="/" />
+            <BottomItem navTitle=" Business Users" link="/business" />
+            <BottomItem navTitle="FAQs" link="/faq" />
+            <BottomItem navTitle="Contact Us" link="contact" />
           </div>
         </div>
         <div className="navbar-end">
