@@ -25,6 +25,7 @@ const Container = styled.button`
   }
   a {
     font-size: 2rem;
+    color: ${props => props.theme.mainBrandColor};
   }
 `;
 

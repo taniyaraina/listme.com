@@ -62,7 +62,8 @@ const Section = styled.div`
     height: 4rem;
   }
   .inputButton{
-    width:13.5rem;
+    width: 13.5rem;
+    height: 3rem
   }
   button {
     background: radial-gradient(circle farthest-corner at 100% 150%,#68044d 10%,#9d2b7e 50%);

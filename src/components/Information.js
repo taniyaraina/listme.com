@@ -8,6 +8,10 @@ const Section = styled.div`
     line-height: 3rem;
     font-family: ${props => props.theme.primaryFontFamily};
   }
+  .btn {
+    height: 3rem;
+    width: 9.5rem;
+  }
 `;
 
 const Information = () => {
@@ -23,7 +27,8 @@ const Information = () => {
                 </h1>
                 <PurpleButton
                   title="Get in Touch"
-                  className="mt-6 mb-6 is-pulled-right"
+                  className="is-medium mt-6 mb-6 is-pulled-right has-text-black has-text-weight-semibold btn"
+                  size="16"
                 />
               </div>
               <div className="column">
