@@ -2,28 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import Heading from './elements/Heading';
 
-const FeatureItem = [
-  {
-    img: '/images/contacticon.png',
-    title:
-      'Entry without the need of a wallet. ListMe APP is your ID and G-token',
-  },
-  {
-    img: '/images/contacticon2.png',
-    title: 'Get guest-listed multiple times while only paying for entry.',
-  },
-  {
-    img: '/images/contacticon3.png',
-    title:
-      'Explore the event that suits your taste. Check up ListMe for the events you might just like',
-  },
-  {
-    img: '/images/contacticon4.png',
-    title:
-      'Meet new people, find new friends and get immersed in the night time experience.',
-  },
-];
-
 const Container = styled.div`
   align-content: right;
   margin-top: 6rem !important;
@@ -87,22 +65,40 @@ const Wrapper = styled.div`
   }
 `;
 
-const Features = () => {
+const Features = ({
+  subtitle,
+  title,
+  iconOne,
+  titleOne,
+  iconTwo,
+  titleTwo,
+  iconThree,
+  titleThree,
+  iconFour,
+  titleFour,
+}) => {
   return (
     <Container className="columns is-multiline is-gapless">
       <div className="column is-1" />
       <div className="column is-6">
         <section className="section">
-          <Heading
-            subtitle="App Solution"
-            title="Socialise with ListME Across the Globe"
-          />
-          {FeatureItem.map(item => (
-            <Wrapper>
-              <img src={item.img} className="img" alt="icon" />
-              <p className="is-size-6">{item.title}</p>
-            </Wrapper>
-          ))}
+          <Heading subtitle={subtitle} title={title} />
+          <Wrapper>
+            <img src={iconOne} className="img" alt="icon" />
+            <p className="is-size-6">{titleOne}</p>
+          </Wrapper>
+          <Wrapper>
+            <img src={iconTwo} className="img" alt="icon" />
+            <p className="is-size-6">{titleTwo}</p>
+          </Wrapper>
+          <Wrapper>
+            <img src={iconThree} className="img" alt="icon" />
+            <p className="is-size-6">{titleThree}</p>
+          </Wrapper>
+          <Wrapper>
+            <img src={iconFour} className="img" alt="icon" />
+            <p className="is-size-6">{titleFour}</p>
+          </Wrapper>
         </section>
       </div>
       <div className="column rightcolm">

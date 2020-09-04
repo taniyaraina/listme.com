@@ -8,7 +8,7 @@ import OurWorkWith from '../components/OurWorkWith';
 import ClientTestimonials from '../components/ClientTestimonials';
 import OurPartner from '../components/OurPartner';
 import Event from '../components/Event';
-import GlobelInformation from '../components/GlobelInformation';
+import FeatureItem from '../components/FeatureItem';
 import CreativeInterface from '../components/CreativeInterface';
 import StepAppProcess from '../components/StepAppProcess';
 
@@ -22,7 +22,7 @@ const Business = () => {
         <MapHero Title="Business Users" subtitle="Business Users" />
         <Event />
         <OurWorkWith />
-        <GlobelInformation />
+        <FeatureItem />
         <StepAppProcess />
         <OurPartner />
         <ClientTestimonials />
