@@ -23,14 +23,9 @@ const Section = styled.div`
       color: ${props => props.theme.textColor} !important;
     }
     line-height: 30px;
-    margin: 0;
-    padding: 0;
     font-weight: 600 !important;
     font-family: ${props => props.theme.fontFamilyThin};
     color: ${props => props.theme.textColor} !important;
-    :hover {
-      background: transparent !important;
-    }
   }
   .navbar-burger {
     background-color: transparent;
@@ -67,50 +62,115 @@ const Section = styled.div`
       display: none;
     }
   }
-`;
 
-const NavItemContainer = styled.a`
-  margin-right: 2rem;
-  .dot {
-    width: 5px;
-    height: 5px;
-    opacity: 1;
-    margin: 3px auto;
-    background-color: transparent;
+  .nav {
+    text-align: center;
+    overflow: hidden;
+    margin: 2em auto;
+    width: 520px;
+    position: relative;
+  }
+
+  .nav a {
+    display: block;
+    position: relative;
+    float: left;
+    padding: 1em 0 2em;
+    width: 25%;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+
+  .nav a:hover {
+    color: ${props => props.theme.mainBrandColor};
+  }
+
+  .effect {
+    position: absolute;
+    left: -12.5%;
+    transition: 0.5s ease-in-out;
+  }
+
+  .nav a:nth-child(1):hover ~ .effect {
+    left: 12.5%;
+  }
+
+  .nav a:nth-child(2):hover ~ .effect {
+    left: 37.5%;
+  }
+
+  .nav a:nth-child(3):hover ~ .effect {
+    left: 62.5%;
+  }
+
+  .nav a:nth-child(4):hover ~ .effect {
+    left: 87.5%;
+  }
+
+  /* ----- dot example -----*/
+
+  .ph-dot-nav:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 40px;
+  }
+
+  .ph-dot-nav a:after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    bottom: 38px;
+    left: 50%;
+    margin-left: -2px;
     border-radius: 100%;
   }
-  :hover {
-    .dot {
-      background-color: #9d2b7e;
-    }
+
+  .ph-dot-nav .effect {
+    width: 6px;
+    height: 6px;
+    bottom: 15px;
+    margin-left: -5px;
+    background: ${props => props.theme.mainBrandColor};
+    border-radius: 100%;
   }
-  @media only screen and (max-width: 768px) {
-    .navbar-item {
-      margin-left: 1rem;
-    }
+
+  .ph-dot-nav .test:after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    bottom: 15px;
+    left: 50%;
+    margin-left: -2px;
+    background: ${props => props.theme.mainBrandColor};
+    border-radius: 100%;
   }
 `;
-
-const BottomItem = ({ link, navTitle }) => {
-  return (
-    <NavItemContainer>
-      <div className="navbar-item is-hoverable">
-        <Link
-          to={link}
-          className="navbar-item has-text-weight-semibold is-size-6"
-        >
-          {navTitle}
-        </Link>
-      </div>
-      <div className="dot is-hidden-mobile" />
-    </NavItemContainer>
-  );
-};
 
 const Header = () => {
   const [menuActive, setMenuActive] = useState(false);
 
+  const [visible, setVisible] = useState(true);
+
   const handleMobileMenu = () => setMenuActive(!menuActive);
+
+  const BottomItem = ({ link, navTitle, className }) => {
+    return (
+      <Link
+        to={link}
+        className={className}
+        onMouseOver={() => setVisible(false)}
+        onMouseOut={() => setTimeout(() => setVisible(true), 1500)}
+      >
+        {navTitle}
+      </Link>
+    );
+  };
+
   return (
     <Section>
       <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -139,11 +199,16 @@ const Header = () => {
           </>
         </div>
         <div className={menuActive ? 'navbar-menu is-active' : 'navbar-menu'}>
-          <div className="navbar-start">
-            <BottomItem navTitle="Home" link="/" />
+          <div className="ph-dot-nav nav has-text-weight-semibold">
+            <BottomItem
+              className={visible ? 'test' : ''}
+              navTitle="Home"
+              link="/"
+            />
             <BottomItem navTitle=" Business Users" link="/business" />
             <BottomItem navTitle="FAQs" link="/faq" />
             <BottomItem navTitle="Contact Us" link="contact" />
+            <div className="effect" />
           </div>
         </div>
         <div className="navbar-end">
