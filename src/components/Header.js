@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import PurpleButton from './elements/PurpleButton';
-import { theme } from '../utils/theme';
 
 const Section = styled.div`
   .navbar {
-    padding: 1.3rem 1.8rem !important;
+    padding: 0rem 1.8rem !important;
     font-family: ${props => props.theme.primaryFontFamily};
   }
   .navbar-start {
@@ -16,7 +15,6 @@ const Section = styled.div`
   }
   .navbar-item img {
     max-height: 2.125rem;
-    margin-top: 20px;
   }
   .navbar-item {
     a {
@@ -32,7 +30,7 @@ const Section = styled.div`
     color: ${props => props.theme.mainBrandColor} !important;
   }
   .navbar-end {
-    align-items: flex-end;
+    align-items: center;
     font-family: ${props => props.theme.fontFamilyThin};
     color: ${props => props.theme.textColor} !important;
     font-weight: 600 !important;
@@ -42,6 +40,12 @@ const Section = styled.div`
   }
 
   @media only screen and (max-width: 768px) {
+    .nav {
+      display: flex;
+      flex-direction: column;
+      text-align: left !important;
+      margin-left: 2rem !important;
+    }
     .navbar {
       background-color: #f9f9f9;
       padding: 0 !important;
