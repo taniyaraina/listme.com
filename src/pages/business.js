@@ -12,7 +12,9 @@ import FeatureItem from '../components/FeatureItem';
 import CreativeInterface from '../components/CreativeInterface';
 import StepAppProcess from '../components/StepAppProcess';
 
-const Container = styled.div``;
+const Container = styled.div`
+  background: black;
+`;
 
 const Business = () => {
   return (
