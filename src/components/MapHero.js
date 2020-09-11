@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 import { useSpring, animated } from 'react-spring';
+import PurpleButton from './elements/PurpleButton';
 
 const Container = styled.div`
   .card1 {
@@ -31,6 +32,10 @@ const Container = styled.div`
     position: absolute;
     left: 90%;
     top: 60%;
+  }
+  .btn {
+    height: 3.5rem;
+    width: 8.5rem;
   }
   .card1 {
     width: 100%;
@@ -99,6 +104,13 @@ const MapHero = ({ Title, heading, lightSubtitle, subtitle }) => {
                       {subtitle}
                     </h1>
                   </Wrapper>
+                  <PurpleButton
+                    title="Sign Up"
+                    className="mt-5 has-text-white btn"
+                    hoverColor
+                    backgroundColor
+                    hoverBackgroundColor
+                  />
                 </Fade>
               </div>
             </div>
