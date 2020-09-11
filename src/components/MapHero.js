@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 import { useSpring, animated } from 'react-spring';
 import PurpleButton from './elements/PurpleButton';
+import SocialIconsHomeHero from './SocialIconsHomeHero';
 
 const Container = styled.div`
   .card1 {
@@ -49,6 +50,11 @@ const Container = styled.div`
   }
 `;
 
+const SocialIcons = styled.div`
+  position: absolute;
+  top: 50%;
+`;
+
 const Section = styled.div``;
 
 const Wrapper = styled.div`
@@ -88,6 +94,9 @@ const MapHero = ({ Title, heading, lightSubtitle, subtitle }) => {
       />
 
       <Section className="section hero">
+        <SocialIcons className="is-hidden-mobile">
+          <SocialIconsHomeHero />
+        </SocialIcons>
         <div className="hero-body has-text-centered">
           <div className="container ">
             <div className="columns is-mobile ">
