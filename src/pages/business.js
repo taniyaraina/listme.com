@@ -21,7 +21,12 @@ const Business = () => {
     <Layout>
       <Seo title="Business Users" />
       <Container>
-        <MapHero Title="Business Users" subtitle="Business Users" />
+        <MapHero
+          heading="Be one step ahead
+							"
+          Title="Events Made Simple"
+          subtitle="Never have we seen a service managing venues digitally with good reason to get customers on board."
+        />
         <Event />
         <OurWorkWith />
         <FeatureItem />
