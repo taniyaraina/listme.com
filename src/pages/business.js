@@ -13,7 +13,8 @@ import CreativeInterface from '../components/CreativeInterface';
 import StepAppProcess from '../components/StepAppProcess';
 
 const Container = styled.div`
-  background: black;
+  background: #191a23;
+  height: 60rem;
 `;
 
 const Business = () => {
@@ -27,14 +28,14 @@ const Business = () => {
           Title="Events Made Simple"
           subtitle="Never have we seen a service managing venues digitally with good reason to get customers on board."
         />
-        <Event />
-        <OurWorkWith />
-        <FeatureItem />
-        <StepAppProcess />
-        <OurPartner />
-        <ClientTestimonials />
-        <CreativeInterface />
       </Container>
+      <Event />
+      <OurWorkWith />
+      <FeatureItem />
+      <StepAppProcess />
+      <OurPartner />
+      <ClientTestimonials />
+      <CreativeInterface />
     </Layout>
   );
 };

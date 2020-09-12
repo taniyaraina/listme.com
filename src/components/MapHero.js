@@ -26,13 +26,13 @@ const Container = styled.div`
   }
   .phoneImage {
     position: absolute;
-    left: 56%;
-    top: 70%;
+    left: 64%;
+    top: 28%;
   }
   .PhoneImageSecond {
     position: absolute;
-    left: 90%;
-    top: 60%;
+    left: 80%;
+    top: 20%;
   }
   .btn {
     height: 3.5rem;
@@ -63,8 +63,8 @@ const Wrapper = styled.div`
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
 const trans1 = (x, y) => `translate3d(${x / 25}px,${y / 25}px,0)`;
-const trans2 = (x, y) => `translate3d(${x / 8 + 15}px,${y / 8 - 200}px,0)`;
-const trans3 = (x, y) => `translate3d(${x / 6 - 250}px,${y / 6 - 200}px,0)`;
+const trans2 = (x, y) => `translate3d(${x / 25}px,${y / 25}px,0)`;
+// const trans3 = (x, y) => `translate3d(${x / 6 - 250}px,${y / 6 - 200}px,0)`;
 // const trans4 = (x, y) => `translate3d(${x / 3.5}px,${y / 3.5}px,0)`;
 
 const MapHero = ({ Title, heading, lightSubtitle, subtitle }) => {
@@ -90,42 +90,43 @@ const MapHero = ({ Title, heading, lightSubtitle, subtitle }) => {
         src="/images/Event-Image2.png"
         alt="phoneImage2"
         class="PhoneImageSecond"
-        style={{ transform: props.xy.interpolate(trans3) }}
+        style={{ transform: props.xy.interpolate(trans2) }}
       />
-
-      <Section className="section hero">
+      <div>
         <SocialIcons className="is-hidden-mobile">
           <SocialIconsHomeHero />
         </SocialIcons>
-        <div className="hero-body has-text-centered">
-          <div className="container ">
-            <div className="columns is-mobile ">
-              <div className="column is-three-fifths is-offset-one-fifth mt-6">
-                <Fade top>
-                  <h1 className="title is-size-5 has-text-weight-bold head mb-0">
-                    {heading}
-                  </h1>
-                  <h1 className="title has-text-weight-bold has-text-white mb-0 mainHead">
-                    {Title}
-                  </h1>
-                  <Wrapper>
-                    <h1 className="Subtitle title is-size-5 has-text-weight-bold has-text-white">
-                      {subtitle}
+        <Section className="section hero">
+          <div className="hero-body has-text-centered">
+            <div className="container ">
+              <div className="columns is-mobile ">
+                <div className="column is-three-fifths is-offset-one-fifth mt-6">
+                  <Fade top>
+                    <h1 className="title is-size-5 has-text-weight-bold head mb-0">
+                      {heading}
                     </h1>
-                  </Wrapper>
-                  <PurpleButton
-                    title="Sign Up"
-                    className="mt-5 has-text-white btn"
-                    hoverColor
-                    backgroundColor
-                    hoverBackgroundColor
-                  />
-                </Fade>
+                    <h1 className="title has-text-weight-bold has-text-white mb-0 mainHead">
+                      {Title}
+                    </h1>
+                    <Wrapper>
+                      <h1 className="Subtitle title is-size-5 has-text-weight-bold has-text-white">
+                        {subtitle}
+                      </h1>
+                    </Wrapper>
+                    <PurpleButton
+                      title="Sign Up"
+                      className="mt-5 has-text-white btn"
+                      hoverColor
+                      backgroundColor
+                      hoverBackgroundColor
+                    />
+                  </Fade>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </Section>
+        </Section>
+      </div>
     </Container>
   );
 };
