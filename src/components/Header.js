@@ -162,7 +162,7 @@ const Section = styled.div`
   }
 `;
 
-const Header = ({ dark, navHeight }) => {
+const Header = ({ dark, navHeight, title }) => {
   const [menuActive, setMenuActive] = useState(false);
 
   const [visible, setVisible] = useState(true);
@@ -225,7 +225,7 @@ const Header = ({ dark, navHeight }) => {
         <div className="navbar-end">
           <PurpleButton
             size
-            title="ListMe Now"
+            title={title || 'ListMe Now'}
             className="btn"
             href="https://apps.apple.com/in/app/listme-app/id1462565783"
             size="14"

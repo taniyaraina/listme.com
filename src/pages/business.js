@@ -19,7 +19,7 @@ const Container = styled.div`
 
 const Business = () => {
   return (
-    <Layout dark navHeight>
+    <Layout dark navHeight title="Try Free Now">
       <Seo title="Business Users" />
       <Container>
         <MapHero
