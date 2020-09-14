@@ -11,7 +11,7 @@ const Container = styled.div`
   min-height: 70vh;
 `;
 
-const IndexLayout = ({ children, hideHeader, dark, title }) => (
+const IndexLayout = ({ children, hideHeader, dark, navHeight }) => (
   <ThemeProvider theme={theme}>
     <>
       <Helmet>
@@ -21,7 +21,7 @@ const IndexLayout = ({ children, hideHeader, dark, title }) => (
         <meta description={config.description} />
       </Helmet>
       <GlobalStyle />
-      {!hideHeader && <Header dark={dark} title={title} />}
+      {!hideHeader && <Header dark={dark} navHeight={navHeight} />}
       <Container>{children}</Container>
       <Footer />
     </>

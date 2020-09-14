@@ -8,7 +8,8 @@ const Section = styled.div`
     padding: 0rem 1.8rem !important;
     font-family: ${props => props.theme.primaryFontFamily};
     background-color: ${props =>
-      props.dark ? props.theme.textColor : 'transparent'}!important;
+      props.dark ? '#191A23' : 'transparent'}!important;
+      height: ${props => (props.navHeight ? '6rem' : '')}!important;
   }
   .navbar-start {
     flex: 1;
@@ -161,7 +162,7 @@ const Section = styled.div`
   }
 `;
 
-const Header = ({ dark, title }) => {
+const Header = ({ dark, navHeight }) => {
   const [menuActive, setMenuActive] = useState(false);
 
   const [visible, setVisible] = useState(true);
@@ -182,7 +183,7 @@ const Header = ({ dark, title }) => {
   };
 
   return (
-    <Section dark={dark} title={title}>
+    <Section dark={dark} navHeight={navHeight}>
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <Link className="navbar-item image-to-hide" to="/">

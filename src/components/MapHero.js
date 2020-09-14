@@ -42,6 +42,7 @@ const Container = styled.div`
     width: 100%;
     height: 100%;
     background-image: url('/images/business-logo.png');
+    margin-top: -5rem;
   }
 
   .script-box {
