@@ -166,7 +166,7 @@ const Section = styled.div`
   }
 `;
 
-const Header = ({ dark, navHeight, title }) => {
+const Header = ({ dark, title }) => {
   const [menuActive, setMenuActive] = useState(false);
 
   const [visible, setVisible] = useState(true);
@@ -186,10 +186,8 @@ const Header = ({ dark, navHeight, title }) => {
     );
   };
 
-  console.log(window.location.pathname, 'data');
-
   return (
-    <Section dark={dark} navHeight={navHeight}>
+    <Section dark={dark}>
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <Link className="navbar-item image-to-hide" to="/">
