@@ -12,22 +12,30 @@ import FeatureItem from '../components/FeatureItem';
 import CreativeInterface from '../components/CreativeInterface';
 import StepAppProcess from '../components/StepAppProcess';
 
-const Container = styled.div``;
+const Container = styled.div`
+  background: #191a23;
+  height: 60rem;
+`;
 
 const Business = () => {
   return (
-    <Layout>
+    <Layout dark title="Try Free Now">
       <Seo title="Business Users" />
       <Container>
-        <MapHero Title="Business Users" subtitle="Business Users" />
-        <Event />
-        <OurWorkWith />
-        <FeatureItem />
-        <StepAppProcess />
-        <OurPartner />
-        <ClientTestimonials />
-        <CreativeInterface />
+        <MapHero
+          heading="Be one step ahead
+							"
+          Title="Events Made Simple"
+          subtitle="Never have we seen a service managing venues digitally with good reason to get customers on board."
+        />
       </Container>
+      <Event />
+      <OurWorkWith />
+      <FeatureItem />
+      <StepAppProcess />
+      <OurPartner />
+      <ClientTestimonials />
+      <CreativeInterface />
     </Layout>
   );
 };

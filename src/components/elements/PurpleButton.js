@@ -8,14 +8,23 @@ const Button = styled.button`
   font-size: ${props =>
     props.size ? props.size : props.theme.fontSizeMedium}px !important;
   border-radius: 100px !important;
-  background-color: transparent !important;
+  background-color: ${props =>
+    props.backgroundColor
+      ? props.theme.mainBrandColor
+      : 'transparent'}!important;
   border-color: ${theme.secondaryBorder} !important;
   box-shadow: ${props =>
     props.Shadow ? props.theme.buttonBoxShadow : 'none'} !important;
   transition: 0.5s;
   :hover {
-    background-color: ${theme.mainBrandColor} !important;
-    color: ${theme.backgroundColor} !important;
+    background-color: ${props =>
+      props.hoverBackgroundColor
+        ? props.theme.backgroundColor
+        : props.theme.mainBrandColor}!important;
+    color: ${props =>
+      props.hoverColor
+        ? props.theme.textColor
+        : props.theme.backgroundColor} !important;
     box-shadow: ${props =>
       props.hoverShadow ? props.theme.buttonBoxShadow : 'none'} !important;
   }
@@ -26,10 +35,11 @@ const PurpleButton = ({
   href,
   color,
   size,
-  height,
-  width,
   hoverShadow,
   Shadow,
+  hoverColor,
+  backgroundColor,
+  hoverBackgroundColor,
 }) => {
   return (
     <a href={href}>
@@ -37,10 +47,11 @@ const PurpleButton = ({
         className={`button ${className}`}
         color={color}
         size={size}
-        height={height}
-        width={width}
         hoverShadow={hoverShadow}
         Shadow={Shadow}
+        backgroundColor={backgroundColor}
+        hoverBackgroundColor={hoverBackgroundColor}
+        hoverColor={hoverColor}
       >
         {title}
       </Button>
