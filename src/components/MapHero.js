@@ -19,7 +19,7 @@ const Container = styled.div`
     line-height: 2;
   }
   .mainHead {
-    font-size: 55px !important;
+    font-size: 55px;
   }
   .Subtitle {
     line-height: 1.7 !important;
@@ -48,6 +48,19 @@ const Container = styled.div`
   .script-box {
     will-change: width, height, left, top;
     position: relative;
+  }
+  @media only screen and (max-width: 768px) {
+    .head {
+      font-size: 11px !important;
+    }
+    .Subtitle {
+      font-size: 13px !important;
+    }
+    .phoneImage {
+      left: 0%;
+      top: 48%;
+      height: 13rem;
+    }
   }
 `;
 
@@ -90,7 +103,7 @@ const MapHero = ({ Title, heading, lightSubtitle, subtitle }) => {
       <animated.img
         src="/images/Event-Image2.png"
         alt="phoneImage2"
-        class="PhoneImageSecond"
+        class="PhoneImageSecond is-hidden-mobile"
         style={{ transform: props.xy.interpolate(trans2) }}
       />
       <div>
@@ -100,17 +113,17 @@ const MapHero = ({ Title, heading, lightSubtitle, subtitle }) => {
         <Section className="section hero">
           <div className="hero-body has-text-centered">
             <div className="container ">
-              <div className="columns is-mobile ">
+              <div className="columns">
                 <div className="column is-three-fifths is-offset-one-fifth mt-6">
                   <Fade top>
                     <h1 className="title is-size-5 has-text-weight-bold head mb-0">
                       {heading}
                     </h1>
-                    <h1 className="title has-text-weight-bold has-text-white mb-0 mainHead">
+                    <h1 className="title has-text-weight-bold has-text-white mb-0 mainHead is-size-6-mobile">
                       {Title}
                     </h1>
                     <Wrapper>
-                      <h1 className="Subtitle title is-size-5 has-text-weight-bold has-text-white">
+                      <h1 className="Subtitle title is-size-5 has-text-weight-bold has-text-white is-size-6-mobile">
                         {subtitle}
                       </h1>
                     </Wrapper>
