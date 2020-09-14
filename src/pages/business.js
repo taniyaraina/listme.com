@@ -19,7 +19,7 @@ const Container = styled.div`
 
 const Business = () => {
   return (
-    <Layout>
+    <Layout dark title="Try Free Now">
       <Seo title="Business Users" />
       <Container>
         <MapHero
