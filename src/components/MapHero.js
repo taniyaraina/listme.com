@@ -106,13 +106,6 @@ const MapHero = ({ Title, heading, lightSubtitle, subtitle }) => {
         class="PhoneImageSecond is-hidden-mobile"
         style={{ transform: props.xy.interpolate(trans2) }}
       />
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#191A23"
-          fillOpacity="1"
-          d="M0,224L48,234.7C96,245,192,267,288,272C384,277,480,267,576,224C672,181,768,107,864,90.7C960,75,1056,117,1152,165.3C1248,213,1344,267,1392,293.3L1440,320L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
-        />
-      </svg>
       <div>
         <SocialIcons className="is-hidden-mobile">
           <SocialIconsHomeHero />
