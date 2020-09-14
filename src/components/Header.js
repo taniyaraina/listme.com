@@ -9,7 +9,6 @@ const Section = styled.div`
     font-family: ${props => props.theme.primaryFontFamily};
     background-color: ${props =>
       props.dark ? '#191A23' : 'transparent'}!important;
-      height: ${props => (props.navHeight ? '6rem' : '')}!important;
   }
   .navbar-start {
     flex: 1;
@@ -18,6 +17,10 @@ const Section = styled.div`
   }
   .navbar-item img {
     max-height: 2.125rem;
+  }
+  .navbar-menu{
+    margin-bottom:${props => (props.dark ? '-25px' : '0')}!important;
+  }
   }
   .navbar-item {
     a {
@@ -60,6 +63,7 @@ const Section = styled.div`
     }
     .navbar-menu {
       height: 100vh;
+      margin-bottom:0px;
     }
     .navbar-brand {
       align-items: center;
@@ -173,7 +177,7 @@ const Header = ({ dark, navHeight, title }) => {
     return (
       <Link
         to={link}
-        className={className}
+        className={window.location.pathname == link && visible ? 'test' : ''}
         onMouseOver={() => setVisible(false)}
         onMouseOut={() => setTimeout(() => setVisible(true), 1500)}
       >
@@ -181,6 +185,8 @@ const Header = ({ dark, navHeight, title }) => {
       </Link>
     );
   };
+
+  console.log(window.location.pathname, 'data');
 
   return (
     <Section dark={dark} navHeight={navHeight}>
@@ -211,14 +217,10 @@ const Header = ({ dark, navHeight, title }) => {
         </div>
         <div className={menuActive ? 'navbar-menu is-active' : 'navbar-menu'}>
           <div className="ph-dot-nav nav has-text-weight-semibold">
-            <BottomItem
-              className={visible ? 'test' : ''}
-              navTitle="Home"
-              link="/"
-            />
+            <BottomItem navTitle="Home" link="/" />
             <BottomItem navTitle=" Business Users" link="/business" />
             <BottomItem navTitle="FAQs" link="/faq" />
-            <BottomItem navTitle="Contact Us" link="contact" />
+            <BottomItem navTitle="Contact Us" link="/contact" />
             <div className="effect" />
           </div>
         </div>
