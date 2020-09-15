@@ -31,7 +31,7 @@ const ContentWrapper = styled.div`
 `;
 
 const SvgContainer = styled.div`
-  margin-top: -15rem;
+  margin-top: -13rem;
 `;
 
 const Event = () => {
