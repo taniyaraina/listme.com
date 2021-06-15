@@ -31,8 +31,8 @@ const Header = () => {
                   <a>
                     <span className="sr-only">{config.siteName}</span>
                     <img
-                      className="h-8 w-auto sm:h-10"
-                      src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                      className="h-4 w-auto sm:h-10"
+                      src="/images/logo.png"
                       alt=""
                     />
                   </a>
@@ -45,17 +45,14 @@ const Header = () => {
                 </Popover.Button>
               </div>
               <Popover.Group as="nav" className="hidden md:flex space-x-10">
-                <Link href="/about">
-                  <AnchorLink>About</AnchorLink>
+                <Link href="/">
+                  <AnchorLink>Events</AnchorLink>
                 </Link>
-                <Link href="/blog">
-                  <AnchorLink>Blog</AnchorLink>
+                <Link href="/">
+                  <AnchorLink>Business service</AnchorLink>
                 </Link>
-                <Link href="/contact">
-                  <AnchorLink>Contact</AnchorLink>
-                </Link>
-                <Link href="/auth/account">
-                  <AnchorLink>Account</AnchorLink>
+                <Link href="/">
+                  <AnchorLink>About Us</AnchorLink>
                 </Link>
               </Popover.Group>
               {isLoggedIn ? (

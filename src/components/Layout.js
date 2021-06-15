@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Header from './global/Header';
 import Footer from './global/Footer';
 
-const Container = styled.div.attrs({ className: 'container mx-auto' })``;
+const Container = styled.div.attrs({ className: '' })``;
 
 const Layout = ({ children }) => (
   <Container>
